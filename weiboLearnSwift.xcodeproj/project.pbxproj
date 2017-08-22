@@ -19,8 +19,8 @@
 		E9AD2B871F4BD52500D60C34 /* JHWbMeTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B861F4BD52500D60C34 /* JHWbMeTableViewController.storyboard */; };
 		E9AD2B8F1F4BD72600D60C34 /* JHWbHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B8E1F4BD72600D60C34 /* JHWbHomeTableViewController.swift */; };
 		E9AD2B911F4BD75300D60C34 /* JHWbMessageTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B901F4BD75300D60C34 /* JHWbMessageTableTableViewController.swift */; };
-		E9AD2B931F4BD77D00D60C34 /* JHWbDiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B921F4BD77D00D60C34 /* JHWbDiscoverTableViewController.swift */; };
-		E9AD2B951F4BD79E00D60C34 /* JHWbMeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B941F4BD79E00D60C34 /* JHWbMeTableViewController.swift */; };
+		E9AD2B971F4BD86400D60C34 /* JHWbDiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B961F4BD86400D60C34 /* JHWbDiscoverTableViewController.swift */; };
+		E9AD2B9B1F4BD8C500D60C34 /* JHWbMeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B9A1F4BD8C500D60C34 /* JHWbMeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +39,8 @@
 		E9AD2B861F4BD52500D60C34 /* JHWbMeTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = JHWbMeTableViewController.storyboard; path = weiboLearnSwift/Classes/Features/4Me/JHWbMeTableViewController.storyboard; sourceTree = SOURCE_ROOT; };
 		E9AD2B8E1F4BD72600D60C34 /* JHWbHomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbHomeTableViewController.swift; path = weiboLearnSwift/Classes/Features/1Home/JHWbHomeTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		E9AD2B901F4BD75300D60C34 /* JHWbMessageTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbMessageTableTableViewController.swift; path = weiboLearnSwift/Classes/Features/2Message/JHWbMessageTableTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		E9AD2B921F4BD77D00D60C34 /* JHWbDiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbDiscoverTableViewController.swift; path = ../3Discover/JHWbDiscoverTableViewController.swift; sourceTree = "<group>"; };
-		E9AD2B941F4BD79E00D60C34 /* JHWbMeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbMeTableViewController.swift; path = weiboLearnSwift/Classes/Features/3Discover/JHWbMeTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		E9AD2B961F4BD86400D60C34 /* JHWbDiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbDiscoverTableViewController.swift; path = weiboLearnSwift/Classes/Features/3Discover/JHWbDiscoverTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		E9AD2B9A1F4BD8C500D60C34 /* JHWbMeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbMeTableViewController.swift; path = weiboLearnSwift/Classes/Features/4Me/JHWbMeTableViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				E9AD2B841F4BD51000D60C34 /* JHWbDiscoverTableViewController.storyboard */,
-				E9AD2B921F4BD77D00D60C34 /* JHWbDiscoverTableViewController.swift */,
+				E9AD2B961F4BD86400D60C34 /* JHWbDiscoverTableViewController.swift */,
 			);
 			name = 3Discover;
 			path = Discover;
@@ -201,8 +201,8 @@
 		E9AD2B641F4BCFC500D60C34 /* 4Me */ = {
 			isa = PBXGroup;
 			children = (
+				E9AD2B9A1F4BD8C500D60C34 /* JHWbMeTableViewController.swift */,
 				E9AD2B861F4BD52500D60C34 /* JHWbMeTableViewController.storyboard */,
-				E9AD2B941F4BD79E00D60C34 /* JHWbMeTableViewController.swift */,
 			);
 			name = 4Me;
 			path = Me;
@@ -347,8 +347,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9AD2B951F4BD79E00D60C34 /* JHWbMeTableViewController.swift in Sources */,
-				E9AD2B931F4BD77D00D60C34 /* JHWbDiscoverTableViewController.swift in Sources */,
+				E9AD2B9B1F4BD8C500D60C34 /* JHWbMeTableViewController.swift in Sources */,
+				E9AD2B971F4BD86400D60C34 /* JHWbDiscoverTableViewController.swift in Sources */,
 				E9AD2B911F4BD75300D60C34 /* JHWbMessageTableTableViewController.swift in Sources */,
 				E9AD2B1C1F4BBF0600D60C34 /* AppDelegate.swift in Sources */,
 				E9AD2B8F1F4BD72600D60C34 /* JHWbHomeTableViewController.swift in Sources */,
