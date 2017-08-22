@@ -1,2 +1,0 @@
-# weibo-learnSwift-
-learn weibo
