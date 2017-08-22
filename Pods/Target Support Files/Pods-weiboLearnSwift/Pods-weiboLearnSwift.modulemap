@@ -1,0 +1,6 @@
+framework module Pods_weiboLearnSwift {
+  umbrella header "Pods-weiboLearnSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
