@@ -10,7 +10,6 @@
 		64466571FAB7296A2ADA26D7 /* Pods_weiboLearnSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5595E5B42DF059CE6951A3 /* Pods_weiboLearnSwift.framework */; };
 		E9AD2B1B1F4BBF0600D60C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B131F4BBF0600D60C34 /* Assets.xcassets */; };
 		E9AD2B1C1F4BBF0600D60C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */; };
-		E9AD2B581F4BBFE400D60C34 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B571F4BBFE400D60C34 /* Info.plist */; };
 		E9AD2B5C1F4BC2DD00D60C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B5B1F4BC2DD00D60C34 /* Main.storyboard */; };
 		E9AD2B6F1F4BD25D00D60C34 /* JHWbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B6E1F4BD25D00D60C34 /* JHWbLoginViewController.swift */; };
 		E9AD2B811F4BD4E200D60C34 /* JHWbHomeTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B801F4BD4E200D60C34 /* JHWbHomeTableViewController.storyboard */; };
@@ -30,7 +29,6 @@
 		E9AD2AE21F4BBA7800D60C34 /* weiboLearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weiboLearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9AD2B131F4BBF0600D60C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9AD2B571F4BBFE400D60C34 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9AD2B5B1F4BC2DD00D60C34 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Main.storyboard; sourceTree = "<group>"; };
 		E9AD2B6E1F4BD25D00D60C34 /* JHWbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbLoginViewController.swift; sourceTree = "<group>"; };
 		E9AD2B801F4BD4E200D60C34 /* JHWbHomeTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = JHWbHomeTableViewController.storyboard; path = weiboLearnSwift/Classes/Features/1Home/JHWbHomeTableViewController.storyboard; sourceTree = SOURCE_ROOT; };
@@ -41,6 +39,7 @@
 		E9AD2B901F4BD75300D60C34 /* JHWbMessageTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbMessageTableTableViewController.swift; path = weiboLearnSwift/Classes/Features/2Message/JHWbMessageTableTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		E9AD2B961F4BD86400D60C34 /* JHWbDiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbDiscoverTableViewController.swift; path = weiboLearnSwift/Classes/Features/3Discover/JHWbDiscoverTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		E9AD2B9A1F4BD8C500D60C34 /* JHWbMeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbMeTableViewController.swift; path = weiboLearnSwift/Classes/Features/4Me/JHWbMeTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		E9AD2B9C1F4BD9C400D60C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				E9AD2B131F4BBF0600D60C34 /* Assets.xcassets */,
-				E9AD2B571F4BBFE400D60C34 /* Info.plist */,
+				E9AD2B9C1F4BD9C400D60C34 /* Info.plist */,
 				E9AD2B141F4BBF0600D60C34 /* Classes */,
 			);
 			path = weiboLearnSwift;
@@ -286,7 +285,6 @@
 				E9AD2B831F4BD4FD00D60C34 /* JHWbMessageTableTableViewController.storyboard in Resources */,
 				E9AD2B811F4BD4E200D60C34 /* JHWbHomeTableViewController.storyboard in Resources */,
 				E9AD2B5C1F4BC2DD00D60C34 /* Main.storyboard in Resources */,
-				E9AD2B581F4BBFE400D60C34 /* Info.plist in Resources */,
 				E9AD2B1B1F4BBF0600D60C34 /* Assets.xcassets in Resources */,
 				E9AD2B871F4BD52500D60C34 /* JHWbMeTableViewController.storyboard in Resources */,
 			);
