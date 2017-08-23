@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5B21A61F4D625500448B2F /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B21A51F4D625500448B2F /* UIButton-Extension.swift */; };
 		64466571FAB7296A2ADA26D7 /* Pods_weiboLearnSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5595E5B42DF059CE6951A3 /* Pods_weiboLearnSwift.framework */; };
 		E91B8AE31F4D1F9000F6C640 /* JHWbHomeTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91B8AD31F4D1F9000F6C640 /* JHWbHomeTableViewController.storyboard */; };
 		E91B8AE41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AD41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F5B21A51F4D625500448B2F /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		5D54D10EED44105E50CAF59E /* Pods-weiboLearnSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboLearnSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-weiboLearnSwift/Pods-weiboLearnSwift.release.xcconfig"; sourceTree = "<group>"; };
 		AF5595E5B42DF059CE6951A3 /* Pods_weiboLearnSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weiboLearnSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1483462D2CE2FF525D87E64 /* Pods-weiboLearnSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboLearnSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weiboLearnSwift/Pods-weiboLearnSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				E91B8AF31F4D598500F6C640 /* UINavigationItem-Extension.swift */,
+				1F5B21A51F4D625500448B2F /* UIButton-Extension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				E91B8AEA1F4D1F9000F6C640 /* JHWbMeTableViewController.swift in Sources */,
 				E91B8AEB1F4D1F9000F6C640 /* JHWbLoginViewController.swift in Sources */,
 				E91B8AEF1F4D2C1E00F6C640 /* JHWbComposeViewController.swift in Sources */,
+				1F5B21A61F4D625500448B2F /* UIButton-Extension.swift in Sources */,
 				E91B8AF41F4D598500F6C640 /* UINavigationItem-Extension.swift in Sources */,
 				E9AD2B1C1F4BBF0600D60C34 /* AppDelegate.swift in Sources */,
 				E91B8AE81F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift in Sources */,

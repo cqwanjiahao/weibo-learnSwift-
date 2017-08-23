@@ -9,7 +9,12 @@
 import UIKit
 
 extension UIBarButtonItem {
-//    convenience init(imageName : String) {
-//        
-//    }
+    convenience init(imageName : String) {
+        let button = UIButton()
+        button.setImage(UIImage(named: imageName), for: .normal)
+        button.setImage(UIImage(named: imageName + "_highlighted"), for: .highlighted)
+        button.sizeToFit()
+        
+        self.init(customView: button)
+    }
 }

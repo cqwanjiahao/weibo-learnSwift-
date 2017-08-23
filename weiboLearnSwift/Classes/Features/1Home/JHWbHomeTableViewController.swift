@@ -25,7 +25,10 @@ extension JHWbHomeTableViewController {
     }
     
     func setupNavigationBar() -> Void {
-//navigationItem.leftBarButtonItem?.customView = UINavigationItem
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(imageName: "navigationbar_friendattention")
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(imageName: "navigationbar_friendattention")
+
+        
     }
     
 }
