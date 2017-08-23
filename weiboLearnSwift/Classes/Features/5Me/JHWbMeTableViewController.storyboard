@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--我-->
         <scene sceneID="LeW-5Y-Lqa">
             <objects>
-                <tableViewController id="8ff-lk-gvw" sceneMemberID="viewController">
+                <tableViewController id="8ff-lk-gvw" customClass="JHWbMeTableViewController" customModule="weiboLearnSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mAT-a1-bxv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,17 +32,24 @@
                             <outlet property="delegate" destination="8ff-lk-gvw" id="AoD-SM-Rmy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="w0i-jw-PDZ"/>
+                    <navigationItem key="navigationItem" title="我" id="w0i-jw-PDZ">
+                        <barButtonItem key="leftBarButtonItem" title="注册" id="0xu-Rp-Lb2">
+                            <color key="tintColor" red="1" green="0.47271999949999999" blue="0.37844757740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="登录" id="2ID-3C-hTc">
+                            <color key="tintColor" red="1" green="0.47271999949999999" blue="0.37844757740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSy-qG-aX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2500" y="2663"/>
         </scene>
-        <!--Item-->
+        <!--我-->
         <scene sceneID="x9O-MD-ZWV">
             <objects>
                 <navigationController id="G1b-mX-2p5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="P2r-nQ-aSH"/>
+                    <tabBarItem key="tabBarItem" title="我" image="tabbar_profile" selectedImage="tabbar_profile_highlighted" id="P2r-nQ-aSH"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zoe-Lt-nq8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -57,4 +64,8 @@
             <point key="canvasLocation" x="-3447" y="2663"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_profile" width="30" height="30"/>
+        <image name="tabbar_profile_highlighted" width="30" height="30"/>
+    </resources>
 </document>

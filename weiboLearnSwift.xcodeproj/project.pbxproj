@@ -8,37 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		64466571FAB7296A2ADA26D7 /* Pods_weiboLearnSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5595E5B42DF059CE6951A3 /* Pods_weiboLearnSwift.framework */; };
+		E91B8AE31F4D1F9000F6C640 /* JHWbHomeTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91B8AD31F4D1F9000F6C640 /* JHWbHomeTableViewController.storyboard */; };
+		E91B8AE41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AD41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift */; };
+		E91B8AE51F4D1F9000F6C640 /* JHWbMessageTableTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91B8AD61F4D1F9000F6C640 /* JHWbMessageTableTableViewController.storyboard */; };
+		E91B8AE61F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AD71F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift */; };
+		E91B8AE71F4D1F9000F6C640 /* JHWbDiscoverTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91B8ADA1F4D1F9000F6C640 /* JHWbDiscoverTableViewController.storyboard */; };
+		E91B8AE81F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8ADB1F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift */; };
+		E91B8AE91F4D1F9000F6C640 /* JHWbMeTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91B8ADD1F4D1F9000F6C640 /* JHWbMeTableViewController.storyboard */; };
+		E91B8AEA1F4D1F9000F6C640 /* JHWbMeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8ADE1F4D1F9000F6C640 /* JHWbMeTableViewController.swift */; };
+		E91B8AEB1F4D1F9000F6C640 /* JHWbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AE11F4D1F9000F6C640 /* JHWbLoginViewController.swift */; };
+		E91B8AED1F4D21DD00F6C640 /* JHWbMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AEC1F4D21DD00F6C640 /* JHWbMainViewController.swift */; };
+		E91B8AEF1F4D2C1E00F6C640 /* JHWbComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AEE1F4D2C1E00F6C640 /* JHWbComposeViewController.swift */; };
+		E91B8AF41F4D598500F6C640 /* UINavigationItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AF31F4D598500F6C640 /* UINavigationItem-Extension.swift */; };
 		E9AD2B1B1F4BBF0600D60C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B131F4BBF0600D60C34 /* Assets.xcassets */; };
 		E9AD2B1C1F4BBF0600D60C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */; };
 		E9AD2B5C1F4BC2DD00D60C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B5B1F4BC2DD00D60C34 /* Main.storyboard */; };
-		E9AD2B6F1F4BD25D00D60C34 /* JHWbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B6E1F4BD25D00D60C34 /* JHWbLoginViewController.swift */; };
-		E9AD2B811F4BD4E200D60C34 /* JHWbHomeTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B801F4BD4E200D60C34 /* JHWbHomeTableViewController.storyboard */; };
-		E9AD2B831F4BD4FD00D60C34 /* JHWbMessageTableTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B821F4BD4FD00D60C34 /* JHWbMessageTableTableViewController.storyboard */; };
-		E9AD2B851F4BD51000D60C34 /* JHWbDiscoverTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B841F4BD51000D60C34 /* JHWbDiscoverTableViewController.storyboard */; };
-		E9AD2B871F4BD52500D60C34 /* JHWbMeTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B861F4BD52500D60C34 /* JHWbMeTableViewController.storyboard */; };
-		E9AD2B8F1F4BD72600D60C34 /* JHWbHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B8E1F4BD72600D60C34 /* JHWbHomeTableViewController.swift */; };
-		E9AD2B911F4BD75300D60C34 /* JHWbMessageTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B901F4BD75300D60C34 /* JHWbMessageTableTableViewController.swift */; };
-		E9AD2B971F4BD86400D60C34 /* JHWbDiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B961F4BD86400D60C34 /* JHWbDiscoverTableViewController.swift */; };
-		E9AD2B9B1F4BD8C500D60C34 /* JHWbMeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B9A1F4BD8C500D60C34 /* JHWbMeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D54D10EED44105E50CAF59E /* Pods-weiboLearnSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboLearnSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-weiboLearnSwift/Pods-weiboLearnSwift.release.xcconfig"; sourceTree = "<group>"; };
 		AF5595E5B42DF059CE6951A3 /* Pods_weiboLearnSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weiboLearnSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1483462D2CE2FF525D87E64 /* Pods-weiboLearnSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboLearnSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weiboLearnSwift/Pods-weiboLearnSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		E91B8AD31F4D1F9000F6C640 /* JHWbHomeTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHWbHomeTableViewController.storyboard; sourceTree = "<group>"; };
+		E91B8AD41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbHomeTableViewController.swift; sourceTree = "<group>"; };
+		E91B8AD61F4D1F9000F6C640 /* JHWbMessageTableTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHWbMessageTableTableViewController.storyboard; sourceTree = "<group>"; };
+		E91B8AD71F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbMessageTableTableViewController.swift; sourceTree = "<group>"; };
+		E91B8ADA1F4D1F9000F6C640 /* JHWbDiscoverTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHWbDiscoverTableViewController.storyboard; sourceTree = "<group>"; };
+		E91B8ADB1F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbDiscoverTableViewController.swift; sourceTree = "<group>"; };
+		E91B8ADD1F4D1F9000F6C640 /* JHWbMeTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHWbMeTableViewController.storyboard; sourceTree = "<group>"; };
+		E91B8ADE1F4D1F9000F6C640 /* JHWbMeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbMeTableViewController.swift; sourceTree = "<group>"; };
+		E91B8AE11F4D1F9000F6C640 /* JHWbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbLoginViewController.swift; sourceTree = "<group>"; };
+		E91B8AEC1F4D21DD00F6C640 /* JHWbMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbMainViewController.swift; sourceTree = "<group>"; };
+		E91B8AEE1F4D2C1E00F6C640 /* JHWbComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbComposeViewController.swift; sourceTree = "<group>"; };
+		E91B8AF31F4D598500F6C640 /* UINavigationItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem-Extension.swift"; sourceTree = "<group>"; };
 		E9AD2AE21F4BBA7800D60C34 /* weiboLearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weiboLearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9AD2B131F4BBF0600D60C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9AD2B5B1F4BC2DD00D60C34 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Main.storyboard; sourceTree = "<group>"; };
-		E9AD2B6E1F4BD25D00D60C34 /* JHWbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbLoginViewController.swift; sourceTree = "<group>"; };
-		E9AD2B801F4BD4E200D60C34 /* JHWbHomeTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = JHWbHomeTableViewController.storyboard; path = weiboLearnSwift/Classes/Features/1Home/JHWbHomeTableViewController.storyboard; sourceTree = SOURCE_ROOT; };
-		E9AD2B821F4BD4FD00D60C34 /* JHWbMessageTableTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = JHWbMessageTableTableViewController.storyboard; path = weiboLearnSwift/Classes/Features/2Message/JHWbMessageTableTableViewController.storyboard; sourceTree = SOURCE_ROOT; };
-		E9AD2B841F4BD51000D60C34 /* JHWbDiscoverTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = JHWbDiscoverTableViewController.storyboard; path = weiboLearnSwift/Classes/Features/3Discover/JHWbDiscoverTableViewController.storyboard; sourceTree = SOURCE_ROOT; };
-		E9AD2B861F4BD52500D60C34 /* JHWbMeTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = JHWbMeTableViewController.storyboard; path = weiboLearnSwift/Classes/Features/4Me/JHWbMeTableViewController.storyboard; sourceTree = SOURCE_ROOT; };
-		E9AD2B8E1F4BD72600D60C34 /* JHWbHomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbHomeTableViewController.swift; path = weiboLearnSwift/Classes/Features/1Home/JHWbHomeTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		E9AD2B901F4BD75300D60C34 /* JHWbMessageTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbMessageTableTableViewController.swift; path = weiboLearnSwift/Classes/Features/2Message/JHWbMessageTableTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		E9AD2B961F4BD86400D60C34 /* JHWbDiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbDiscoverTableViewController.swift; path = weiboLearnSwift/Classes/Features/3Discover/JHWbDiscoverTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		E9AD2B9A1F4BD8C500D60C34 /* JHWbMeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JHWbMeTableViewController.swift; path = weiboLearnSwift/Classes/Features/4Me/JHWbMeTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		E9AD2B5B1F4BC2DD00D60C34 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../Main.storyboard; sourceTree = "<group>"; };
 		E9AD2B9C1F4BD9C400D60C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +75,97 @@
 				AF5595E5B42DF059CE6951A3 /* Pods_weiboLearnSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E91B8AD11F4D1F9000F6C640 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E91B8AE21F4D1F9000F6C640 /* Main */,
+				E91B8AF01F4D2F4800F6C640 /* visitor */,
+				E91B8AD21F4D1F9000F6C640 /* 1Home */,
+				E91B8AD51F4D1F9000F6C640 /* 2Message */,
+				E91B8AD81F4D1F9000F6C640 /* 3compose */,
+				E91B8AD91F4D1F9000F6C640 /* 4Discover */,
+				E91B8ADC1F4D1F9000F6C640 /* 5Me */,
+				E91B8ADF1F4D1F9000F6C640 /* Auto */,
+				E91B8AE01F4D1F9000F6C640 /* Login */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E91B8AD21F4D1F9000F6C640 /* 1Home */ = {
+			isa = PBXGroup;
+			children = (
+				E91B8AD31F4D1F9000F6C640 /* JHWbHomeTableViewController.storyboard */,
+				E91B8AD41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift */,
+			);
+			path = 1Home;
+			sourceTree = "<group>";
+		};
+		E91B8AD51F4D1F9000F6C640 /* 2Message */ = {
+			isa = PBXGroup;
+			children = (
+				E91B8AD61F4D1F9000F6C640 /* JHWbMessageTableTableViewController.storyboard */,
+				E91B8AD71F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift */,
+			);
+			path = 2Message;
+			sourceTree = "<group>";
+		};
+		E91B8AD81F4D1F9000F6C640 /* 3compose */ = {
+			isa = PBXGroup;
+			children = (
+				E91B8AEE1F4D2C1E00F6C640 /* JHWbComposeViewController.swift */,
+			);
+			path = 3compose;
+			sourceTree = "<group>";
+		};
+		E91B8AD91F4D1F9000F6C640 /* 4Discover */ = {
+			isa = PBXGroup;
+			children = (
+				E91B8ADA1F4D1F9000F6C640 /* JHWbDiscoverTableViewController.storyboard */,
+				E91B8ADB1F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift */,
+			);
+			path = 4Discover;
+			sourceTree = "<group>";
+		};
+		E91B8ADC1F4D1F9000F6C640 /* 5Me */ = {
+			isa = PBXGroup;
+			children = (
+				E91B8ADD1F4D1F9000F6C640 /* JHWbMeTableViewController.storyboard */,
+				E91B8ADE1F4D1F9000F6C640 /* JHWbMeTableViewController.swift */,
+			);
+			path = 5Me;
+			sourceTree = "<group>";
+		};
+		E91B8ADF1F4D1F9000F6C640 /* Auto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auto;
+			sourceTree = "<group>";
+		};
+		E91B8AE01F4D1F9000F6C640 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E91B8AE11F4D1F9000F6C640 /* JHWbLoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E91B8AE21F4D1F9000F6C640 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E9AD2B5B1F4BC2DD00D60C34 /* Main.storyboard */,
+				E91B8AEC1F4D21DD00F6C640 /* JHWbMainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E91B8AF01F4D2F4800F6C640 /* visitor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = visitor;
 			sourceTree = "<group>";
 		};
 		E9AD2AD91F4BBA7800D60C34 = {
@@ -103,7 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				E9AD2B151F4BBF0600D60C34 /* AppDelegate */,
-				E9AD2B5E1F4BCFC500D60C34 /* Features */,
+				E91B8AD11F4D1F9000F6C640 /* Features */,
 				E9AD2B181F4BBF0600D60C34 /* Model */,
 				E9AD2B191F4BBF0600D60C34 /* Network */,
 				E9AD2B1A1F4BBF0600D60C34 /* Util */,
@@ -115,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */,
-				E9AD2B5B1F4BC2DD00D60C34 /* Main.storyboard */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -137,84 +233,9 @@
 		E9AD2B1A1F4BBF0600D60C34 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				E91B8AF31F4D598500F6C640 /* UINavigationItem-Extension.swift */,
 			);
 			path = Util;
-			sourceTree = "<group>";
-		};
-		E9AD2B5E1F4BCFC500D60C34 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				E9AD2B631F4BCFC500D60C34 /* Main */,
-				E9AD2B611F4BCFC500D60C34 /* 1Home */,
-				E9AD2B651F4BCFC500D60C34 /* 2Message */,
-				E9AD2B601F4BCFC500D60C34 /* 3Discover */,
-				E9AD2B641F4BCFC500D60C34 /* 4Me */,
-				E9AD2B5F1F4BCFC500D60C34 /* Auto */,
-				E9AD2B621F4BCFC500D60C34 /* Login */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
-		E9AD2B5F1F4BCFC500D60C34 /* Auto */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Auto;
-			sourceTree = "<group>";
-		};
-		E9AD2B601F4BCFC500D60C34 /* 3Discover */ = {
-			isa = PBXGroup;
-			children = (
-				E9AD2B841F4BD51000D60C34 /* JHWbDiscoverTableViewController.storyboard */,
-				E9AD2B961F4BD86400D60C34 /* JHWbDiscoverTableViewController.swift */,
-			);
-			name = 3Discover;
-			path = Discover;
-			sourceTree = "<group>";
-		};
-		E9AD2B611F4BCFC500D60C34 /* 1Home */ = {
-			isa = PBXGroup;
-			children = (
-				E9AD2B801F4BD4E200D60C34 /* JHWbHomeTableViewController.storyboard */,
-				E9AD2B8E1F4BD72600D60C34 /* JHWbHomeTableViewController.swift */,
-			);
-			name = 1Home;
-			path = Home;
-			sourceTree = "<group>";
-		};
-		E9AD2B621F4BCFC500D60C34 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				E9AD2B6E1F4BD25D00D60C34 /* JHWbLoginViewController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		E9AD2B631F4BCFC500D60C34 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		E9AD2B641F4BCFC500D60C34 /* 4Me */ = {
-			isa = PBXGroup;
-			children = (
-				E9AD2B9A1F4BD8C500D60C34 /* JHWbMeTableViewController.swift */,
-				E9AD2B861F4BD52500D60C34 /* JHWbMeTableViewController.storyboard */,
-			);
-			name = 4Me;
-			path = Me;
-			sourceTree = "<group>";
-		};
-		E9AD2B651F4BCFC500D60C34 /* 2Message */ = {
-			isa = PBXGroup;
-			children = (
-				E9AD2B821F4BD4FD00D60C34 /* JHWbMessageTableTableViewController.storyboard */,
-				E9AD2B901F4BD75300D60C34 /* JHWbMessageTableTableViewController.swift */,
-			);
-			name = 2Message;
-			path = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,12 +302,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9AD2B851F4BD51000D60C34 /* JHWbDiscoverTableViewController.storyboard in Resources */,
-				E9AD2B831F4BD4FD00D60C34 /* JHWbMessageTableTableViewController.storyboard in Resources */,
-				E9AD2B811F4BD4E200D60C34 /* JHWbHomeTableViewController.storyboard in Resources */,
+				E91B8AE51F4D1F9000F6C640 /* JHWbMessageTableTableViewController.storyboard in Resources */,
 				E9AD2B5C1F4BC2DD00D60C34 /* Main.storyboard in Resources */,
 				E9AD2B1B1F4BBF0600D60C34 /* Assets.xcassets in Resources */,
-				E9AD2B871F4BD52500D60C34 /* JHWbMeTableViewController.storyboard in Resources */,
+				E91B8AE71F4D1F9000F6C640 /* JHWbDiscoverTableViewController.storyboard in Resources */,
+				E91B8AE31F4D1F9000F6C640 /* JHWbHomeTableViewController.storyboard in Resources */,
+				E91B8AE91F4D1F9000F6C640 /* JHWbMeTableViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,12 +366,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9AD2B9B1F4BD8C500D60C34 /* JHWbMeTableViewController.swift in Sources */,
-				E9AD2B971F4BD86400D60C34 /* JHWbDiscoverTableViewController.swift in Sources */,
-				E9AD2B911F4BD75300D60C34 /* JHWbMessageTableTableViewController.swift in Sources */,
+				E91B8AEA1F4D1F9000F6C640 /* JHWbMeTableViewController.swift in Sources */,
+				E91B8AEB1F4D1F9000F6C640 /* JHWbLoginViewController.swift in Sources */,
+				E91B8AEF1F4D2C1E00F6C640 /* JHWbComposeViewController.swift in Sources */,
+				E91B8AF41F4D598500F6C640 /* UINavigationItem-Extension.swift in Sources */,
 				E9AD2B1C1F4BBF0600D60C34 /* AppDelegate.swift in Sources */,
-				E9AD2B8F1F4BD72600D60C34 /* JHWbHomeTableViewController.swift in Sources */,
-				E9AD2B6F1F4BD25D00D60C34 /* JHWbLoginViewController.swift in Sources */,
+				E91B8AE81F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift in Sources */,
+				E91B8AED1F4D21DD00F6C640 /* JHWbMainViewController.swift in Sources */,
+				E91B8AE61F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift in Sources */,
+				E91B8AE41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

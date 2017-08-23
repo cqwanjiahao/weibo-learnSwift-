@@ -12,7 +12,8 @@ class JHWbMessageTableTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        view.backgroundColor = UIColor.yellow
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -1,5 +1,5 @@
 //
-//  JHWbDiscoverTableViewController.swift
+//  JHWbMeTableViewController.swift
 //  weiboLearnSwift
 //
 //  Created by 万家豪 on 2017/8/22.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class JHWbDiscoverTableViewController: UITableViewController {
+class JHWbMeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        view.backgroundColor = UIColor.green
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

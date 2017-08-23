@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--发现-->
         <scene sceneID="PbW-OU-tgO">
             <objects>
-                <tableViewController id="X6u-cp-byy" sceneMemberID="viewController">
+                <tableViewController id="X6u-cp-byy" customClass="JHWbDiscoverTableViewController" customModule="weiboLearnSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nN5-o6-DGl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,17 +32,24 @@
                             <outlet property="delegate" destination="X6u-cp-byy" id="5Vd-IP-hiR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="run-ye-Sa0"/>
+                    <navigationItem key="navigationItem" title="发现" id="run-ye-Sa0">
+                        <barButtonItem key="leftBarButtonItem" title="注册" id="Oi9-aK-DI1">
+                            <color key="tintColor" red="1" green="0.47271999949999999" blue="0.37844757740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="登录" id="Jh3-UI-aD7">
+                            <color key="tintColor" red="1" green="0.47271999949999999" blue="0.37844757740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuA-bo-Yle" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2500" y="1936"/>
         </scene>
-        <!--Item-->
+        <!--发现-->
         <scene sceneID="3pa-B3-bB9">
             <objects>
                 <navigationController id="UKC-PC-ftJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7Fu-Q8-PWw"/>
+                    <tabBarItem key="tabBarItem" title="发现" image="tabbar_discover" selectedImage="tabbar_discover_highlighted" id="7Fu-Q8-PWw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0sp-jW-ygB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -57,4 +64,8 @@
             <point key="canvasLocation" x="-3498" y="1935"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_discover" width="30" height="30"/>
+        <image name="tabbar_discover_highlighted" width="30" height="30"/>
+    </resources>
 </document>

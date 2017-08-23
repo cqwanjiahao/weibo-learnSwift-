@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--消息-->
         <scene sceneID="e85-f9-BKu">
             <objects>
-                <tableViewController id="CtD-a5-xLn" sceneMemberID="viewController">
+                <tableViewController id="CtD-a5-xLn" customClass="JHWbMessageTableTableViewController" customModule="weiboLearnSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="F4i-NG-CY7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,17 +32,24 @@
                             <outlet property="delegate" destination="CtD-a5-xLn" id="I7g-zh-C2l"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Ua5-4X-R6N"/>
+                    <navigationItem key="navigationItem" title="消息" id="Ua5-4X-R6N">
+                        <barButtonItem key="leftBarButtonItem" title="注册" id="Od8-mb-kgE">
+                            <color key="tintColor" red="1" green="0.47271999949999999" blue="0.37844757740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="登录" id="K29-AT-wrd">
+                            <color key="tintColor" red="1" green="0.47271999949999999" blue="0.37844757740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fK-Zg-9cz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2438" y="1203"/>
         </scene>
-        <!--Item-->
+        <!--消息-->
         <scene sceneID="hGh-6o-5xo">
             <objects>
                 <navigationController id="WUp-0P-MZw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tAc-hb-qTH"/>
+                    <tabBarItem key="tabBarItem" title="消息" image="tabbar_message_center" selectedImage="tabbar_message_center_highlighted" id="tAc-hb-qTH"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nom-Tc-kQf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -57,4 +64,8 @@
             <point key="canvasLocation" x="-3390" y="1203"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_message_center" width="30" height="30"/>
+        <image name="tabbar_message_center_highlighted" width="30" height="30"/>
+    </resources>
 </document>

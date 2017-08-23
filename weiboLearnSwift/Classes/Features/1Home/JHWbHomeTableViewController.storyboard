@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Title-->
         <scene sceneID="kWZ-Gb-OJy">
             <objects>
-                <tableViewController id="SUN-OM-uYq" sceneMemberID="viewController">
+                <tableViewController id="SUN-OM-uYq" customClass="JHWbHomeTableViewController" customModule="weiboLearnSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0yU-NM-3ee">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,9 @@
                             <outlet property="delegate" destination="SUN-OM-uYq" id="xNU-mI-EAu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="iGS-IL-Ex7"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="Ddn-hm-c9p"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhc-SM-WRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

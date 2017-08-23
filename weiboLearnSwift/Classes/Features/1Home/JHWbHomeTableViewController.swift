@@ -9,24 +9,30 @@
 import UIKit
 
 class JHWbHomeTableViewController: UITableViewController {
+    @IBOutlet weak var nameButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK:- 设置UI
+extension JHWbHomeTableViewController {
+    func setupUI() -> Void {
+        setupNavigationBar()
     }
+    
+    func setupNavigationBar() -> Void {
+//navigationItem.leftBarButtonItem?.customView = UINavigationItem
+    }
+    
+}
 
-    // MARK: - Table view data source
 
+// MARK: - Table view data source
+extension JHWbHomeTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
