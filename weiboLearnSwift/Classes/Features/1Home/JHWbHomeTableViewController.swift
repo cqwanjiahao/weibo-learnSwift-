@@ -7,14 +7,21 @@
 //
 
 import UIKit
-
+import SnapKit
 class JHWbHomeTableViewController: UITableViewController {
-    @IBOutlet weak var nameButton: UIButton!
+    lazy var titleButton = JHWbHomeTitleButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-
+        setupConstraint()
+        let test1 = UIButton()
+//        test1.backgroundColor = UIColor.jh_setColor(r: 220, g: 20, b: 60  #FF00FF)
+//        test1.backgroundColor = UIColor.init(red: CGFloat, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+        test1.backgroundColor = UIColor.jh_setHexStringColor(hex:"#FF00FF")
+//        test1.backgroundColor = UIColor.jh_setColor(rgb: 123)
+        test1.frame = CGRect.init(x: 30, y: 30, width: 50, height: 50)
+        view.addSubview(test1)
     }
 }
 
@@ -24,13 +31,18 @@ extension JHWbHomeTableViewController {
         setupNavigationBar()
     }
     
+    /// 设置导航条
     func setupNavigationBar() -> Void {
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(imageName: "navigationbar_friendattention")
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(imageName: "navigationbar_friendattention")
-
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(imageName: "navigationbar_pop")
+    ///设置标题按钮
+//        titleButton.backgroundColor = UIColor.jh_setColor(rgb: 123)
+        titleButton.setTitle("wanjiahao", for: .normal)
     }
     
+    func setupConstraint() -> Void {
+        
+    }
 }
 
 

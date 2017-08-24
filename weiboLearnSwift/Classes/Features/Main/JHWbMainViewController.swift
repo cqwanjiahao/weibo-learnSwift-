@@ -43,5 +43,6 @@ extension JHWbMainViewController {
 extension JHWbMainViewController {
     @objc fileprivate func composeButtonClick() -> Void {
         print("点击了发布按钮")
+        
     }
 }
