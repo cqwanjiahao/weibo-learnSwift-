@@ -9,20 +9,37 @@
 import UIKit
 
 extension UIButton {
-
-    convenience init(image:String) {
+    //设置图片
+    convenience init(imageName:String) {
         self.init()
-        setImage(UIImage(named: image), for: .normal)
-        setImage(UIImage(named: image + "_highlighted"), for: .selected)
+        setImage(UIImage(named: imageName), for: .normal)
+        setImage(UIImage(named: imageName + "_highlighted"), for: .selected)
         sizeToFit()
     }
     
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    convenience init(imageName : String, highlighImageName : String) {
+        self.init()
+        setImage(UIImage(named: imageName), for: .normal)
+        setImage(UIImage(named: highlighImageName), for: .selected)
+        sizeToFit()
     }
-    */
+    
+   ///创建button
+    convenience init(imageName: String, highlighImageName: String, target: Any, action: Selector) {
+        self.init(imageName: imageName, highlighImageName: highlighImageName)
+        addTarget(target, action: action, for: .touchUpInside)
+//        self.jh_size = self.currentBackgroundImage?.size
+    }
+}
 
+extension UIBarButtonItem {
+    convenience init(imageName : String) {
+        let button = UIButton.init(imageName: imageName)
+        self.init(customView: button)
+    }
+    
+    convenience init(imageName : String, highlighImageName : String) {
+        let button = UIButton.init(imageName: imageName, highlighImageName: highlighImageName)
+        self.init(customView: button)
+    }
 }

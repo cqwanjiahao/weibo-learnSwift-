@@ -20,10 +20,9 @@
 		E91B8AEB1F4D1F9000F6C640 /* JHWbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AE11F4D1F9000F6C640 /* JHWbLoginViewController.swift */; };
 		E91B8AED1F4D21DD00F6C640 /* JHWbMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AEC1F4D21DD00F6C640 /* JHWbMainViewController.swift */; };
 		E91B8AEF1F4D2C1E00F6C640 /* JHWbComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AEE1F4D2C1E00F6C640 /* JHWbComposeViewController.swift */; };
-		E91B8AF41F4D598500F6C640 /* UINavigationItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AF31F4D598500F6C640 /* UINavigationItem-Extension.swift */; };
 		E944941B1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944941A1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift */; };
 		E944941F1F4EE3FC0053DFC3 /* JHColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944941E1F4EE3FC0053DFC3 /* JHColor.swift */; };
-		E94494211F4EE73E0053DFC3 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94494201F4EE73E0053DFC3 /* UIView-Extension.swift */; };
+		E94494211F4EE73E0053DFC3 /* UIView-Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94494201F4EE73E0053DFC3 /* UIView-Frame.swift */; };
 		E94494251F4EF0C70053DFC3 /* JHWbConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94494241F4EF0C70053DFC3 /* JHWbConfig.swift */; };
 		E94494271F4EF1930053DFC3 /* JHScreenFitUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94494261F4EF1930053DFC3 /* JHScreenFitUtil.swift */; };
 		E94494291F4EFC850053DFC3 /* JHConstPCH.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94494281F4EFC850053DFC3 /* JHConstPCH.swift */; };
@@ -48,10 +47,9 @@
 		E91B8AE11F4D1F9000F6C640 /* JHWbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbLoginViewController.swift; sourceTree = "<group>"; };
 		E91B8AEC1F4D21DD00F6C640 /* JHWbMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbMainViewController.swift; sourceTree = "<group>"; };
 		E91B8AEE1F4D2C1E00F6C640 /* JHWbComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbComposeViewController.swift; sourceTree = "<group>"; };
-		E91B8AF31F4D598500F6C640 /* UINavigationItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem-Extension.swift"; sourceTree = "<group>"; };
 		E944941A1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbHomeTitleButton.swift; sourceTree = "<group>"; };
 		E944941E1F4EE3FC0053DFC3 /* JHColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHColor.swift; sourceTree = "<group>"; };
-		E94494201F4EE73E0053DFC3 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		E94494201F4EE73E0053DFC3 /* UIView-Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Frame.swift"; sourceTree = "<group>"; };
 		E94494241F4EF0C70053DFC3 /* JHWbConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbConfig.swift; sourceTree = "<group>"; };
 		E94494261F4EF1930053DFC3 /* JHScreenFitUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScreenFitUtil.swift; sourceTree = "<group>"; };
 		E94494281F4EFC850053DFC3 /* JHConstPCH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHConstPCH.swift; sourceTree = "<group>"; };
@@ -257,10 +255,9 @@
 		E9AD2B1A1F4BBF0600D60C34 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				E91B8AF31F4D598500F6C640 /* UINavigationItem-Extension.swift */,
 				1F5B21A51F4D625500448B2F /* UIButton-Extension.swift */,
 				E944941E1F4EE3FC0053DFC3 /* JHColor.swift */,
-				E94494201F4EE73E0053DFC3 /* UIView-Extension.swift */,
+				E94494201F4EE73E0053DFC3 /* UIView-Frame.swift */,
 				E94494261F4EF1930053DFC3 /* JHScreenFitUtil.swift */,
 				E94494281F4EFC850053DFC3 /* JHConstPCH.swift */,
 			);
@@ -397,13 +394,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E91B8AEA1F4D1F9000F6C640 /* JHWbMeTableViewController.swift in Sources */,
-				E94494211F4EE73E0053DFC3 /* UIView-Extension.swift in Sources */,
+				E94494211F4EE73E0053DFC3 /* UIView-Frame.swift in Sources */,
 				E944941F1F4EE3FC0053DFC3 /* JHColor.swift in Sources */,
 				E94494291F4EFC850053DFC3 /* JHConstPCH.swift in Sources */,
 				E91B8AEB1F4D1F9000F6C640 /* JHWbLoginViewController.swift in Sources */,
 				E91B8AEF1F4D2C1E00F6C640 /* JHWbComposeViewController.swift in Sources */,
 				1F5B21A61F4D625500448B2F /* UIButton-Extension.swift in Sources */,
-				E91B8AF41F4D598500F6C640 /* UINavigationItem-Extension.swift in Sources */,
 				E944941B1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift in Sources */,
 				E94494271F4EF1930053DFC3 /* JHScreenFitUtil.swift in Sources */,
 				E94494251F4EF0C70053DFC3 /* JHWbConfig.swift in Sources */,

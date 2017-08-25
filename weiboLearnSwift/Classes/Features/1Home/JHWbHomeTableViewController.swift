@@ -15,15 +15,9 @@ class JHWbHomeTableViewController: UITableViewController {
         super.viewDidLoad()
         setupUI()
         setupConstraint()
-        let test1 = UIButton()
-//        test1.backgroundColor = UIColor.jh_setColor(r: 220, g: 20, b: 60  #FF00FF)
-//        test1.backgroundColor = UIColor.init(red: CGFloat, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
-        test1.backgroundColor = UIColor.jh_setHexStringColor(hex:"#FF00FF")
-//        test1.backgroundColor = UIColor.jh_setColor(rgb: 123)
-        test1.frame = CGRect.init(x: 30, y: 30, width: 50, height: 50)
-        view.addSubview(test1)
     }
 }
+
 
 // MARK:- 设置UI
 extension JHWbHomeTableViewController {

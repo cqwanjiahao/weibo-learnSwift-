@@ -29,6 +29,7 @@ extension UIColor {
     class func jh_setHexStringColor(hex: String, alpha: CGFloat) -> UIColor {
         return .HEXCOLORA(hex:hex, alpha:alpha)
     }
+    
     ///随机色
     class func jh_randomColor() -> UIColor {
         return .RGBA(red: CGFloat(arc4random_uniform(256)), green: CGFloat(arc4random_uniform(256)), blue: CGFloat(arc4random_uniform(256)), alpha: 1.0)
@@ -45,15 +46,7 @@ extension UIColor {
         Scanner(string: hex[1..<3]).scanHexInt32(&red)
         Scanner(string: hex[3..<5]).scanHexInt32(&green)
         Scanner(string: hex[5..<7]).scanHexInt32(&blue)
-        
-        print(CGFloat(red))
-//        print(Scanner(string: hex[1..<3]))
-        print(CGFloat(green))
-//        print(Scanner(string: hex[3..<5]))
-        print(CGFloat(blue))
-//        print(Scanner(string: hex[5..<7]))
         return .RGBA(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: alpha)
-//        return RGBA(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
     }
 }
 
@@ -64,7 +57,6 @@ extension String {
         get {
             let startIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
             let endIndex = self.index(self.startIndex, offsetBy: range.upperBound)
-//            print(String(self[startIndex..<endIndex]))
             return String(self[startIndex..<endIndex])
         }
     }
