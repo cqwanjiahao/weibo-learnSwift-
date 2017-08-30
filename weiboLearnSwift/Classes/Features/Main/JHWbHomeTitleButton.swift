@@ -14,6 +14,7 @@ class JHWbHomeTitleButton: UIButton {
         setImage(#imageLiteral(resourceName: "navigationbar_arrow_down"), for: .normal)
         setImage(#imageLiteral(resourceName: "navigationbar_arrow_down"), for: .selected)
         setTitleColor(UIColor.black, for: .normal)
+        jh_log(messsage: "tset")
     }
     
     required init?(coder aDecoder: NSCoder) {
