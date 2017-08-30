@@ -20,6 +20,9 @@
 		E91B8AEB1F4D1F9000F6C640 /* JHWbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AE11F4D1F9000F6C640 /* JHWbLoginViewController.swift */; };
 		E91B8AED1F4D21DD00F6C640 /* JHWbMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AEC1F4D21DD00F6C640 /* JHWbMainViewController.swift */; };
 		E91B8AEF1F4D2C1E00F6C640 /* JHWbComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AEE1F4D2C1E00F6C640 /* JHWbComposeViewController.swift */; };
+		E93038511F571448008F7114 /* JHWbBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93038501F571448008F7114 /* JHWbBaseTableViewController.swift */; };
+		E93038531F571464008F7114 /* JHWbVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93038521F571464008F7114 /* JHWbVisitorView.swift */; };
+		E93038551F57147B008F7114 /* JHWbVisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E93038541F57147B008F7114 /* JHWbVisitorView.xib */; };
 		E944941B1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944941A1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift */; };
 		E944941F1F4EE3FC0053DFC3 /* JHColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944941E1F4EE3FC0053DFC3 /* JHColor.swift */; };
 		E94494211F4EE73E0053DFC3 /* UIView-Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94494201F4EE73E0053DFC3 /* UIView-Frame.swift */; };
@@ -47,9 +50,9 @@
 		E91B8AE11F4D1F9000F6C640 /* JHWbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbLoginViewController.swift; sourceTree = "<group>"; };
 		E91B8AEC1F4D21DD00F6C640 /* JHWbMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbMainViewController.swift; sourceTree = "<group>"; };
 		E91B8AEE1F4D2C1E00F6C640 /* JHWbComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbComposeViewController.swift; sourceTree = "<group>"; };
-		E92833E51F57075900A638AE /* JHWbVisitorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHWbVisitorView.xib; sourceTree = "<group>"; };
-		E92833E61F57075900A638AE /* JHWbVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbVisitorView.swift; sourceTree = "<group>"; };
-		E92833E71F57075A00A638AE /* JHWbBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbBaseTableViewController.swift; sourceTree = "<group>"; };
+		E93038501F571448008F7114 /* JHWbBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbBaseTableViewController.swift; sourceTree = "<group>"; };
+		E93038521F571464008F7114 /* JHWbVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbVisitorView.swift; sourceTree = "<group>"; };
+		E93038541F57147B008F7114 /* JHWbVisitorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHWbVisitorView.xib; sourceTree = "<group>"; };
 		E944941A1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbHomeTitleButton.swift; sourceTree = "<group>"; };
 		E944941E1F4EE3FC0053DFC3 /* JHColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHColor.swift; sourceTree = "<group>"; };
 		E94494201F4EE73E0053DFC3 /* UIView-Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Frame.swift"; sourceTree = "<group>"; };
@@ -95,8 +98,8 @@
 		E91B8AD11F4D1F9000F6C640 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E930384C1F5713E3008F7114 /* Visitor */,
 				E91B8AE21F4D1F9000F6C640 /* Main */,
-				E91B8AF01F4D2F4800F6C640 /* visitor */,
 				E91B8AD21F4D1F9000F6C640 /* 1Home */,
 				E91B8AD51F4D1F9000F6C640 /* 2Message */,
 				E91B8AD81F4D1F9000F6C640 /* 3compose */,
@@ -177,14 +180,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		E91B8AF01F4D2F4800F6C640 /* visitor */ = {
+		E930384C1F5713E3008F7114 /* Visitor */ = {
 			isa = PBXGroup;
 			children = (
-				E92833E71F57075A00A638AE /* JHWbBaseTableViewController.swift */,
-				E92833E61F57075900A638AE /* JHWbVisitorView.swift */,
-				E92833E51F57075900A638AE /* JHWbVisitorView.xib */,
+				E93038501F571448008F7114 /* JHWbBaseTableViewController.swift */,
+				E93038521F571464008F7114 /* JHWbVisitorView.swift */,
+				E93038541F57147B008F7114 /* JHWbVisitorView.xib */,
 			);
-			path = visitor;
+			path = Visitor;
 			sourceTree = "<group>";
 		};
 		E94494231F4EF0A20053DFC3 /* Constant */ = {
@@ -337,6 +340,7 @@
 			files = (
 				E91B8AE51F4D1F9000F6C640 /* JHWbMessageTableTableViewController.storyboard in Resources */,
 				E9AD2B5C1F4BC2DD00D60C34 /* Main.storyboard in Resources */,
+				E93038551F57147B008F7114 /* JHWbVisitorView.xib in Resources */,
 				E9AD2B1B1F4BBF0600D60C34 /* Assets.xcassets in Resources */,
 				E91B8AE71F4D1F9000F6C640 /* JHWbDiscoverTableViewController.storyboard in Resources */,
 				E91B8AE31F4D1F9000F6C640 /* JHWbHomeTableViewController.storyboard in Resources */,
@@ -417,11 +421,13 @@
 				E94494291F4EFC850053DFC3 /* JHConstPCH.swift in Sources */,
 				E91B8AEB1F4D1F9000F6C640 /* JHWbLoginViewController.swift in Sources */,
 				E91B8AEF1F4D2C1E00F6C640 /* JHWbComposeViewController.swift in Sources */,
+				E93038531F571464008F7114 /* JHWbVisitorView.swift in Sources */,
 				1F5B21A61F4D625500448B2F /* UIButton-Extension.swift in Sources */,
 				E944941B1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift in Sources */,
 				E94494271F4EF1930053DFC3 /* JHScreenFitUtil.swift in Sources */,
 				E94494251F4EF0C70053DFC3 /* JHWbConfig.swift in Sources */,
 				E9AD2B1C1F4BBF0600D60C34 /* AppDelegate.swift in Sources */,
+				E93038511F571448008F7114 /* JHWbBaseTableViewController.swift in Sources */,
 				E91B8AE81F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift in Sources */,
 				E91B8AED1F4D21DD00F6C640 /* JHWbMainViewController.swift in Sources */,
 				E91B8AE61F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift in Sources */,
@@ -543,11 +549,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = QMR2DC8U7N;
 				INFOPLIST_FILE = weiboLearnSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.weiboLearnSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -559,6 +567,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = QMR2DC8U7N;
 				INFOPLIST_FILE = weiboLearnSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

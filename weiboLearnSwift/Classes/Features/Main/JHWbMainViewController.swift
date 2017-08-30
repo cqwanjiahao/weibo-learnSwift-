@@ -11,10 +11,9 @@ import UIKit
 class JHWbMainViewController: UITabBarController {
     lazy var composeButton = UIButton()
     lazy var isLogin = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UINavigationBar.appearance().tintColor = UIColor.orange
     }
     
     override func viewWillAppear(_ animated: Bool) {

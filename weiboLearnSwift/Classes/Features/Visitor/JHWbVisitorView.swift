@@ -2,23 +2,24 @@
 //  JHWbVisitorView.swift
 //  weiboLearnSwift
 //
-//  Created by 万家豪 on 2017/8/27.
+//  Created by 万家豪 on 2017/8/30.
 //  Copyright © 2017年 万家豪. All rights reserved.
 //
 
 import UIKit
 
 class JHWbVisitorView: UIView {
-//MARK: - 控件的属性
+    //MARK: - 控件的属性
+    
     @IBOutlet weak var rotateView: UIImageView!
     @IBOutlet weak var shadowView: UIImageView!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var introiLabel: UILabel!
     @IBOutlet weak var homeButton: UIButton!
-    @IBOutlet weak var meHeardView: UIView!
-    @IBOutlet weak var meHeardButton: UIButton!
     @IBOutlet weak var registButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var meHeardView: UIView!
+    @IBOutlet weak var meHeardButton: UIButton!
     
     //类方法快速获取控件
     class func VisitorView() -> UIView {
@@ -76,3 +77,4 @@ extension JHWbVisitorView {
         rotateView.layer.add(rotateAnimate, forKey: nil)
     }
 }
+

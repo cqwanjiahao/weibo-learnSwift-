@@ -8,13 +8,21 @@
 
 import UIKit
 class JHWbHomeTableViewController: JHWbBaseTableViewController {
-    lazy var titleButton = JHWbHomeTitleButton()
+        lazy var titleButton = JHWbHomeTitleButton()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-    }
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            setupUI()
+        }
 }
+//class JHWbHomeTableViewController: JHWbBaseTableViewController {
+//    lazy var titleButton = JHWbHomeTitleButton()
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        setupUI()
+//    }
+//}
 
 
 // MARK:- 设置UI
