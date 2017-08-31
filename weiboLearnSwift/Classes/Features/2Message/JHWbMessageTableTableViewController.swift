@@ -29,7 +29,7 @@ extension JHWbMessageTableTableViewController {
         visitorView.setupMessageController()
     }
     
-    override  func setupNavigationBar() {
+   @objc override  func setupNavigationBar() {
         navigationItem.title = "消息"
     }
 }

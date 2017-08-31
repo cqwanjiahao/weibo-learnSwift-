@@ -31,9 +31,6 @@ extension JHWbBaseTableViewController {
         visitorView.meHeardButton.addTarget(self, action: #selector(JHWbBaseTableViewController.loginButtonClick), for: .touchUpInside)
     }
     
-    
-    
-    
     /// 设置导航栏左右的Item
     func setupNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "注册", style: .plain, target: self, action: #selector(JHWbBaseTableViewController.rigisetButtonClick))
@@ -44,7 +41,8 @@ extension JHWbBaseTableViewController {
 // MARK:- 事件监听
 extension JHWbBaseTableViewController {
     @objc private func rigisetButtonClick() {
-        print("registerBtnClick")
+        present(JHWbLoginViewController.LoginViewController(), animated: true) {
+        }
     }
     
     @objc private func loginButtonClick() {

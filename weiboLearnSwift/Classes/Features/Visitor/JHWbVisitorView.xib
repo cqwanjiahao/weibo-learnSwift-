@@ -34,9 +34,9 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你还没有关注的人。关注自己感兴趣的人，可在这里看到他们发布的内容" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfr-qU-q0G" userLabel="文字">
-                    <rect key="frame" x="193" y="375" width="300" height="31.5"/>
+                    <rect key="frame" x="213" y="375" width="260" height="31.5"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="300" id="dGr-aM-HOh"/>
+                        <constraint firstAttribute="width" constant="260" id="dGr-aM-HOh"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,7 +54,7 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYt-yj-ScZ">
-                    <rect key="frame" x="193" y="436.5" width="90" height="32"/>
+                    <rect key="frame" x="213" y="436.5" width="90" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="mAF-To-YYf"/>
                         <constraint firstAttribute="width" constant="90" id="oGB-sa-vfb"/>
@@ -65,7 +65,7 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob4-jq-g3e" userLabel="登录">
-                    <rect key="frame" x="403" y="436.5" width="90" height="32"/>
+                    <rect key="frame" x="383" y="436.5" width="90" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="PDf-2o-gv8"/>
                         <constraint firstAttribute="width" constant="90" id="hEm-gb-IEK"/>
@@ -143,7 +143,7 @@
         </view>
     </objects>
     <resources>
-        <image name="common_button_white_disable" width="11" height="35"/>
+        <image name="common_button_white_disable" width="11" height="9"/>
         <image name="visitor_profile_heardView" width="250" height="102"/>
         <image name="visitordiscover_feed_image_house" width="94" height="90"/>
         <image name="visitordiscover_feed_image_smallicon" width="175" height="175"/>

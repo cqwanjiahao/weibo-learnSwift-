@@ -22,7 +22,7 @@ extension JHWbMeTableViewController {
     func setupUI() -> Void {
         visitorView.setupMeController()
     }
-    override func setupNavigationBar() {
+   override func setupNavigationBar() {
         navigationItem.title = "我"
         navigationItem.rightBarButtonItem?.tintColor = UIColor.darkGray
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "设置", style:.plain, target: self, action: #selector(JHWbMeTableViewController.settingButtonClick))
@@ -30,7 +30,7 @@ extension JHWbMeTableViewController {
 }
 //MARK: - 事件监听
 extension JHWbMeTableViewController {
-    func settingButtonClick() {
+    @objc func settingButtonClick() {
         jh_log(messsage: "点击了监听按钮")
     }
 }

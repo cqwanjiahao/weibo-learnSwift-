@@ -32,6 +32,7 @@
 		E9AD2B1B1F4BBF0600D60C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B131F4BBF0600D60C34 /* Assets.xcassets */; };
 		E9AD2B1C1F4BBF0600D60C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */; };
 		E9AD2B5C1F4BC2DD00D60C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B5B1F4BC2DD00D60C34 /* Main.storyboard */; };
+		E9E6F08D1F58181900482DAF /* JHWbLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9E6F08C1F58181900482DAF /* JHWbLoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9AD2B5B1F4BC2DD00D60C34 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../Main.storyboard; sourceTree = "<group>"; };
 		E9AD2B9C1F4BD9C400D60C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9E6F08C1F58181900482DAF /* JHWbLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHWbLoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		E91B8AD11F4D1F9000F6C640 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E91B8AE01F4D1F9000F6C640 /* Login */,
 				E930384C1F5713E3008F7114 /* Visitor */,
 				E91B8AE21F4D1F9000F6C640 /* Main */,
 				E91B8AD21F4D1F9000F6C640 /* 1Home */,
@@ -106,7 +109,6 @@
 				E91B8AD91F4D1F9000F6C640 /* 4Discover */,
 				E91B8ADC1F4D1F9000F6C640 /* 5Me */,
 				E91B8ADF1F4D1F9000F6C640 /* Auto */,
-				E91B8AE01F4D1F9000F6C640 /* Login */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				E91B8AE11F4D1F9000F6C640 /* JHWbLoginViewController.swift */,
+				E9E6F08C1F58181900482DAF /* JHWbLoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				E91B8AE71F4D1F9000F6C640 /* JHWbDiscoverTableViewController.storyboard in Resources */,
 				E91B8AE31F4D1F9000F6C640 /* JHWbHomeTableViewController.storyboard in Resources */,
 				E91B8AE91F4D1F9000F6C640 /* JHWbMeTableViewController.storyboard in Resources */,
+				E9E6F08D1F58181900482DAF /* JHWbLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
