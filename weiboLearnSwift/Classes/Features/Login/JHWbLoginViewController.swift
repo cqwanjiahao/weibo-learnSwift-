@@ -50,9 +50,9 @@ extension JHWbLoginViewController {
 extension JHWbLoginViewController {
 //区域选择按钮
     @IBAction func areaButtonClick(_ sender: Any) {
-        //新建一个VC
-        let areaPickTableViewController = UITableViewController()
-        navigationController?.pushViewController(areaPickTableViewController, animated: true)
+        let areaPickstoryboard = UIStoryboard.init(name: "JHWbAreaPickTableViewController", bundle: nil)
+        let areaPickVC : JHWbAreaPickTableViewController = areaPickstoryboard.instantiateInitialViewController() as! JHWbAreaPickTableViewController
+        navigationController?.pushViewController(areaPickVC, animated: true)
     }
     
     //取消按钮

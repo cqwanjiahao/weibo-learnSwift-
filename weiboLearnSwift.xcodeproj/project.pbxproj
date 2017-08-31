@@ -29,10 +29,15 @@
 		E94494251F4EF0C70053DFC3 /* JHWbConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94494241F4EF0C70053DFC3 /* JHWbConfig.swift */; };
 		E94494271F4EF1930053DFC3 /* JHScreenFitUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94494261F4EF1930053DFC3 /* JHScreenFitUtil.swift */; };
 		E94494291F4EFC850053DFC3 /* JHConstPCH.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94494281F4EFC850053DFC3 /* JHConstPCH.swift */; };
+		E9730E901F5882FD00006773 /* JHWbAreaPickTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9730E8F1F5882FD00006773 /* JHWbAreaPickTableViewController.storyboard */; };
+		E9730E931F588AA100006773 /* JHWbAreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9730E921F588AA100006773 /* JHWbAreaModel.swift */; };
+		E9730E951F589FE800006773 /* JHWbAreaGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9730E941F589FE800006773 /* JHWbAreaGroupModel.swift */; };
 		E9AD2B1B1F4BBF0600D60C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B131F4BBF0600D60C34 /* Assets.xcassets */; };
 		E9AD2B1C1F4BBF0600D60C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */; };
 		E9AD2B5C1F4BC2DD00D60C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B5B1F4BC2DD00D60C34 /* Main.storyboard */; };
 		E9E6F08D1F58181900482DAF /* JHWbLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9E6F08C1F58181900482DAF /* JHWbLoginViewController.xib */; };
+		E9E6F08F1F5879A200482DAF /* areaPick.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E6F08E1F5879A200482DAF /* areaPick.plist */; };
+		E9E6F09E1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6F09C1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,12 +65,17 @@
 		E94494241F4EF0C70053DFC3 /* JHWbConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbConfig.swift; sourceTree = "<group>"; };
 		E94494261F4EF1930053DFC3 /* JHScreenFitUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScreenFitUtil.swift; sourceTree = "<group>"; };
 		E94494281F4EFC850053DFC3 /* JHConstPCH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHConstPCH.swift; sourceTree = "<group>"; };
+		E9730E8F1F5882FD00006773 /* JHWbAreaPickTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JHWbAreaPickTableViewController.storyboard; sourceTree = "<group>"; };
+		E9730E921F588AA100006773 /* JHWbAreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaModel.swift; sourceTree = "<group>"; };
+		E9730E941F589FE800006773 /* JHWbAreaGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaGroupModel.swift; sourceTree = "<group>"; };
 		E9AD2AE21F4BBA7800D60C34 /* weiboLearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weiboLearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9AD2B131F4BBF0600D60C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9AD2B5B1F4BC2DD00D60C34 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../Main.storyboard; sourceTree = "<group>"; };
 		E9AD2B9C1F4BD9C400D60C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9E6F08C1F58181900482DAF /* JHWbLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHWbLoginViewController.xib; sourceTree = "<group>"; };
+		E9E6F08E1F5879A200482DAF /* areaPick.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = areaPick.plist; sourceTree = "<group>"; };
+		E9E6F09C1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +179,7 @@
 			children = (
 				E91B8AE11F4D1F9000F6C640 /* JHWbLoginViewController.swift */,
 				E9E6F08C1F58181900482DAF /* JHWbLoginViewController.xib */,
+				E9730E911F58862100006773 /* AreaPick */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -199,6 +210,18 @@
 				E94494241F4EF0C70053DFC3 /* JHWbConfig.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		E9730E911F58862100006773 /* AreaPick */ = {
+			isa = PBXGroup;
+			children = (
+				E9E6F08E1F5879A200482DAF /* areaPick.plist */,
+				E9730E941F589FE800006773 /* JHWbAreaGroupModel.swift */,
+				E9730E921F588AA100006773 /* JHWbAreaModel.swift */,
+				E9730E8F1F5882FD00006773 /* JHWbAreaPickTableViewController.storyboard */,
+				E9E6F09C1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift */,
+			);
+			path = AreaPick;
 			sourceTree = "<group>";
 		};
 		E9AD2AD91F4BBA7800D60C34 = {
@@ -341,7 +364,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9730E901F5882FD00006773 /* JHWbAreaPickTableViewController.storyboard in Resources */,
 				E91B8AE51F4D1F9000F6C640 /* JHWbMessageTableTableViewController.storyboard in Resources */,
+				E9E6F08F1F5879A200482DAF /* areaPick.plist in Resources */,
 				E9AD2B5C1F4BC2DD00D60C34 /* Main.storyboard in Resources */,
 				E93038551F57147B008F7114 /* JHWbVisitorView.xib in Resources */,
 				E9AD2B1B1F4BBF0600D60C34 /* Assets.xcassets in Resources */,
@@ -427,9 +452,12 @@
 				E91B8AEF1F4D2C1E00F6C640 /* JHWbComposeViewController.swift in Sources */,
 				E93038531F571464008F7114 /* JHWbVisitorView.swift in Sources */,
 				1F5B21A61F4D625500448B2F /* UIButton-Extension.swift in Sources */,
+				E9E6F09E1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift in Sources */,
 				E944941B1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift in Sources */,
 				E94494271F4EF1930053DFC3 /* JHScreenFitUtil.swift in Sources */,
+				E9730E931F588AA100006773 /* JHWbAreaModel.swift in Sources */,
 				E94494251F4EF0C70053DFC3 /* JHWbConfig.swift in Sources */,
+				E9730E951F589FE800006773 /* JHWbAreaGroupModel.swift in Sources */,
 				E9AD2B1C1F4BBF0600D60C34 /* AppDelegate.swift in Sources */,
 				E93038511F571448008F7114 /* JHWbBaseTableViewController.swift in Sources */,
 				E91B8AE81F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift in Sources */,

@@ -12,7 +12,7 @@ class JHWbMeTableViewController: JHWbBaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.darkGray
+        navigationController?.navigationBar.tintColor = UIColor.darkGray
         setupUI()
     }
 }
@@ -24,7 +24,6 @@ extension JHWbMeTableViewController {
     }
    override func setupNavigationBar() {
         navigationItem.title = "我"
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.darkGray
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "设置", style:.plain, target: self, action: #selector(JHWbMeTableViewController.settingButtonClick))
     }
 }
