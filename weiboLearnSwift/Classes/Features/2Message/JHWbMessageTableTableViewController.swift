@@ -29,7 +29,7 @@ extension JHWbMessageTableTableViewController {
         visitorView.setupMessageController()
     }
     
-   @objc override  func setupNavigationBar() {
+    override  func setupNavigationBar() {
         navigationItem.title = "消息"
     }
 }
@@ -38,7 +38,6 @@ extension JHWbMessageTableTableViewController {
 extension JHWbMessageTableTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 0
     }
     

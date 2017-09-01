@@ -33,7 +33,7 @@ extension JHWbHomeTableViewController {
     }
     
     /// 设置导航条
-   @objc override  func setupNavigationBar() {
+    override  func setupNavigationBar() {
         super .setupNavigationBar()
         ///设置标题按钮
         titleButton.setTitle("wanjiahao", for: .normal)

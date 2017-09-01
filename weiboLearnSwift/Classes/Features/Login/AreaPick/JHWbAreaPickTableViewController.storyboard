@@ -17,12 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <switch key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="3Ch-RY-ML7">
-                            <rect key="frame" x="0.0" y="103.5" width="375" height="31"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </switch>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AreaPickCell" rowHeight="30" id="2N0-uu-Qpr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AreaPickCell" rowHeight="30" id="2N0-uu-Qpr" customClass="JHWbAreaPickTableViewCell" customModule="weiboLearnSwift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="375" height="30"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2N0-uu-Qpr" id="L1j-BZ-7d9">
@@ -57,6 +53,10 @@
                                         <constraint firstAttribute="trailing" secondItem="p8o-rY-8au" secondAttribute="trailing" constant="30" id="az9-vg-JRD"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="adressNum" destination="p8o-rY-8au" id="KKp-b6-Le4"/>
+                                    <outlet property="countryLabel" destination="mah-nD-9AH" id="tDU-1J-ou8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

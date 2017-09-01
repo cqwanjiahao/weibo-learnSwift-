@@ -11,6 +11,7 @@ import UIKit
 class JHWbLoginViewController: UIViewController {
     //MARK: - 控件属性
     
+    @IBOutlet weak var areaInfolabel: UIButton!
     @IBOutlet weak var errorLable: UILabel!
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var moblieTextField: UITextField!
@@ -33,6 +34,8 @@ class JHWbLoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        areaInfolabel.titleLabel?.text = "haha"
         setupUI()
         addAGesutreRecognizerForScrollView()
     }

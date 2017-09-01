@@ -296,28 +296,13 @@
             </view>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="areaInfolabel" destination="ijm-iN-Id7" id="dsv-E2-nzp"/>
                 <outlet property="errorLable" destination="LYL-ve-mWX" id="7Wt-AX-goV"/>
                 <outlet property="mainScrollView" destination="mGM-No-fZb" id="sYZ-QP-89B"/>
                 <outlet property="moblieTextField" destination="emG-gi-X8q" id="6Rf-dN-nuM"/>
             </connections>
             <point key="canvasLocation" x="500.5" y="-319.5"/>
         </viewController>
-        <view contentMode="scaleToFill" id="MkO-te-FWk">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <viewLayoutGuide key="safeArea" id="oJ0-vA-luK"/>
-            <point key="canvasLocation" x="920" y="-247"/>
-        </view>
-        <visualEffectView opaque="NO" contentMode="scaleToFill" id="uC3-bn-2qD">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JP3-1f-5ll">
-                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            </view>
-            <blurEffect style="light"/>
-        </visualEffectView>
     </objects>
     <resources>
         <image name="login_button" width="20" height="20"/>

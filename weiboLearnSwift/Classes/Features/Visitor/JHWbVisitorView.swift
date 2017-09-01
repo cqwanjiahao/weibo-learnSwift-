@@ -71,7 +71,7 @@ extension JHWbVisitorView {
         rotateAnimate.fromValue = 0
         rotateAnimate.toValue = Double.pi * 2
         rotateAnimate.repeatCount = MAXFLOAT
-        rotateAnimate.duration = 5
+        rotateAnimate.duration = 30
         rotateAnimate.isRemovedOnCompletion = false
         //将动画添加到layer中
         rotateView.layer.add(rotateAnimate, forKey: nil)
