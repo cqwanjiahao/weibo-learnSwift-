@@ -19,15 +19,20 @@ extension NSObject {
 class JHScreenFitUtil {
     // MARK:- 设计单例对象
     static let sharedUtils = JHScreenFitUtil()
+    //以5.5寸plus 截图换算比例
     class func fixLength(length: CGFloat) -> CGFloat {
         if (JHDevices.sharedDevices.IPhone4_4s) {
-            return length * 0.85;
+//            return length * 0.85;
+            return length * 0.7735;
         } else if (JHDevices.sharedDevices.IPhone5_5s_SE) {
-            return length * 0.85;
+//            return length * 0.85;
+            return length * 0.7735;
         } else if (JHDevices.sharedDevices.IPhone6_6s_7) {
-            return length;
+//            return length;
+            return length * 0.91;
         } else if (JHDevices.sharedDevices.IPhone6Plus_6sPlus_7Plus) {
-            return length * 1.1;
+//            return length * 1.1;
+            return length ;
         }
         return length
     }

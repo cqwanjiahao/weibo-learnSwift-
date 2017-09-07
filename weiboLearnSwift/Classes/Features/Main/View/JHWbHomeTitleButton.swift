@@ -5,7 +5,7 @@
 //  Created by 万家豪 on 2017/8/24.
 //  Copyright © 2017年 万家豪. All rights reserved.
 //
-
+//顶部点击变化的titile   : 关注 / 热门
 import UIKit
 
 class JHWbHomeTitleButton: UIButton {
@@ -14,7 +14,6 @@ class JHWbHomeTitleButton: UIButton {
         setImage(#imageLiteral(resourceName: "navigationbar_arrow_down"), for: .normal)
         setImage(#imageLiteral(resourceName: "navigationbar_arrow_down"), for: .selected)
         setTitleColor(UIColor.black, for: .normal)
-        jh_log(messsage: "tset")
     }
     
     required init?(coder aDecoder: NSCoder) {
