@@ -15,7 +15,6 @@ class JHWbVisitorButton: UIButton {
     titleLabel?.font = .systemFont(ofSize: jh_getLength(length: 16))
     setTitleColor(titleColor, for: .normal)
     setBackgroundImage(#imageLiteral(resourceName: "common_button_white_disable"), for: .normal)
-//    setBackgroundImage(#imageLiteral(resourceName: "common_button_white_disable"), for: .highlighted)
     }
     
     required init?(coder aDecoder: NSCoder) {

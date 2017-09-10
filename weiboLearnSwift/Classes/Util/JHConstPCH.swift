@@ -15,6 +15,22 @@ extension NSObject {
             print("\(fileName) : (\(lineNum))  -  \(messsage)")
         #endif
     }
+    
+    //通过颜色创建图片
+    func jh_createImageWithColor(color: UIColor) -> UIImage {
+        let rect = CGRect.init(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        context!.setFillColor(color.cgColor)
+        context!.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
+    //通过颜色创建拉伸图片 forButton
+    func jh_createStretchImageWithColor(color: UIColor) -> UIImage {
+       return  jh_createImageWithColor(color: color).resizableImage(withCapInsets: UIEdgeInsetsMake(1, 1, 1, 1), resizingMode: .stretch)
+    }
 }
 
 extension UIImage {

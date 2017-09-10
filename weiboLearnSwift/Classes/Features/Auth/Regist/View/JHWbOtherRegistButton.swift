@@ -9,7 +9,7 @@
 import UIKit
 
 class JHWbOtherRegistButton: UIButton {
-    public init(title: String, image: UIImage) {
+     init(title: String, image: UIImage) {
         super.init(frame: CGRect.zero)
         setTitle(title, for: .normal)
         titleLabel?.font = .systemFont(ofSize: jh_getLength(length: 12))

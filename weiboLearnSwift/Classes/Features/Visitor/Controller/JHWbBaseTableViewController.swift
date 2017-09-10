@@ -89,7 +89,7 @@ extension JHWbBaseTableViewController {
 // MARK:- Click
 extension JHWbBaseTableViewController {
     @objc private func rigisetButtonClick() {
-        let registNav = UINavigationController.init(rootViewController: JHWbLoginViewController())
+        let registNav = UINavigationController.init(rootViewController: JHWbRegistViewController())
         present(registNav, animated: true) {
         }
     }
