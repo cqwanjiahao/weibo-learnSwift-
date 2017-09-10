@@ -31,5 +31,4 @@ class JHWbAreaPickModel: NSObject {
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
     }
-    
 }

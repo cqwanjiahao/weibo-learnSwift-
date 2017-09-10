@@ -27,7 +27,11 @@ class JHWbVisitorView: UIView {
     //背景阴影
     lazy var shadowView = UIImageView.init(image: #imageLiteral(resourceName: "visitordiscover_feed_mask_smallicon"))
     //中心图标
-    lazy var centerIconView = UIImageView.init(image: #imageLiteral(resourceName: "visitordiscover_feed_image_house"))
+    lazy var centerIconView = { () -> UIImageView in
+       let centerIconView = UIImageView.init(image: #imageLiteral(resourceName: "visitordiscover_feed_image_house"))
+        centerIconView.contentMode = .center
+        return centerIconView
+    }()
     //文字介绍
     lazy var introLabel = {
         () -> UILabel in

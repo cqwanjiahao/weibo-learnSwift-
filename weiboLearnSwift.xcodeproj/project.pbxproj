@@ -31,7 +31,7 @@
 		E94C263D1F61B77D00C69DF4 /* JHWbVisitorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C263C1F61B77D00C69DF4 /* JHWbVisitorButton.swift */; };
 		E94C26411F61BC8E00C69DF4 /* JHWbMoblieRegistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C26401F61BC8E00C69DF4 /* JHWbMoblieRegistView.swift */; };
 		E94EFC4D1F65203200FF830E /* JHWbTimeCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94EFC4C1F65203200FF830E /* JHWbTimeCountDown.swift */; };
-		E9730E901F5882FD00006773 /* JHWbAreaPickTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9730E8F1F5882FD00006773 /* JHWbAreaPickTableViewController.storyboard */; };
+		E970881F1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970881E1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift */; };
 		E9730E931F588AA100006773 /* JHWbAreaInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9730E921F588AA100006773 /* JHWbAreaInfoModel.swift */; };
 		E9730E951F589FE800006773 /* JHWbAreaPickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9730E941F589FE800006773 /* JHWbAreaPickModel.swift */; };
 		E9A5F84E1F61CCA5005D39C9 /* JHWbOtherRegistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A5F84D1F61CCA5005D39C9 /* JHWbOtherRegistButton.swift */; };
@@ -39,6 +39,7 @@
 		E9AD2B1B1F4BBF0600D60C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AD2B131F4BBF0600D60C34 /* Assets.xcassets */; };
 		E9AD2B1C1F4BBF0600D60C34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */; };
 		E9C5DBF71F62541D0035C374 /* JHWbMobileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C5DBF61F62541D0035C374 /* JHWbMobileTextField.swift */; };
+		E9CC97BD1F65805800263D08 /* JHWbTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC97BC1F65805800263D08 /* JHWbTableViewCell.swift */; };
 		E9E6F08F1F5879A200482DAF /* areaPick.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E6F08E1F5879A200482DAF /* areaPick.plist */; };
 		E9E6F09E1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6F09C1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -70,7 +71,7 @@
 		E94C263C1F61B77D00C69DF4 /* JHWbVisitorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbVisitorButton.swift; sourceTree = "<group>"; };
 		E94C26401F61BC8E00C69DF4 /* JHWbMoblieRegistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbMoblieRegistView.swift; sourceTree = "<group>"; };
 		E94EFC4C1F65203200FF830E /* JHWbTimeCountDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbTimeCountDown.swift; sourceTree = "<group>"; };
-		E9730E8F1F5882FD00006773 /* JHWbAreaPickTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JHWbAreaPickTableViewController.storyboard; sourceTree = "<group>"; };
+		E970881E1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickTableHeaderView.swift; sourceTree = "<group>"; };
 		E9730E921F588AA100006773 /* JHWbAreaInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaInfoModel.swift; sourceTree = "<group>"; };
 		E9730E941F589FE800006773 /* JHWbAreaPickModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickModel.swift; sourceTree = "<group>"; };
 		E9A5F84D1F61CCA5005D39C9 /* JHWbOtherRegistButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbOtherRegistButton.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9AD2B9C1F4BD9C400D60C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9C5DBF61F62541D0035C374 /* JHWbMobileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbMobileTextField.swift; sourceTree = "<group>"; };
+		E9CC97BC1F65805800263D08 /* JHWbTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbTableViewCell.swift; sourceTree = "<group>"; };
 		E9E6F08E1F5879A200482DAF /* areaPick.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = areaPick.plist; sourceTree = "<group>"; };
 		E9E6F09C1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -252,12 +254,9 @@
 		E9730E911F58862100006773 /* AreaPick */ = {
 			isa = PBXGroup;
 			children = (
-				E9E6F08E1F5879A200482DAF /* areaPick.plist */,
-				E9730E941F589FE800006773 /* JHWbAreaPickModel.swift */,
-				E9730E921F588AA100006773 /* JHWbAreaInfoModel.swift */,
-				E9730E8F1F5882FD00006773 /* JHWbAreaPickTableViewController.storyboard */,
-				E9126B501F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift */,
-				E9E6F09C1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift */,
+				E9CC97BE1F65891600263D08 /* Controller */,
+				E9CC97BF1F65892200263D08 /* View */,
+				E9CC97C01F65893200263D08 /* Model */,
 			);
 			path = AreaPick;
 			sourceTree = "<group>";
@@ -360,8 +359,36 @@
 				E94494281F4EFC850053DFC3 /* JHConstPCH.swift */,
 				E9086AD41F5FEAAA00BD421E /* UIView-Extension.swift */,
 				E94EFC4C1F65203200FF830E /* JHWbTimeCountDown.swift */,
+				E9CC97BC1F65805800263D08 /* JHWbTableViewCell.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		E9CC97BE1F65891600263D08 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9E6F09C1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E9CC97BF1F65892200263D08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E970881E1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift */,
+				E9126B501F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9CC97C01F65893200263D08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9E6F08E1F5879A200482DAF /* areaPick.plist */,
+				E9730E941F589FE800006773 /* JHWbAreaPickModel.swift */,
+				E9730E921F588AA100006773 /* JHWbAreaInfoModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,7 +457,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9086AD71F60009A00BD421E /* MainVCSettings.json in Resources */,
-				E9730E901F5882FD00006773 /* JHWbAreaPickTableViewController.storyboard in Resources */,
 				E9E6F08F1F5879A200482DAF /* areaPick.plist in Resources */,
 				E9AD2B1B1F4BBF0600D60C34 /* Assets.xcassets in Resources */,
 			);
@@ -507,6 +533,7 @@
 			files = (
 				E91B8AEA1F4D1F9000F6C640 /* JHWbMeTableViewController.swift in Sources */,
 				E94C26411F61BC8E00C69DF4 /* JHWbMoblieRegistView.swift in Sources */,
+				E9CC97BD1F65805800263D08 /* JHWbTableViewCell.swift in Sources */,
 				E94494211F4EE73E0053DFC3 /* UIView-Frame.swift in Sources */,
 				E944941F1F4EE3FC0053DFC3 /* JHColor.swift in Sources */,
 				E94494291F4EFC850053DFC3 /* JHConstPCH.swift in Sources */,
@@ -533,6 +560,7 @@
 				E9C5DBF71F62541D0035C374 /* JHWbMobileTextField.swift in Sources */,
 				E91B8AED1F4D21DD00F6C640 /* JHWbMainViewController.swift in Sources */,
 				E91B8AE61F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift in Sources */,
+				E970881F1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift in Sources */,
 				E91B8AE41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

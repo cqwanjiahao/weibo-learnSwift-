@@ -93,6 +93,7 @@ extension JHWbBaseTableViewController {
         present(registNav, animated: true) {
         }
     }
+    
     @objc private func loginButtonClick() {
         print("loginBtnClick")
     }

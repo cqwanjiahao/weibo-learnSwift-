@@ -12,7 +12,7 @@ class JHWbAdvertViewController: UIViewController {
     private var didSetupConstraints = false
     
     //MARK: - lazyload
-    lazy var backgroundImageView = UIImageView.init(image: #imageLiteral(resourceName: "ad_background"))
+    lazy var backgroundImageView = UIImageView.init(image: #imageLiteral(resourceName: "ad_background")) 
     lazy var passBtn = { () -> UIButton in
         let passBtn = UIButton()
         passBtn.titleLabel?.textAlignment = .center
@@ -28,13 +28,9 @@ class JHWbAdvertViewController: UIViewController {
     lazy var advertImageView = UIImageView.init(image: #imageLiteral(resourceName: "ad_1"))
     
     //MARK: - 计时器
-//    let countdownTimeQueue = DispatchQueue.init(label: <#T##String#>)
-//    let delayTime = DispatchQueue.
-    
-    private var remainingSeconds = 0 
+    private var remainingSeconds = 0
     private var countdownTimer: Timer?
 
-    
     // MARK: - 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,21 +52,15 @@ extension JHWbAdvertViewController {
     func setupSubView() {
         view.addSubview(backgroundImageView)
         backgroundImageView.addSubview(advertImageView)
-        backgroundImageView.addSubview(passBtn)
+        view.addSubview(passBtn)
     }
 }
 
 // MARK:- 倒计时跳过
 extension JHWbAdvertViewController {
     func calculateTime() {
-        remainingSeconds = 30
+        remainingSeconds = 3
         passBtn.setTitle("跳过(\(remainingSeconds))", for: .normal)
-        let i = 3
-
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            jh_log(messsage: "yanshi 1miao ")
-        }
-        
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(JHWbAdvertViewController.checkCountDown), userInfo: nil, repeats: true)
     }
 

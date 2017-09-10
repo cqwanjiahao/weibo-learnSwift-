@@ -142,18 +142,8 @@ extension JHWbRegistViewController {
     //    }
 }
 
-// MARK: - closeBag
-//extension JHWbRegistViewController {
-//
-//    func areaPickBtnClick( ()->()){
-//        jh_log(messsage: "haha")
-//    }
-//}
-
 extension JHWbRegistViewController {
     func areaPickBtnClick() {
-        let areaPickstoryboard = UIStoryboard.init(name: "JHWbAreaPickTableViewController", bundle: nil)
-        let areaPickVC : JHWbAreaPickTableViewController = areaPickstoryboard.instantiateInitialViewController() as! JHWbAreaPickTableViewController
-        navigationController?.pushViewController(areaPickVC, animated: true)
+        navigationController?.pushViewController(JHWbAreaPickTableViewController.init(style: .plain), animated: true)
     }
 }
