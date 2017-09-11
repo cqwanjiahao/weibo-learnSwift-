@@ -47,6 +47,7 @@ class JHWbRegistViewController: UIViewController,JHWbMoblieRegistViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubView()
+        otherRegistEvents()
         mobileRegistView.delegate = self
         addAGesutreRecognizerForScrollView()
         view .updateConstraints()
@@ -116,6 +117,22 @@ extension JHWbRegistViewController {
 
 // MARK: - Events
 extension JHWbRegistViewController {
+    func otherRegistEvents() {
+        otherRegistView.qqBtn.addTarget(self, action: #selector(JHWbRegistViewController.qqBtnClick), for: .touchUpInside)
+        otherRegistView.wechatBtn.addTarget(self, action: #selector(JHWbRegistViewController.wechatBtnClick), for: .touchUpInside)
+        otherRegistView.mailBtn.addTarget(self, action: #selector(JHWbRegistViewController.mailBtnClick), for: .touchUpInside)
+    }
+    
+    @objc func qqBtnClick() {
+        jh_log(messsage: "sd")
+    }
+    @objc func wechatBtnClick() {
+        jh_log(messsage: "sd")
+    }
+    @objc func mailBtnClick() {
+        jh_log(messsage: "sd")
+    }
+    
     @objc func cancelButtonClick() {
         dismiss(animated: true) {
         }
