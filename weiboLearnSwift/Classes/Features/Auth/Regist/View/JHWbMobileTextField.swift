@@ -10,11 +10,11 @@ import UIKit
 
 class JHWbMobileTextField: UITextField {
     //系统回调
-    public init(target: Any?, action: Selector) {
+    public init(placeHolder: String, target: Any?, action: Selector) {
         super.init(frame: CGRect.zero)
         clearButtonMode = .whileEditing
-        keyboardType = .numberPad
-        attributedPlaceholder = NSAttributedString.init(string: "手机号", attributes: [NSAttributedStringKey.foregroundColor : UIColor.jh_setColor(rgb: 198)])
+//        keyboardType = .numberPad
+        attributedPlaceholder = NSAttributedString.init(string: placeHolder, attributes: [NSAttributedStringKey.foregroundColor : UIColor.jh_setColor(rgb: 198)])
         font = .systemFont(ofSize: jh_getLength(length: 17))
         addTarget(target, action: action, for: .editingChanged)
         textAlignment = .left

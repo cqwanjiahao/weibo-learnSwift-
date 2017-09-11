@@ -95,6 +95,8 @@ extension JHWbBaseTableViewController {
     }
     
     @objc private func loginButtonClick() {
-        print("loginBtnClick")
+        let loginNav = UINavigationController.init(rootViewController: JHWbLoginViewController())
+        present(loginNav, animated: true) {
+        }
     }
 }

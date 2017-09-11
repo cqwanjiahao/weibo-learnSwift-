@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class JHWbRegistViewController: UIViewController,JHWbMoblieRegistViewDelegate {
     private var didSetupConstraints = false
@@ -124,13 +125,16 @@ extension JHWbRegistViewController {
     }
     
     @objc func qqBtnClick() {
-        jh_log(messsage: "sd")
+        SVProgressHUD.show(withStatus: "QQ暂未完成")
+        SVProgressHUD.dismiss(withDelay: 2)
     }
     @objc func wechatBtnClick() {
-        jh_log(messsage: "sd")
+        SVProgressHUD.show(withStatus: "微信暂未完成")
+        SVProgressHUD.dismiss(withDelay: 2)
     }
     @objc func mailBtnClick() {
-        jh_log(messsage: "sd")
+        SVProgressHUD.show(withStatus: "邮箱暂未完成")
+        SVProgressHUD.dismiss(withDelay: 2)
     }
     
     @objc func cancelButtonClick() {

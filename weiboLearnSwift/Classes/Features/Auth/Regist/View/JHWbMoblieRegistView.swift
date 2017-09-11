@@ -15,10 +15,9 @@ protocol JHWbMoblieRegistViewDelegate :NSObjectProtocol {
 class JHWbMoblieRegistView: UIView {
     var delegate : JHWbMoblieRegistViewDelegate?
     
+    private var didSetupConstraints = false
+
     //MARK: - lazyLoad
-    lazy var didSetupConstraints = false
-    
-    
     //控件属性
     lazy var areaPickBtn = { () -> UIButton in
        let areaPickBtn = UIButton()
@@ -35,7 +34,7 @@ class JHWbMoblieRegistView: UIView {
     }()
     lazy var areaPickIcon = UIImageView.init(image: #imageLiteral(resourceName: "login_button"))
     lazy var firstLine = UIView.init(lineViewColor: .jh_setColor(rgb: 198))
-    lazy var mobileTextField = JHWbMobileTextField.init(target: self, action:#selector(JHWbMoblieRegistView.mobileTextFieldEditingChanged))
+    lazy var mobileTextField = JHWbMobileTextField.init(placeHolder: "手机号",target: self, action:#selector(JHWbMoblieRegistView.mobileTextFieldEditingChanged))
     lazy var secondLine = UIView.init(lineViewColor: .jh_setColor(rgb: 198))
     lazy var errorLabel = { () -> UILabel in
        let errorLabel = UILabel()
@@ -100,6 +99,7 @@ extension JHWbMoblieRegistView {
         addSubview(errorLabel)
         addSubview(registBtn)
         addSubview(lawLabel)
+        mobileTextField.keyboardType = .numberPad
     }
 }
 
@@ -195,8 +195,3 @@ extension JHWbMoblieRegistView {
     }
     
 }
-
-extension JHWbMoblieRegistView {
-    
-}
-
