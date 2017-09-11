@@ -29,6 +29,7 @@ class JHWbAreaPickTableHeaderView: UIView {
     }
     
     func setupSubviews() {
+        backgroundColor = UIColor.jh_setColor(rgb: 242)
         addSubview(bottomLine)
         addSubview(areaLabel)
     }

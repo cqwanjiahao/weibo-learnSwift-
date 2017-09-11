@@ -39,7 +39,7 @@ class JHWbRegistViewController: UIViewController,JHWbMoblieRegistViewDelegate {
     }()
     
     lazy var mobileRegistView = JHWbMoblieRegistView()
-        lazy var otherRegistView = JHWbOtherRegistView()
+    lazy var otherRegistView = JHWbOtherRegistView()
     
     
     
@@ -74,7 +74,6 @@ extension JHWbRegistViewController {
         mainScrollView.addSubview(otherRegistView)
     }
 }
-
 
 // MARK:- constraints
 extension JHWbRegistViewController {
@@ -122,7 +121,6 @@ extension JHWbRegistViewController {
         }
     }
     
-
 //    退出键盘
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         mobileRegistView.mobileTextField.resignFirstResponder()
@@ -134,16 +132,22 @@ extension JHWbRegistViewController {
     }
     @objc func tapGestureClick(recognizer : UITapGestureRecognizer) {        mobileRegistView.mobileTextField.resignFirstResponder()
     }
-    //swift4 中无法重写 这个方法
-    //        mainScrollView.hitTest(<#T##point: CGPoint##CGPoint#>, with: <#T##UIEvent?#>)
-    //        mainScrollView.point(inside: <#T##CGPoint#>, with: <#T##UIEvent?#>)
-    //    override func hitTest(_ point: CGPoint, with event: UIEvent?) {
-    //        return mainScrollView
-    //    }
-}
 
+}
+//MARK:- 代理方法
 extension JHWbRegistViewController {
+    //JHWbMoblieRegistViewDelegate
     func areaPickBtnClick() {
-        navigationController?.pushViewController(JHWbAreaPickTableViewController.init(style: .plain), animated: true)
+        let areaPickVC = JHWbAreaPickViewController()
+        //接收闭包传回的值
+        areaPickVC.areaPickTableVC.areaInfoClosure = receiveTitleClosure;
+        navigationController?.pushViewController(areaPickVC, animated: true)
+    }
+    
+    //定义一个带字符串参数的闭包
+    func receiveTitleClosure(title: String)->Void{
+        mobileRegistView.areaPickBtn.setTitle(title, for: .normal)
     }
 }
+
+

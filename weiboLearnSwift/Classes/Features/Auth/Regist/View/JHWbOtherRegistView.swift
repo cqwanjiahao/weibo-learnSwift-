@@ -71,7 +71,8 @@ extension JHWbOtherRegistView {
             
             rightLine.snp.makeConstraints({ (make) -> Void in
                 make.leading.equalTo(infoLabel.snp.trailing).offset(jh_getLength(length: 4))
-                make.trailing.equalToSuperview().offset(UIScreen.main.bounds.size.width - jh_getLength(length: -30))
+                make.width.equalTo(leftLine)
+//                make.l.equalToSuperview().offset(UIScreen.main.bounds.size.width - jh_getLength(length: -30))
                 make.centerY.equalTo(infoLabel)
                 make.height.equalTo(1)
             })

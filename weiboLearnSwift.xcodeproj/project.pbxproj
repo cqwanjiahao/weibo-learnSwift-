@@ -12,6 +12,9 @@
 		E9086AD51F5FEAAA00BD421E /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9086AD41F5FEAAA00BD421E /* UIView-Extension.swift */; };
 		E9086AD71F60009A00BD421E /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = E9086AD61F5FF3EB00BD421E /* MainVCSettings.json */; };
 		E9126B511F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9126B501F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift */; };
+		E9157A331F663F2100AC896E /* JHWbAreaPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9157A321F663F2100AC896E /* JHWbAreaPickViewController.swift */; };
+		E9157A371F66538B00AC896E /* JHWbAreaPickOtherAreaBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9157A361F66538B00AC896E /* JHWbAreaPickOtherAreaBtn.swift */; };
+		E9157A391F66669000AC896E /* JHWbAreaPickOtherWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9157A381F66669000AC896E /* JHWbAreaPickOtherWebViewController.swift */; };
 		E91B8AE41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AD41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift */; };
 		E91B8AE61F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AD71F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift */; };
 		E91B8AE81F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8ADB1F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift */; };
@@ -52,6 +55,9 @@
 		E9086AD41F5FEAAA00BD421E /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
 		E9086AD61F5FF3EB00BD421E /* MainVCSettings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		E9126B501F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickTableViewCell.swift; sourceTree = "<group>"; };
+		E9157A321F663F2100AC896E /* JHWbAreaPickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickViewController.swift; sourceTree = "<group>"; };
+		E9157A361F66538B00AC896E /* JHWbAreaPickOtherAreaBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickOtherAreaBtn.swift; sourceTree = "<group>"; };
+		E9157A381F66669000AC896E /* JHWbAreaPickOtherWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickOtherWebViewController.swift; sourceTree = "<group>"; };
 		E91B8AD41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbHomeTableViewController.swift; sourceTree = "<group>"; };
 		E91B8AD71F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbMessageTableTableViewController.swift; sourceTree = "<group>"; };
 		E91B8ADB1F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbDiscoverTableViewController.swift; sourceTree = "<group>"; };
@@ -367,7 +373,9 @@
 		E9CC97BE1F65891600263D08 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E9157A321F663F2100AC896E /* JHWbAreaPickViewController.swift */,
 				E9E6F09C1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift */,
+				E9157A381F66669000AC896E /* JHWbAreaPickOtherWebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -375,6 +383,7 @@
 		E9CC97BF1F65892200263D08 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9157A361F66538B00AC896E /* JHWbAreaPickOtherAreaBtn.swift */,
 				E970881E1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift */,
 				E9126B501F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift */,
 			);
@@ -535,12 +544,14 @@
 				E94C26411F61BC8E00C69DF4 /* JHWbMoblieRegistView.swift in Sources */,
 				E9CC97BD1F65805800263D08 /* JHWbTableViewCell.swift in Sources */,
 				E94494211F4EE73E0053DFC3 /* UIView-Frame.swift in Sources */,
+				E9157A371F66538B00AC896E /* JHWbAreaPickOtherAreaBtn.swift in Sources */,
 				E944941F1F4EE3FC0053DFC3 /* JHColor.swift in Sources */,
 				E94494291F4EFC850053DFC3 /* JHConstPCH.swift in Sources */,
 				E94C263D1F61B77D00C69DF4 /* JHWbVisitorButton.swift in Sources */,
 				E91B8AEB1F4D1F9000F6C640 /* JHWbRegistViewController.swift in Sources */,
 				E9126B511F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift in Sources */,
 				E9A5F84E1F61CCA5005D39C9 /* JHWbOtherRegistButton.swift in Sources */,
+				E9157A331F663F2100AC896E /* JHWbAreaPickViewController.swift in Sources */,
 				E91B8AEF1F4D2C1E00F6C640 /* JHWbComposeViewController.swift in Sources */,
 				E93038531F571464008F7114 /* JHWbVisitorView.swift in Sources */,
 				1F5B21A61F4D625500448B2F /* UIButton-Extension.swift in Sources */,
@@ -560,6 +571,7 @@
 				E9C5DBF71F62541D0035C374 /* JHWbMobileTextField.swift in Sources */,
 				E91B8AED1F4D21DD00F6C640 /* JHWbMainViewController.swift in Sources */,
 				E91B8AE61F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift in Sources */,
+				E9157A391F66669000AC896E /* JHWbAreaPickOtherWebViewController.swift in Sources */,
 				E970881F1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift in Sources */,
 				E91B8AE41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift in Sources */,
 			);

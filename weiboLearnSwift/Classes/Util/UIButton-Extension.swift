@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 extension UIButton {
     //设置图片
@@ -42,4 +43,17 @@ extension UIBarButtonItem {
         let button = UIButton.init(imageName: imageName, highlighImageName: highlighImageName)
         self.init(customView: button)
     }
+    
+//    convenience init(fromView: UIView, backTitle: String, target: Any, action: Selector) {
+//    let leftBtn = UIButton()
+//        fromView.addSubview(leftBtn)
+//        leftBtn.setImage(#imageLiteral(resourceName: "nav_backBtn"), for: .normal)
+//        leftBtn.setTitle(backTitle, for: .normal)
+//        leftBtn.setTitleColor(.black, for: .normal)
+//        leftBtn.titleLabel?.font = UIFont.systemFont(ofSize: 17)
+//        leftBtn.sizeToFit()
+//        leftBtn.addTarget(target, action: action, for: .touchUpInside)
+//        self.init(customView: leftBtn)
+//}
 }
+

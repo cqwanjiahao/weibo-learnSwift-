@@ -7,13 +7,23 @@
 //
 
 import UIKit
+//闭包类型
+typealias SendAreaInfoClosure = (_ Title: String)->Void
 
 class JHWbAreaPickTableViewController: UITableViewController {
-    var didSetupConstraints = false
-//    override init(style: UITableViewStyle) {
-//        style = UITableViewStylePlain;
+//    //闭包属性
+//    var areaInfoTitle : String!
+    //声明一个闭包
+    var areaInfoClosure : SendAreaInfoClosure?
+  
+//    func setAreaInfoLable(title: String, respont: AreaInfoCloser) {
+//        self.areaInfoRespont = respont
+//        self.AreaInfoTitle = title
 //    }
     
+    
+    var didSetupConstraints = false
+    var indexes=[String]()
     //模型属性
     lazy var areaModelArray : [JHWbAreaPickModel] = {
             let areaPlistArray = NSArray.init(contentsOfFile: Bundle.main.path(forResource: "areaPick", ofType: ".plist")!)!
@@ -25,16 +35,12 @@ class JHWbAreaPickTableViewController: UITableViewController {
         return dicArray as! [JHWbAreaPickModel]
         }()
     
-    
-    lazy var footerView = UIView.init(lineViewColor: .red)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubview()
-        registerCell()
+//        registerCell()
         view.updateConstraintsIfNeeded()
         view.setNeedsUpdateConstraints()
-        navigationController?.navigationBar.tintColor = UIColor.darkGray
     }
 }
 
@@ -42,14 +48,16 @@ extension JHWbAreaPickTableViewController {
     func setupSubview() {
         tableView.separatorStyle = .none
         tableView.delegate = self
-        tableView.tableFooterView = footerView
+        tableView.sectionIndexColor = UIColor.jh_setColor(r: 122, g: 130, b: 140)
+        tableView.sectionIndexBackgroundColor = UIColor.clear
+        tableView.sectionIndexTrackingBackgroundColor = UIColor.jh_setColor(r: 191, g: 195, b: 199)
+        tableView.showsVerticalScrollIndicator = false
         automaticallyAdjustsScrollViewInsets = true
     }
-    
-    func registerCell() {
-        //可能可以省略  最后试一试  最后!!
-        tableView.register(JHWbAreaPickTableViewCell.self, forCellReuseIdentifier: JHWbAreaPickTableViewCell.cellIdentifier())
-    }
+    //经测试 可以删除
+    //    func registerCell() {
+    //        tableView.register(JHWbAreaPickTableViewCell.self, forCellReuseIdentifier: JHWbAreaPickTableViewCell.cellIdentifier())
+    //    }
 }
 
 // MARK: - constranits
@@ -57,17 +65,6 @@ extension JHWbAreaPickTableViewController {
     override func updateViewConstraints() {
         if !didSetupConstraints {
             didSetupConstraints = true
-            tableView.tableHeaderView?.snp.makeConstraints({ (make) -> Void in
-                make.height.equalTo(54)
-                make.top.equalTo(UIScreen.main.bounds.size.height - 118)
-                make.leading.width.equalToSuperview()
-            })
-            
-            footerView.snp.makeConstraints({ (make) -> Void in
-                make.height.equalTo(54)
-                make.top.equalTo(UIScreen.main.bounds.size.height - 118)
-                make.leading.width.equalToSuperview()
-            })
         }
         super .updateViewConstraints()
     }
@@ -75,7 +72,6 @@ extension JHWbAreaPickTableViewController {
 
 // MARK: - 数据源方法
 extension JHWbAreaPickTableViewController {
-    ///cell
     override func numberOfSections(in tableView: UITableView) -> Int {
         return areaModelArray.count
     }
@@ -90,7 +86,7 @@ extension JHWbAreaPickTableViewController {
         return cell
     }
     
-    ///headView  自定义View  高度15
+    ///headView  自定义View
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return JHWbAreaPickTableHeaderView.init(title: areaModelArray[section].titleName!)
     }
@@ -98,61 +94,44 @@ extension JHWbAreaPickTableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 21
     }
-
-    
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return footerView
-    }
-    
-    
-//    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-//        if (section == areaModelArray.count - 1) {
-//            tableView.tableFooterView = footerView
-////            footerView.snp.makeConstraints({ (make) -> Void in
-////                //                make.size.equalToSuperview()
-////                //                make.center.equalToSuperview()
-////                make.height.equalTo(54)
-////                make.top.equalTo(UIScreen.main.bounds.size.height - 118)
-////                make.leading.width.equalToSuperview()
-////            })
-////            footerView.layoutIfNeeded()
-//        } else {
-//            tableView.tableFooterView = nil
-//        }
-//    }
-    
 }
+
 // MARK: - 代理方法
 extension JHWbAreaPickTableViewController {
+    ///点击cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
-        //dissmiss   然后block传值
+        
+        //Closure 传值
+        if areaInfoClosure != nil {
+          let title1 = (areaModelArray[indexPath.section].areas![indexPath.row] as! JHWbAreaInfoModel).country
+          let title2 = (areaModelArray[indexPath.section].areas![indexPath.row] as! JHWbAreaInfoModel).addressNum
+            let title = title1! + " +" + title2!
+            areaInfoClosure!(title)
+        }
+        
         navigationController?.popViewController(animated: true)
-//        navigationController?.dismiss(animated: true, completion: {
-            //传入block
-//            areaInfo("666")->("777")
-//            func areaInfoBlock() -> String {
-////                let areaInfoArray = self.areaModelArray[indexPath.section].areas
-////                return (areaInfoArray![indexPath.row] as! JHWbAreaInfoModel).areaInfo
-//                return "6666"
-//            }
-//        })
-        jh_log(messsage: indexPath.row)
     }
     
-//    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if scrollView == tableView {
-//            let tableView1 = UIScrollView()
-//            let footerHeight = 54.0
-//            let offsetY = tableView1.contentOffset.y
-//            switch offsetY {
-//            case 0..<footerHeight : tableView1.contentInset = UIEdgeInsetsMake(-offsetY, 0, CGFloat(-footerHeight), 0)
-//            case footerHeight..<tableView1.contentSize.height - tableView1.frame.size.height - footerHeight : tableView1.contentInset = UIEdgeInsetsMake(0, 0, CGFloat(-footerHeight), 0)
-//            case >tableView1.contentSize.height - tableView1.frame.size.height :
-//                tableView1.contentInset = UIEdgeInsetsMake(-offsetY, 0, -(tableView1.contentSize.height - tableView1.frame.size.height - footerHeight), 0)
-//            }
-//
-//        }
+    /// 设置索引条
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        for i in 0..<areaModelArray.count {
+            var ch = areaModelArray[i].titleName
+            if ch == "常用" {
+                ch = "+"
+            }
+            indexes.append(ch!)
+        }
+        return indexes
+    }
+    
+    //点击索引响应方法
+    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        for i in indexes {
+            if i == title {
+                return index
+            }
+        }
+        return  0;
     }
 }
