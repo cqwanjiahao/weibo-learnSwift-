@@ -34,6 +34,7 @@
 		E94C263D1F61B77D00C69DF4 /* JHWbVisitorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C263C1F61B77D00C69DF4 /* JHWbVisitorButton.swift */; };
 		E94C26411F61BC8E00C69DF4 /* JHWbMoblieRegistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C26401F61BC8E00C69DF4 /* JHWbMoblieRegistView.swift */; };
 		E94EFC4D1F65203200FF830E /* JHWbTimeCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94EFC4C1F65203200FF830E /* JHWbTimeCountDown.swift */; };
+		E96EAB6B1F67F1D400217CD0 /* JHWb111model.m in Sources */ = {isa = PBXBuildFile; fileRef = E96EAB6A1F67F1D400217CD0 /* JHWb111model.m */; };
 		E970881F1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970881E1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift */; };
 		E9730E931F588AA100006773 /* JHWbAreaInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9730E921F588AA100006773 /* JHWbAreaInfoModel.swift */; };
 		E9730E951F589FE800006773 /* JHWbAreaPickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9730E941F589FE800006773 /* JHWbAreaPickModel.swift */; };
@@ -79,6 +80,9 @@
 		E94C263C1F61B77D00C69DF4 /* JHWbVisitorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbVisitorButton.swift; sourceTree = "<group>"; };
 		E94C26401F61BC8E00C69DF4 /* JHWbMoblieRegistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbMoblieRegistView.swift; sourceTree = "<group>"; };
 		E94EFC4C1F65203200FF830E /* JHWbTimeCountDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbTimeCountDown.swift; sourceTree = "<group>"; };
+		E96EAB681F67F1D400217CD0 /* weiboLearnSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "weiboLearnSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		E96EAB691F67F1D400217CD0 /* JHWb111model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHWb111model.h; sourceTree = "<group>"; };
+		E96EAB6A1F67F1D400217CD0 /* JHWb111model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHWb111model.m; sourceTree = "<group>"; };
 		E970881E1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickTableHeaderView.swift; sourceTree = "<group>"; };
 		E9730E921F588AA100006773 /* JHWbAreaInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaInfoModel.swift; sourceTree = "<group>"; };
 		E9730E941F589FE800006773 /* JHWbAreaPickModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickModel.swift; sourceTree = "<group>"; };
@@ -262,6 +266,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E96EAB671F67F1BA00217CD0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E96EAB691F67F1D400217CD0 /* JHWb111model.h */,
+				E96EAB6A1F67F1D400217CD0 /* JHWb111model.m */,
+				E96EAB681F67F1D400217CD0 /* weiboLearnSwift-Bridging-Header.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E9730E911F58862100006773 /* AreaPick */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,9 +342,9 @@
 		E9AD2B141F4BBF0600D60C34 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E96EAB671F67F1BA00217CD0 /* Model */,
 				E9AD2B151F4BBF0600D60C34 /* AppDelegate */,
 				E91B8AD11F4D1F9000F6C640 /* Features */,
-				E9AD2B181F4BBF0600D60C34 /* Model */,
 				E9AD2B191F4BBF0600D60C34 /* Network */,
 				E9AD2B1A1F4BBF0600D60C34 /* Util */,
 				E94494231F4EF0A20053DFC3 /* Constant */,
@@ -344,13 +358,6 @@
 				E9AD2B161F4BBF0600D60C34 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
-			sourceTree = "<group>";
-		};
-		E9AD2B181F4BBF0600D60C34 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E9AD2B191F4BBF0600D60C34 /* Network */ = {
@@ -578,6 +585,7 @@
 				E944941F1F4EE3FC0053DFC3 /* JHColor.swift in Sources */,
 				E94494291F4EFC850053DFC3 /* JHConstPCH.swift in Sources */,
 				E94C263D1F61B77D00C69DF4 /* JHWbVisitorButton.swift in Sources */,
+				E96EAB6B1F67F1D400217CD0 /* JHWb111model.m in Sources */,
 				E91B8AEB1F4D1F9000F6C640 /* JHWbRegistViewController.swift in Sources */,
 				E9126B511F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift in Sources */,
 				E9A5F84E1F61CCA5005D39C9 /* JHWbOtherRegistButton.swift in Sources */,
@@ -729,6 +737,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.weiboLearnSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "weiboLearnSwift/Classes/Model/weiboLearnSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -747,6 +756,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.weiboLearnSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "weiboLearnSwift/Classes/Model/weiboLearnSwift-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
