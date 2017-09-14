@@ -10,11 +10,6 @@
      "imageName": "tabbar_message_center"
  },
  {
-     "vcName": "JHWbComposeViewController",
-     "title": "",
-     "imageName": "tabbar_message_center"
- },
- {
      "vcName": "JHWbDiscoverTableViewController",
      "title": "发现",
      "imageName": "tabbar_discover"

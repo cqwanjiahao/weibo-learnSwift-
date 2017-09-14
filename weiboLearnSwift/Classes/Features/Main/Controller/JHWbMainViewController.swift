@@ -8,34 +8,21 @@
 
 ///warning :tabBarItem 颜色有问题
 import UIKit
-
-class JHWbMainViewController: UITabBarController {
+class JHWbMainViewController: UITabBarController,JHWbMainTabBarDelegate {
     /// MARK: - lazyLoad
-    lazy var composeButton = UIButton()
+    lazy var mainTabBar = JHWbMainTabBar.init(frame: self.tabBar.frame)
     lazy var isLogin = false
-    var didSetupConstraints = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChildVc()
-        setupSubView()
-        
-        UINavigationBar.appearance().tintColor = UIColor.orange
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.orange], for: .selected)
-        view .updateConstraints()
-        view.setNeedsUpdateConstraints()
+        setupTabBar()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super .viewWillAppear(animated)
-    }
-    
-
 }
 
 // MARK:- setupChildVC
 extension JHWbMainViewController {
-    //Json加载控制器
+    //Json创建控制器
     private func setupChildVc() {
         let jsonData = NSData.init(contentsOfFile: Bundle.main.path(forResource: "MainVCSettings.json", ofType:nil)!)
         do {
@@ -63,37 +50,22 @@ extension JHWbMainViewController {
         let childVcType = childVcClass as? UIViewController.Type
         //创建对应的控制器对象
         let childVc = childVcType!.init()
-        //设置子控制器属性
         childVc.title = title
-
         childVc.tabBarItem.image = UIImage.init(named: imageName)
-    
         childVc.tabBarItem.selectedImage = UIImage.init(named: imageName + "_highlighted")
-        
-        //包装导航控制器
         let childNav = UINavigationController.init(rootViewController: childVc)
-        //添加控制器
         addChildViewController(childNav)
     }
 }
 
 // MARK:- setupView
 extension JHWbMainViewController {
-    //设置subView
-    func setupSubView() {
-        setupComposeButton()
-    }
-    //添加发布按钮
-    func setupComposeButton() {
-        composeButton.setBackgroundImage(#imageLiteral(resourceName: "tabbar_compose_button"), for: .normal)
-        composeButton.setBackgroundImage(#imageLiteral(resourceName: "tabbar_compose_button_highlighted"), for: .selected)
-        composeButton.setImage(#imageLiteral(resourceName: "tabbar_compose_icon_add"), for: .normal)
-        composeButton.setImage(#imageLiteral(resourceName: "tabbar_compose_icon_add_highlighted"), for: .selected)
-        composeButton .sizeToFit()
-        view .addSubview(composeButton)
-        composeButton .addTarget(self, action: #selector(JHWbMainViewController.composeButtonClick), for: .touchUpInside)
+    func setupTabBar() {
+        UINavigationBar.appearance().tintColor = UIColor.orange
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.orange], for: .selected)
         
-        composeButton.center = tabBar.center
+        mainTabBar.mainTabBarDelegate = self
+        self.setValue(mainTabBar, forKey: "tabBar")
     }
 }
 
@@ -101,17 +73,14 @@ extension JHWbMainViewController {
 extension JHWbMainViewController {
     @objc fileprivate func composeButtonClick() -> Void {
         print("点击了发布按钮")
-        
     }
 }
 
-// MARK:- 设置约束
+//MARK:- JHWbMainTabBarDelegate
 extension JHWbMainViewController {
-    override func updateViewConstraints() {
-        if !didSetupConstraints {
-            didSetupConstraints = true
-            //设置约束
+      func barBtnAction(_ sender: JHWbTabBarAddBtn) {
+        let composeVC = JHWbComposeViewController()
+        present(composeVC, animated: true) {
         }
-        super .updateViewConstraints()
     }
 }

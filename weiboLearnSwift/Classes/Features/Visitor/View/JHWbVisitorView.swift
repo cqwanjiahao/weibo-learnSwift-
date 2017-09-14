@@ -16,7 +16,7 @@ class JHWbVisitorView: UIView {
     lazy var meHeadView = UIView()
     //#warning 后期把UIView()  改为 scrollView()
     lazy var meHeadImageView = UIImageView.init(image: #imageLiteral(resourceName: "visitorme_photo"))
-    lazy var meHaedButton = {
+    lazy var meHaedBtn = {
         () -> UIButton in
         let headButton = UIButton()
         headButton.titleLabel?.text = ""
@@ -47,9 +47,9 @@ class JHWbVisitorView: UIView {
     //首页: 中心按钮
     lazy var homeButton = JHWbVisitorButton.init(title:"找感兴趣的人",titleColor: UIColor.jh_setColor(r: 255, g: 118, b: 1))
     //消息: 注册按钮
-    lazy var registButton = JHWbVisitorButton.init(title:"注册",titleColor: UIColor.jh_setColor(r: 255, g: 118, b: 1))
+    lazy var registBtn = JHWbVisitorButton.init(title:"注册",titleColor: UIColor.jh_setColor(r: 255, g: 118, b: 1))
     //消息: 登录按钮
-    lazy var loginButton = JHWbVisitorButton.init(title:"登录",titleColor: UIColor.jh_setColor(rgb: 140))
+    lazy var loginBtn = JHWbVisitorButton.init(title:"登录",titleColor: UIColor.jh_setColor(rgb: 140))
     //系统回调
     public init() {
         super.init(frame: CGRect.zero)
@@ -66,17 +66,16 @@ class JHWbVisitorView: UIView {
 // MARK:- setupView
 extension JHWbVisitorView {
     func setupSubView() {
-        jh_log(messsage: frame)
         addSubview(meHeadView)
         meHeadView.addSubview(meHeadImageView)
-        meHeadView.addSubview(meHaedButton)
+        meHeadView.addSubview(meHaedBtn)
         addSubview(rotateView)
         addSubview(shadowView)
         addSubview(centerIconView)
         addSubview(introLabel)
         addSubview(homeButton)
-        addSubview(registButton)
-        addSubview(loginButton)
+        addSubview(registBtn)
+        addSubview(loginBtn)
     }
 }
 
@@ -96,7 +95,7 @@ extension JHWbVisitorView {
                 make.size.centerX.centerY.equalToSuperview()
             })
             
-            meHaedButton.snp.makeConstraints({ (make) -> Void in make.edges.equalToSuperview().inset(UIEdgeInsetsMake(jh_getLength(length: 50), jh_getLength(length: 170), jh_getLength(length: 40), jh_getLength(length: 163)))
+            meHaedBtn.snp.makeConstraints({ (make) -> Void in make.edges.equalToSuperview().inset(UIEdgeInsetsMake(jh_getLength(length: 50), jh_getLength(length: 170), jh_getLength(length: 40), jh_getLength(length: 163)))
             })
             
             introLabel.snp.makeConstraints({ (make) -> Void in make.top.equalTo(meHeadView.snp.bottom).offset(jh_getLength(length: 127))
@@ -104,17 +103,17 @@ extension JHWbVisitorView {
                 make.width.equalTo(UIScreen.main.bounds.size.width)
             })
             
-            registButton.snp.makeConstraints({ (make) -> Void in
+            registBtn.snp.makeConstraints({ (make) -> Void in
                 make.top.equalTo(meHeadView.snp.bottom).offset(jh_getLength(length: 178))
                 make.leading.equalToSuperview().offset(jh_getLength(length: 69))
                 make.size.equalTo(jh_getsize(x: 127, y: 40))
             })
             
-            loginButton.snp.makeConstraints({ (make) -> Void in
-                make.top.equalTo(registButton)
+            loginBtn.snp.makeConstraints({ (make) -> Void in
+                make.top.equalTo(registBtn)
                 ///此时父view的frame为0
 //                make.trailing.equalToSuperview().offset(jh_getLength(length: 69))
-                make.leading.equalTo(registButton.snp.trailing).offset(jh_getLength(length: 22))
+                make.leading.equalTo(registBtn.snp.trailing).offset(jh_getLength(length: 22))
                 make.size.equalTo(jh_getsize(x: 127, y: 40))
             })
             
@@ -137,7 +136,7 @@ extension JHWbVisitorView {
             })
             
             homeButton.snp.makeConstraints({ (make) -> Void in
-                make.top.equalTo(registButton)
+                make.top.equalTo(registBtn)
                 make.leading.equalTo((UIScreen.main.bounds.size.width - 290) * 0.5)
                 make.size.equalTo(jh_getsize(x: 290, y: 40))
             })
@@ -151,8 +150,8 @@ extension JHWbVisitorView {
     ///设置Home界面
     func setupHomeController() {
         meHeadView.isHidden = true
-        registButton.isHidden = true
-        loginButton.isHidden = true
+        registBtn.isHidden = true
+        loginBtn.isHidden = true
         addRotateAnimate()
     }
     ///设置Message界面
@@ -162,8 +161,8 @@ extension JHWbVisitorView {
         shadowView.isHidden = true
         homeButton.isHidden = true
         
-        registButton.isHidden = false
-        loginButton.isHidden = false
+        registBtn.isHidden = false
+        loginBtn.isHidden = false
         introLabel.text = "登录后，别人评论你的微博，给你\n发消息，都会在这里收到通知"
         centerIconView.image = #imageLiteral(resourceName: "visitordiscover_image_message")
     }
@@ -175,8 +174,8 @@ extension JHWbVisitorView {
         centerIconView.isHidden = true
         
         meHeadView.isHidden = false
-        registButton.isHidden = false
-        loginButton.isHidden = false
+        registBtn.isHidden = false
+        loginBtn.isHidden = false
         introLabel.text = "登陆后，你的微博、相册、个人资料会\n显示在这里，展示给别人"
     }
 }

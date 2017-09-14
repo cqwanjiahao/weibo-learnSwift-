@@ -9,5 +9,14 @@
 import UIKit
 
 class JHWbComposeViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .red
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        dismiss(animated: true) {
+        }
+    }
 }
 

@@ -15,26 +15,47 @@ class JHWbMeTableViewController: JHWbBaseTableViewController {
         navigationController?.navigationBar.tintColor = UIColor.darkGray
         setupSubView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        jh_log(messsage: visitorView.frame)
+//        hidesBottomBarWhenPushed = true
+//        navigationController?.setNavigationBarHidden(true, animated: false)
+//        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+//        hidesBottomBarWhenPushed = false
+//        tabBarController.
+//        navigationController?.setNavigationBarHidden(true, animated: false)
+//        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 }
 
 // MARK:- setupView
 extension JHWbMeTableViewController {
     override func setupSubView() {
         super.setupSubView()
+//        hidesBottomBarWhenPushed = true
         visitorView.setupMeController()
     }
     
     override func setupNavigationBar() {
         navigationItem.title = "我"
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "设置", style:.plain, target: self, action: #selector(JHWbMeTableViewController.settingButtonClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "设置", style:.plain, target: self, action: #selector(JHWbMeTableViewController.settingBtnClick))
     }
+    
+    
 }
+
 
 //MARK: - Click
 extension JHWbMeTableViewController {
-    @objc func settingButtonClick() {
-        jh_log(messsage: "点击了监听按钮")
+    
+    @objc private func settingBtnClick(){ navigationController?.pushViewController(JHWbSettingUnLoginTableViewController(), animated: false)
+//    @objc private func settingBtnClick(){ navigationController?.pushViewController(JHWbSettingUnLoginTableViewController(), animated: false)
     }
+
 }
 
 // MARK: - Table view data source
@@ -46,4 +67,6 @@ extension JHWbMeTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
+
 }
+

@@ -44,20 +44,20 @@ extension JHWbBaseTableViewController {
         view = visitorView
         setupNavigationBar()
         ///监听按钮点击
-        visitorView.registButton.addTarget(self, action: #selector(JHWbBaseTableViewController.rigisetButtonClick), for: .touchUpInside)
-        visitorView.loginButton.addTarget(self, action: #selector(JHWbBaseTableViewController.loginButtonClick), for: .touchUpInside)
-        visitorView.meHaedButton.addTarget(self, action: #selector(JHWbBaseTableViewController.loginButtonClick), for: .touchUpInside)
+        visitorView.registBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.registBtnClick), for: .touchUpInside)
+        visitorView.loginBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.loginBtnClick), for: .touchUpInside)
+        visitorView.meHaedBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.loginBtnClick), for: .touchUpInside)
     }
     
     /// 设置导航栏左右的Item
     @objc func setupNavigationBar() {
         let leftNegativeSpacer = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         leftNegativeSpacer.width = -10
-        let leftButton = UIBarButtonItem.init(title: "注册", style: .plain, target: self, action: #selector(JHWbBaseTableViewController.rigisetButtonClick))
+        let leftButton = UIBarButtonItem.init(title: "注册", style: .plain, target: self, action: #selector(JHWbBaseTableViewController.registBtnClick))
         navigationItem.leftBarButtonItems = [leftNegativeSpacer, leftButton]
         let rightNegativeSpacer = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         rightNegativeSpacer.width = -10
-        let rightButton = UIBarButtonItem.init(title: "登录", style: .plain, target: self, action: #selector(JHWbBaseTableViewController.loginButtonClick))
+        let rightButton = UIBarButtonItem.init(title: "登录", style: .plain, target: self, action: #selector(JHWbBaseTableViewController.loginBtnClick))
         navigationItem.rightBarButtonItems = [rightNegativeSpacer, rightButton]
     }
 }
@@ -88,13 +88,13 @@ extension JHWbBaseTableViewController {
 
 // MARK:- Click
 extension JHWbBaseTableViewController {
-    @objc private func rigisetButtonClick() {
+    @objc private func registBtnClick() {
         let registNav = UINavigationController.init(rootViewController: JHWbRegistViewController())
         present(registNav, animated: true) {
         }
     }
     
-    @objc private func loginButtonClick() {
+    @objc private func loginBtnClick() {
         let loginNav = UINavigationController.init(rootViewController: JHWbLoginViewController())
         present(loginNav, animated: true) {
         }

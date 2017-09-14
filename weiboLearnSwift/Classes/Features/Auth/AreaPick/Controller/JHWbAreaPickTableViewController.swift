@@ -22,7 +22,7 @@ class JHWbAreaPickTableViewController: UITableViewController {
 //    }
     
     
-    var didSetupConstraints = false
+    private var didSetupConstraints = false
     var indexes=[String]()
     //模型属性
     lazy var areaModelArray : [JHWbAreaPickModel] = {
