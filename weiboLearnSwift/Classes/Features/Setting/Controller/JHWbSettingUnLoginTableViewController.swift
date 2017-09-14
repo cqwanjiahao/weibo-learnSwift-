@@ -26,7 +26,7 @@ extension JHWbSettingUnLoginTableViewController {
     func setupGrup0() {
         let items = NSMutableArray()
         let item11 = JHWbSettingArrowItemModel.init(title: "通用设置")
-        item11.desVC = JHWbSettingUnloginCommonTableViewController()
+        item11.desVC = NSStringFromClass(JHWbSettingUnloginCommonTableViewController.classForCoder())
         items.add(item11)
         let group = JHWbSettingGroupModel.init(items: items)
         groups.add(group)
@@ -35,15 +35,16 @@ extension JHWbSettingUnLoginTableViewController {
     func setupGrup1() {
         let items = NSMutableArray()
         let item21 = JHWbSettingArrowItemModel.init(title: "客服中心")
-        item21.desVC = JHWbWebViewController.init(webAdress: "http://kefu.weibo.com/",title: "客服中心",backgroudColor: UIColor.jh_setColor(rgb: 170), backgroundTitle: "网页由 kefu.weibo.com 提供")
-        navigationController?.pushViewController(item21.desVC!, animated: true)
+        item21.desVC = NSStringFromClass(JHWbWebServiceCenterViewController.classForCoder())
+        
         items.add(item21)
         let item22 = JHWbSettingArrowItemModel.init(title: "关于微博")
-//        item22.desVC = type(of: UIViewController()) as AnyClass
+        item22.desVC = NSStringFromClass(JHWbComposeViewController.classForCoder())
         items.add(item22)
-        let item3333333333333 = JHWbSettingArrowItemModel.init(title: "test")
         
-        item3333333333333.desVC = JHWbComposeViewController()
+        let item3333333333333 = JHWbSettingArrowItemModel.init(title: "test")
+        item3333333333333.desVC = NSStringFromClass(JHWbComposeViewController.classForCoder())
+//MARK:- 特殊需求的时候 使用闭包完成
 //        item3333333333333.operationClosure = receiveoperationClosure
         items.add(item3333333333333)
         let group = JHWbSettingGroupModel.init(items: items)
@@ -59,4 +60,14 @@ extension JHWbSettingUnLoginTableViewController {
         textFeild.becomeFirstResponder()
     }
     */
+}
+
+class JHWbWebServiceCenterViewController: JHWbWebViewController {
+    override init(webAdress: String, title: String, backgroudColor: UIColor, backgroundTitle: String) {
+        super.init(webAdress: "http://kefu.weibo.com/",title: "客服中心",backgroudColor: UIColor.jh_setColor(rgb: 170), backgroundTitle: "网页由 kefu.weibo.com 提供")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

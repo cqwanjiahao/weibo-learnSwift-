@@ -36,7 +36,7 @@ class JHWbSettingItemModel: NSObject {
 }
 
 class JHWbSettingArrowItemModel: JHWbSettingItemModel {
-    var desVC : UIViewController?
+    var desVC : String?
 }
 
 class JHWbSettingSwitchItemModel: JHWbSettingItemModel {

@@ -53,41 +53,39 @@ extension JHWbSettingBaseTableViewController {
         let item : JHWbSettingItemModel = (groups[indexPath.section] as! JHWbSettingGroupModel).items![indexPath.row] as! JHWbSettingItemModel
         if item.isKind(of: type(of: JHWbSettingArrowItemModel())) {
             if ((item as! JHWbSettingArrowItemModel).desVC != nil) {
-                let desVC = (item as! JHWbSettingArrowItemModel).desVC
-                navigationController?.pushViewController(desVC!, animated: true)
+                let desVC = desViewController(desVCName: (item as! JHWbSettingArrowItemModel).desVC!, desVCTitle: item.title!)
+                
+                navigationController?.pushViewController(desVC, animated: true)
             }
         } else if item.isKind(of: type(of: JHWbSettingSwitchItemModel())) {
             (item as! JHWbSettingSwitchItemModel).switchOn = !(item as! JHWbSettingSwitchItemModel).switchOn
         }
-        
+        //闭包完成其他事件功能
         if item.operationClosure != nil {
             item.operationClosure!(indexPath)
         }
-        // 做事情和跳转只能做一件
-        //        if (item.operationBlock) {
-        //            item.operationBlock(indexPath);
-        //
-        //        }else if ([item isKindOfClass:[XMGSettingArrowItem class]]) {
-        
-        
-        //        itemModel.isKind(of: type(of: JHWbSettingArrowItemModel)) {
-        //
-        //            // 只有箭头模型才具备跳转
-        //            // 跳转
-        //            XMGSettingArrowItem *arrowItem = (XMGSettingArrowItem *)item;
-        //            if (arrowItem.desVC) {
-        //                // 如果有目标控制器才跳转
-        //                UIViewController *vc =  [[arrowItem.desVC alloc] init];
-        //                vc.navigationItem.title = item.title;
-        //                //            vc.title = @"";
-        //
-        //                [self.navigationController pushViewController:vc animated:YES];
-        //            }
-        //        }
+    }
+    
+//    //MARK:- 根据名字 创建控制器
+    func desViewController(desVCName: String,desVCTitle: String) -> UIViewController {
+        //获取命名空间
+        jh_log(messsage: desVCName)
+        let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
+        jh_log(messsage: nameSpace)
+        guard let desVCClass = NSClassFromString(nameSpace + "." + desVCName) else  {
+            print("没有获取到字符串对应的Class")
+            return UIViewController()
+        }
+        //将对应的AnyObject转成控制器的类型
+        let desVCType = desVCClass as? UIViewController.Type
+        //创建对应的控制器对象
+        let desVC = desVCType!.init()
+        desVC.title = desVCTitle
+        return desVC
     }
 }
 
-//MARK: StupNav
+//MARK:- StupNav
 extension JHWbSettingBaseTableViewController {
     func setupNav(title: String,leftBtnTitle: String = "返回") {
         self.title = title
