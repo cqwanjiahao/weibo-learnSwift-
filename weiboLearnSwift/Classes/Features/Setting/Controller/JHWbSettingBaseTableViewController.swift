@@ -21,6 +21,7 @@ class JHWbSettingBaseTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.jh_setColor(rgb: 240)
         tableView.separatorStyle = .none
     }
 }
@@ -49,8 +50,19 @@ extension JHWbSettingBaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-//        tableView.deselectRow(at: indexPath, animated: true)
-        //        jh_log(messsage: type(of: JHWbSettingArrowItemModel))
+        let item : JHWbSettingItemModel = (groups[indexPath.section] as! JHWbSettingGroupModel).items![indexPath.row] as! JHWbSettingItemModel
+        if item.isKind(of: type(of: JHWbSettingArrowItemModel())) {
+            if ((item as! JHWbSettingArrowItemModel).desVC != nil) {
+                let desVC = (item as! JHWbSettingArrowItemModel).desVC
+                navigationController?.pushViewController(desVC!, animated: true)
+            }
+        } else if item.isKind(of: type(of: JHWbSettingSwitchItemModel())) {
+            (item as! JHWbSettingSwitchItemModel).switchOn = !(item as! JHWbSettingSwitchItemModel).switchOn
+        }
+        
+        if item.operationClosure != nil {
+            item.operationClosure!(indexPath)
+        }
         // 做事情和跳转只能做一件
         //        if (item.operationBlock) {
         //            item.operationBlock(indexPath);

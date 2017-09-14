@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+typealias SendOperationClosure = (_ indexPath: IndexPath)->Void
 class JHWbSettingItemModel: NSObject {
     var icon : UIImage?
     var title : String?
@@ -17,6 +17,8 @@ class JHWbSettingItemModel: NSObject {
 //        self.icon = icon
 //        self.title = title
 //    }
+    
+    var operationClosure : SendOperationClosure?
     
     public init(icon: UIImage, title: String) {
         super.init()
@@ -34,7 +36,7 @@ class JHWbSettingItemModel: NSObject {
 }
 
 class JHWbSettingArrowItemModel: JHWbSettingItemModel {
-    var desVC : AnyClass?
+    var desVC : UIViewController?
 }
 
 class JHWbSettingSwitchItemModel: JHWbSettingItemModel {

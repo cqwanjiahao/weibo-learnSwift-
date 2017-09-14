@@ -54,6 +54,8 @@
 		E9E6F08F1F5879A200482DAF /* areaPick.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E6F08E1F5879A200482DAF /* areaPick.plist */; };
 		E9E6F09E1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6F09C1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift */; };
 		E9EBD1591F6AAD3000500B73 /* JHWbTabBarAddBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EBD1581F6AAD3000500B73 /* JHWbTabBarAddBtn.swift */; };
+		E9EBD15B1F6ADB3400500B73 /* JHWbSettingUnloginCommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EBD15A1F6ADB3400500B73 /* JHWbSettingUnloginCommonTableViewController.swift */; };
+		E9EBD15D1F6ADDE900500B73 /* JHWbWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EBD15C1F6ADDE900500B73 /* JHWbWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +110,8 @@
 		E9E6F08E1F5879A200482DAF /* areaPick.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = areaPick.plist; sourceTree = "<group>"; };
 		E9E6F09C1F5880FD00482DAF /* JHWbAreaPickTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickTableViewController.swift; sourceTree = "<group>"; };
 		E9EBD1581F6AAD3000500B73 /* JHWbTabBarAddBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbTabBarAddBtn.swift; sourceTree = "<group>"; };
+		E9EBD15A1F6ADB3400500B73 /* JHWbSettingUnloginCommonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbSettingUnloginCommonTableViewController.swift; sourceTree = "<group>"; };
+		E9EBD15C1F6ADDE900500B73 /* JHWbWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,8 +315,9 @@
 		E98B06261F68045400E2E015 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E96EAB6F1F67F5FF00217CD0 /* JHWbSettingUnLoginTableViewController.swift */,
 				E927260D1F68C6B800D8B818 /* JHWbSettingBaseTableViewController.swift */,
+				E96EAB6F1F67F5FF00217CD0 /* JHWbSettingUnLoginTableViewController.swift */,
+				E9EBD15A1F6ADB3400500B73 /* JHWbSettingUnloginCommonTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				E9086AD41F5FEAAA00BD421E /* UIView-Extension.swift */,
 				E94EFC4C1F65203200FF830E /* JHWbTimeCountDown.swift */,
 				E9CC97BC1F65805800263D08 /* JHWbTableViewCell.swift */,
+				E9EBD15C1F6ADDE900500B73 /* JHWbWebViewController.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -620,10 +626,12 @@
 				E9CC97BD1F65805800263D08 /* JHWbTableViewCell.swift in Sources */,
 				E94494211F4EE73E0053DFC3 /* UIView-Frame.swift in Sources */,
 				E9157A371F66538B00AC896E /* JHWbAreaPickOtherAreaBtn.swift in Sources */,
+				E9EBD15D1F6ADDE900500B73 /* JHWbWebViewController.swift in Sources */,
 				E944941F1F4EE3FC0053DFC3 /* JHColor.swift in Sources */,
 				E927260E1F68C6B800D8B818 /* JHWbSettingBaseTableViewController.swift in Sources */,
 				E94494291F4EFC850053DFC3 /* JHConstPCH.swift in Sources */,
 				E94C263D1F61B77D00C69DF4 /* JHWbVisitorButton.swift in Sources */,
+				E9EBD15B1F6ADB3400500B73 /* JHWbSettingUnloginCommonTableViewController.swift in Sources */,
 				E91B8AEB1F4D1F9000F6C640 /* JHWbRegistViewController.swift in Sources */,
 				E9126B511F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift in Sources */,
 				E92726101F68C7D700D8B818 /* JHWbSettingGroupModel.swift in Sources */,

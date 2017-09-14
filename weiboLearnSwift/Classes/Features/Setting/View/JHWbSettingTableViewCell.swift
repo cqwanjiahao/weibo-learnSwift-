@@ -29,19 +29,6 @@ class JHWbSettingTableViewCell: JHWbTableViewCell {
         super.setupViews()
         textLabel?.backgroundColor = UIColor.clear
     }
-//    //设置选中状态下的颜色
-//    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
-//        super.setHighlighted(highlighted, animated: animated)
-//        if highlighted {
-//            contentView.backgroundColor = UIColor.jh_setColor(rgb: 238)
-//            accessoryView?.backgroundColor = UIColor.jh_setColor(rgb: 238)
-//        } else {
-//            contentView.backgroundColor = UIColor.jh_setColor(rgb: 255)
-//            accessoryView?.backgroundColor = UIColor.jh_setColor(rgb: 255)
-//        }
-//        jh_log(messsage: accessoryView?.backgroundColor)
-////        imageView?.backgroundColor = contentView.backgroundColor?
-//    }
     
     override func configureCellDate(entity: Any) {
         itemModel = entity as? JHWbSettingItemModel
@@ -65,3 +52,21 @@ extension JHWbSettingTableViewCell {
         }
     }
 }
+
+//MARK- 拓展:当需要高亮状态下改变文字颜色的时候 调用以下方法
+/*
+ 
+     //设置选中状态下的颜色
+     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+         super.setHighlighted(highlighted, animated: animated)
+         if highlighted {
+             contentView.backgroundColor = UIColor.jh_setColor(rgb: 238)
+             accessoryView?.backgroundColor = UIColor.jh_setColor(rgb: 238)
+         } else {
+             contentView.backgroundColor = UIColor.jh_setColor(rgb: 255)
+             accessoryView?.backgroundColor = UIColor.jh_setColor(rgb: 255)
+         }
+         jh_log(messsage: accessoryView?.backgroundColor)
+         imageView?.backgroundColor = contentView.backgroundColor?
+     }
+ */
