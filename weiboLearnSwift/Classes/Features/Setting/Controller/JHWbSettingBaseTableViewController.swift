@@ -69,10 +69,10 @@ extension JHWbSettingBaseTableViewController {
 //    //MARK:- 根据名字 创建控制器
     func desViewController(desVCName: String,desVCTitle: String) -> UIViewController {
         //获取命名空间
-        jh_log(messsage: desVCName)
-        let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
-        jh_log(messsage: nameSpace)
-        guard let desVCClass = NSClassFromString(nameSpace + "." + desVCName) else  {
+//        jh_log(messsage: desVCName)
+//        let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
+//        jh_log(messsage: nameSpace)
+        guard let desVCClass = NSClassFromString(desVCName) else  {
             print("没有获取到字符串对应的Class")
             return UIViewController()
         }

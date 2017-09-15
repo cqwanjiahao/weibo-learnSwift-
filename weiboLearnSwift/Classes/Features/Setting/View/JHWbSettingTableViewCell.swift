@@ -10,6 +10,14 @@ import UIKit
 
 class JHWbSettingTableViewCell: JHWbTableViewCell {
     var itemModel : JHWbSettingItemModel?
+    lazy var rightTitleLable = { () -> UILabel in
+       let rightTitleLable = UILabel()
+        rightTitleLable.text = ""
+        rightTitleLable.textColor = UIColor.jh_setColor(rgb: 142)
+        rightTitleLable.textAlignment = .right
+        rightTitleLable.font = UIFont.systemFont(ofSize: 14)
+        return rightTitleLable
+    }()
     
     // MARK:- 注册Cell
     class func dequeueOrCreateCell(tableView: UITableView) -> JHWbSettingTableViewCell {
@@ -33,8 +41,14 @@ class JHWbSettingTableViewCell: JHWbTableViewCell {
     override func configureCellDate(entity: Any) {
         itemModel = entity as? JHWbSettingItemModel
         textLabel?.text = itemModel?.title
+        rightTitleLable.text = itemModel?.rightTitle
         setupRightView()
         super.configureCellDate(entity: entity)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        rightTitleLable.frame = .init(x: (UIScreen.main.bounds.size.width - 110), y: 0, width: 100, height: jh_getLength(length: 15))
     }
 }
 

@@ -17,38 +17,39 @@ class JHWbBaseTableViewController: UITableViewController {
     lazy var topLine = {() -> UIView in
         let topLine = UIView()
         topLine.backgroundColor = UIColor.jh_setColor(rgb: 221)
+        topLine.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1)
         return topLine
     }()
-    
-    //系统回调
-    override func loadView() {
-        isLogin ? super.loadView() : setupVisitorView()
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        if !isLogin {
+            setupVisitorView()
+            tableView.isScrollEnabled = false
+        } else {
+            tableView.isScrollEnabled = true
+        }
         setupSubView()
         view .updateConstraints()
         view.setNeedsUpdateConstraints()
+    }
+    
+    private func setupVisitorView() {
+//        view = visitorView
+        view.addSubview(visitorView)
+        ///监听按钮点击
+        visitorView.registBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.registBtnClick), for: .touchUpInside)
+        visitorView.loginBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.loginBtnClick), for: .touchUpInside)
+        visitorView.meHaedBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.loginBtnClick), for: .touchUpInside)
     }
 }
 
 // MARK:- setupView
 extension JHWbBaseTableViewController {
     @objc func setupSubView() {
-        view .addSubview(topLine)
-        topLine.frame = CGRect.init(x: 0, y: 64, width: UIScreen.main.bounds.width, height: 1)
-    }
-    
-    private func setupVisitorView() {
-        view = visitorView
         setupNavigationBar()
-        ///监听按钮点击
-        visitorView.registBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.registBtnClick), for: .touchUpInside)
-        visitorView.loginBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.loginBtnClick), for: .touchUpInside)
-        visitorView.meHaedBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.loginBtnClick), for: .touchUpInside)
+        view .addSubview(topLine)
     }
-    
     /// 设置导航栏左右的Item
     @objc func setupNavigationBar() {
         let leftNegativeSpacer = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
@@ -60,30 +61,24 @@ extension JHWbBaseTableViewController {
         let rightButton = UIBarButtonItem.init(title: "登录", style: .plain, target: self, action: #selector(JHWbBaseTableViewController.loginBtnClick))
         navigationItem.rightBarButtonItems = [rightNegativeSpacer, rightButton]
     }
+    
+
 }
 
-// MARK:- constraints
+ //MARK:- constraints
 extension JHWbBaseTableViewController {
-//    override func updateViewConstraints() {
-//        if !didSetupConstraints {
-//            didSetupConstraints = true
-//
-//            visitorView.snp.makeConstraints { (make) -> Void in
-//                make.size.equalTo(view)
-//                make.center.equalTo(view)
-//            }
-//
-//            topLine.snp.makeConstraints { (make) -> Void in
-////                make.left.equalTo(view)
-////                make.right.equalTo(view)
-//                make.height.equalTo(50)
-////                make.top.equalTo(64)
-//                make.width.height.equalTo(50)
-//                make.center.equalTo(self.view)
-//            }
-//        }
-//        super .updateViewConstraints()
-//    }
+    override func updateViewConstraints() {
+        if !didSetupConstraints {
+            didSetupConstraints = true
+            if !isLogin {
+            visitorView.snp.makeConstraints { (make) -> Void in
+                make.size.equalTo(view)
+                make.center.equalTo(view)
+                }
+            }
+        }
+        super .updateViewConstraints()
+    }
 }
 
 // MARK:- Click
@@ -100,3 +95,12 @@ extension JHWbBaseTableViewController {
         }
     }
 }
+
+//MARK:- 拓展:当需要直接替代view的时候,调用一下方法
+///如果直接替代:需要重写viewWillLayoutSubviews方法     尽量不使用,直接分两个类情况分别处理
+
+//    override func viewWillLayoutSubviews() {
+//        super.viewWillLayoutSubviews()
+//        view.updateConstraints()
+//        view.setNeedsUpdateConstraints()
+//    }

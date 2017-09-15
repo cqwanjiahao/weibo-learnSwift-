@@ -15,27 +15,14 @@ class JHWbMeTableViewController: JHWbBaseTableViewController {
         navigationController?.navigationBar.tintColor = UIColor.darkGray
         setupSubView()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        jh_log(messsage: visitorView.frame)
-//        hidesBottomBarWhenPushed = true
-//        navigationController?.setNavigationBarHidden(true, animated: false)
-//        navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-//        hidesBottomBarWhenPushed = false
-//        tabBarController.
-//        navigationController?.setNavigationBarHidden(true, animated: false)
-//        navigationController?.setNavigationBarHidden(false, animated: false)
-    }
 }
 
 // MARK:- setupView
 extension JHWbMeTableViewController {
     override func setupSubView() {
         super.setupSubView()
+        automaticallyAdjustsScrollViewInsets = true
+//        navigationController?.navigationBar.isTranslucent = true
 //        hidesBottomBarWhenPushed = true
         visitorView.setupMeController()
     }
@@ -44,16 +31,13 @@ extension JHWbMeTableViewController {
         navigationItem.title = "我"
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "设置", style:.plain, target: self, action: #selector(JHWbMeTableViewController.settingBtnClick))
     }
-    
-    
 }
 
 
 //MARK: - Click
 extension JHWbMeTableViewController {
-    
-    @objc private func settingBtnClick(){ navigationController?.pushViewController(JHWbSettingUnLoginTableViewController(), animated: false)
-//    @objc private func settingBtnClick(){ navigationController?.pushViewController(JHWbSettingUnLoginTableViewController(), animated: false)
+    @objc private func settingBtnClick(){
+        navigationController?.pushViewController(JHWbSettingUnLoginTableViewController(), animated: true)
     }
 
 }

@@ -87,7 +87,7 @@ extension JHWbVisitorView {
             
             meHeadView.snp.makeConstraints({ (make) -> Void in
                 make.width.equalTo(UIScreen.main.bounds.width)
-                make.top.equalToSuperview().offset(64)
+                make.top.equalToSuperview()
                 make.height.equalTo(jh_getLength(length: 170))
             })
             
@@ -118,7 +118,7 @@ extension JHWbVisitorView {
             })
             
             rotateView.snp.makeConstraints({ (make) -> Void in
-                make.top.equalToSuperview().offset(jh_getLength(length: 164))
+                make.top.equalToSuperview().offset(jh_getLength(length: 100))
                 make.leading.equalTo((UIScreen.main.bounds.size.width - 175) * 0.5)
                 make.size.equalTo(CGSize.init(width: 175, height: 175))
             })
@@ -130,7 +130,7 @@ extension JHWbVisitorView {
             })
             
             centerIconView.snp.makeConstraints({ (make) -> Void in
-                make.top.equalToSuperview().offset(jh_getLength(length: 220))
+                make.top.equalToSuperview().offset(jh_getLength(length: 156))
                 make.leading.equalTo((UIScreen.main.bounds.size.width - 94) * 0.5)
                 make.size.equalTo(CGSize.init(width: 94, height: 90))
             })

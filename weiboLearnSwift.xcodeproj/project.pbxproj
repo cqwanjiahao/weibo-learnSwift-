@@ -29,6 +29,7 @@
 		E93002D51F6A4B960079E2C8 /* JHWbMainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93002D41F6A4B960079E2C8 /* JHWbMainTabBar.swift */; };
 		E93038511F571448008F7114 /* JHWbBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93038501F571448008F7114 /* JHWbBaseTableViewController.swift */; };
 		E93038531F571464008F7114 /* JHWbVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93038521F571464008F7114 /* JHWbVisitorView.swift */; };
+		E9412C9C1F6C30FF004437BB /* JHWbSettingUnloginAboutWBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9412C9B1F6C30FF004437BB /* JHWbSettingUnloginAboutWBTableViewController.swift */; };
 		E944941B1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944941A1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift */; };
 		E944941F1F4EE3FC0053DFC3 /* JHColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944941E1F4EE3FC0053DFC3 /* JHColor.swift */; };
 		E94494211F4EE73E0053DFC3 /* UIView-Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94494201F4EE73E0053DFC3 /* UIView-Frame.swift */; };
@@ -83,6 +84,7 @@
 		E93002D41F6A4B960079E2C8 /* JHWbMainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbMainTabBar.swift; sourceTree = "<group>"; };
 		E93038501F571448008F7114 /* JHWbBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbBaseTableViewController.swift; sourceTree = "<group>"; };
 		E93038521F571464008F7114 /* JHWbVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbVisitorView.swift; sourceTree = "<group>"; };
+		E9412C9B1F6C30FF004437BB /* JHWbSettingUnloginAboutWBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbSettingUnloginAboutWBTableViewController.swift; sourceTree = "<group>"; };
 		E944941A1F4EDD300053DFC3 /* JHWbHomeTitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbHomeTitleButton.swift; sourceTree = "<group>"; };
 		E944941E1F4EE3FC0053DFC3 /* JHColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHColor.swift; sourceTree = "<group>"; };
 		E94494201F4EE73E0053DFC3 /* UIView-Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Frame.swift"; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				E927260D1F68C6B800D8B818 /* JHWbSettingBaseTableViewController.swift */,
 				E96EAB6F1F67F5FF00217CD0 /* JHWbSettingUnLoginTableViewController.swift */,
 				E9EBD15A1F6ADB3400500B73 /* JHWbSettingUnloginCommonTableViewController.swift */,
+				E9412C9B1F6C30FF004437BB /* JHWbSettingUnloginAboutWBTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				E9157A391F66669000AC896E /* JHWbAreaPickOtherWebViewController.swift in Sources */,
 				E970881F1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift in Sources */,
 				E91B8AE41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift in Sources */,
+				E9412C9C1F6C30FF004437BB /* JHWbSettingUnloginAboutWBTableViewController.swift in Sources */,
 				E9EBD1591F6AAD3000500B73 /* JHWbTabBarAddBtn.swift in Sources */,
 				E93002D51F6A4B960079E2C8 /* JHWbMainTabBar.swift in Sources */,
 			);

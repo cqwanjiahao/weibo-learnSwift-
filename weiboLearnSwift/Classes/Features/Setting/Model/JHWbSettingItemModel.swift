@@ -11,6 +11,7 @@ typealias SendOperationClosure = (_ indexPath: IndexPath)->Void
 class JHWbSettingItemModel: NSObject {
     var icon : UIImage?
     var title : String?
+    var rightTitle : String?
     //写一个闭包处理 点击cell的事件@property (nonatomic, copy) void(^operationBlock)(NSIndexPath *indexPath);
 //    convenience init(icon: UIImage,title: String) {
 //        self.init()
@@ -19,6 +20,10 @@ class JHWbSettingItemModel: NSObject {
 //    }
     
     var operationClosure : SendOperationClosure?
+    public init(title: String) {
+        super.init()
+        self.title = title
+    }
     
     public init(icon: UIImage, title: String) {
         super.init()
@@ -26,10 +31,12 @@ class JHWbSettingItemModel: NSObject {
         self.title = title
     }
     
-    public init(title: String) {
+    public init(title: String,rightTitle: String ) {
         super.init()
         self.title = title
+        self.rightTitle = rightTitle
     }
+    
     public override init() {
         super.init()
     }

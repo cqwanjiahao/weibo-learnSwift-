@@ -35,7 +35,7 @@ extension JHWbSettingUnloginCommonTableViewController {
     
     func setupGrup1() {
         let items = NSMutableArray()
-        let item21 = JHWbSettingArrowItemModel.init(title: "多语言环境")
+        let item21 = JHWbSettingArrowItemModel.init(title: "多语言环境", rightTitle: "跟随系统")
         //        item21.desVC = JHWbComposeViewController()
         items.add(item21)
         let group = JHWbSettingGroupModel.init(items: items)
