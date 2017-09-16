@@ -54,7 +54,8 @@ extension JHWbSettingBaseTableViewController {
         if item.isKind(of: type(of: JHWbSettingArrowItemModel())) {
             if ((item as! JHWbSettingArrowItemModel).desVC != nil) {
                 let desVC = desViewController(desVCName: (item as! JHWbSettingArrowItemModel).desVC!, desVCTitle: item.title!)
-                
+                let cell = tableView.cellForRow(at: indexPath)
+                setupDetialTextLable(item: item,cell: cell!,desVC: desVC,indexPath: indexPath)
                 navigationController?.pushViewController(desVC, animated: true)
             }
         } else if item.isKind(of: type(of: JHWbSettingSwitchItemModel())) {
@@ -64,6 +65,8 @@ extension JHWbSettingBaseTableViewController {
         if item.operationClosure != nil {
             item.operationClosure!(indexPath)
         }
+        
+
     }
     
 //    //MARK:- 根据名字 创建控制器
@@ -85,12 +88,12 @@ extension JHWbSettingBaseTableViewController {
     }
 }
 
-//MARK:- StupNav
+//MARK:- StupUI
 extension JHWbSettingBaseTableViewController {
     func setupNav(title: String,leftBtnTitle: String = "返回") {
         self.title = title
         navigationController?.navigationBar.tintColor = UIColor.darkGray
-        setupLeftBarButton(title: title)
+        setupLeftBarButton(title: leftBtnTitle)
     }
     
     func setupLeftBarButton(title: String) {
@@ -114,6 +117,30 @@ extension JHWbSettingBaseTableViewController {
         leftNegativeSpacer.width = -10
         navigationItem.leftBarButtonItems = [leftNegativeSpacer, lefrBarBtn]
     }
+    
+    func setupDetialTextLable(item: JHWbSettingItemModel,cell: UITableViewCell,desVC: UIViewController,indexPath: IndexPath) {
+        let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
+        if (NSStringFromClass(desVC.classForCoder) == (nameSpace + "." + "JHWbSettingUnloginLanguageTableViewController")) {
+            let languageVC = (desVC as! JHWbSettingUnloginLanguageTableViewController)
+            languageVC.defalutSelectDetialText = item.detailTextLabel
+            if (languageVC.defalutSelectDetialText == cell.detailTextLabel?.text) {
+                languageVC.selctCell = cell
+                languageVC.tableView(tableView, didSelectRowAt: indexPath)
+            }
+            
+            languageVC.languageTitleClosure = {
+                (title: String) -> Void in
+                cell.detailTextLabel?.text = title
+                item.detailTextLabel = title
+            }
+        }
+        if (NSStringFromClass(desVC.classForCoder) == (nameSpace + "." + "JHWbSettingUnloginLanguageTableViewController")) {
+            (desVC as! JHWbSettingUnloginLanguageTableViewController).languageTitleClosure = {
+                (title: String) -> Void in
+                cell.detailTextLabel?.text = title
+            }
+        }
+    }
 }
 
 // MARK: - Events
@@ -121,4 +148,12 @@ extension JHWbSettingBaseTableViewController {
     @objc func leftBackBtnClick() {
         navigationController?.popViewController(animated: false)
     }
+    
+////    //定义一个带字符串参数的闭包
+//    func receiveTitleClosure(title: String)->Void{
+//        let cell = tableView.cellForRow(at: indexPath)
+//        cell?.detailTextLabel?.text = title
+//    }
 }
+
+

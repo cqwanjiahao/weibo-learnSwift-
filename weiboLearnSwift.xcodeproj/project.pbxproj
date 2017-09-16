@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F5B21A61F4D625500448B2F /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B21A51F4D625500448B2F /* UIButton-Extension.swift */; };
 		64466571FAB7296A2ADA26D7 /* Pods_weiboLearnSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5595E5B42DF059CE6951A3 /* Pods_weiboLearnSwift.framework */; };
+		E9056E701F6D0479003E0021 /* JHWbSettingUnloginLanguageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9056E6F1F6D0479003E0021 /* JHWbSettingUnloginLanguageTableViewController.swift */; };
 		E9086AD51F5FEAAA00BD421E /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9086AD41F5FEAAA00BD421E /* UIView-Extension.swift */; };
 		E9086AD71F60009A00BD421E /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = E9086AD61F5FF3EB00BD421E /* MainVCSettings.json */; };
 		E9126B511F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9126B501F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift */; };
@@ -64,6 +65,7 @@
 		5D54D10EED44105E50CAF59E /* Pods-weiboLearnSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboLearnSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-weiboLearnSwift/Pods-weiboLearnSwift.release.xcconfig"; sourceTree = "<group>"; };
 		AF5595E5B42DF059CE6951A3 /* Pods_weiboLearnSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weiboLearnSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1483462D2CE2FF525D87E64 /* Pods-weiboLearnSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weiboLearnSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weiboLearnSwift/Pods-weiboLearnSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		E9056E6F1F6D0479003E0021 /* JHWbSettingUnloginLanguageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbSettingUnloginLanguageTableViewController.swift; sourceTree = "<group>"; };
 		E9086AD41F5FEAAA00BD421E /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
 		E9086AD61F5FF3EB00BD421E /* MainVCSettings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		E9126B501F5948730012F1A6 /* JHWbAreaPickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickTableViewCell.swift; sourceTree = "<group>"; };
@@ -319,8 +321,9 @@
 			children = (
 				E927260D1F68C6B800D8B818 /* JHWbSettingBaseTableViewController.swift */,
 				E96EAB6F1F67F5FF00217CD0 /* JHWbSettingUnLoginTableViewController.swift */,
-				E9EBD15A1F6ADB3400500B73 /* JHWbSettingUnloginCommonTableViewController.swift */,
 				E9412C9B1F6C30FF004437BB /* JHWbSettingUnloginAboutWBTableViewController.swift */,
+				E9EBD15A1F6ADB3400500B73 /* JHWbSettingUnloginCommonTableViewController.swift */,
+				E9056E6F1F6D0479003E0021 /* JHWbSettingUnloginLanguageTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				E9A5F8501F61CF92005D39C9 /* JHWbOtherRegistView.swift in Sources */,
 				E94494271F4EF1930053DFC3 /* JHScreenFitUtil.swift in Sources */,
 				E94EFC4D1F65203200FF830E /* JHWbTimeCountDown.swift in Sources */,
+				E9056E701F6D0479003E0021 /* JHWbSettingUnloginLanguageTableViewController.swift in Sources */,
 				E9086AD51F5FEAAA00BD421E /* UIView-Extension.swift in Sources */,
 				E9C880921F66DFB800313F77 /* JHWbLoginViewController.swift in Sources */,
 				E9730E931F588AA100006773 /* JHWbAreaInfoModel.swift in Sources */,

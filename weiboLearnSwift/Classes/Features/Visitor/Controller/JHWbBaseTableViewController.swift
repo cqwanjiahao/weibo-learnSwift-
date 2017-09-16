@@ -29,6 +29,7 @@ class JHWbBaseTableViewController: UITableViewController {
         } else {
             tableView.isScrollEnabled = true
         }
+        tableView.separatorStyle = .none
         setupSubView()
         view .updateConstraints()
         view.setNeedsUpdateConstraints()

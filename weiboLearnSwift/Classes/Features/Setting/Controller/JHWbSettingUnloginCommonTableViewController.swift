@@ -35,8 +35,14 @@ extension JHWbSettingUnloginCommonTableViewController {
     
     func setupGrup1() {
         let items = NSMutableArray()
-        let item21 = JHWbSettingArrowItemModel.init(title: "多语言环境", rightTitle: "跟随系统")
-        //        item21.desVC = JHWbComposeViewController()
+        let item21 = JHWbSettingArrowItemModel.init(title: "多语言环境", detailTextLabel: "跟随系统")
+        item21.desVC = NSStringFromClass(JHWbSettingUnloginLanguageTableViewController.classForCoder())
+        
+        
+        //接收闭包传回的值        areaPickVC.areaPickTableVC.areaInfoClosure = receiveTitleClosure;
+    //定义一个带字符串参数的闭包    func receiveTitleClosure(title: String)->Void{        mobileRegistView.areaPickBtn.setTitle(title, for: .normal)    }
+        
+        
         items.add(item21)
         let group = JHWbSettingGroupModel.init(items: items)
         groups.add(group)
@@ -44,8 +50,8 @@ extension JHWbSettingUnloginCommonTableViewController {
     
     func setupGrup2() {
         let items = NSMutableArray()
-        let item31 = JHWbSettingArrowItemModel.init(title: "视频和动图自动播放")
-        //        item31.desVC = JHWbComposeViewController()
+        let item31 = JHWbSettingArrowItemModel.init(title: "视频和动图自动播放", detailTextLabel: "仅WIFI")
+        item31.desVC = NSStringFromClass(JHWbSettingUnloginLanguageTableViewController.classForCoder())
         items.add(item31)
         let group = JHWbSettingGroupModel.init(items: items)
         groups.add(group)
@@ -59,4 +65,6 @@ extension JHWbSettingUnloginCommonTableViewController {
      textFeild.becomeFirstResponder()
      }
      */
+    
+    
 }

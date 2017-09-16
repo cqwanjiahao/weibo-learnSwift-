@@ -11,7 +11,6 @@ class JHWbSettingUnLoginTableViewController: JHWbSettingBaseTableViewController 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNav(title: "设置", leftBtnTitle: "我")
-//        setupLeftBarButton(title: "设置")
         setupSubview()
     }
 }

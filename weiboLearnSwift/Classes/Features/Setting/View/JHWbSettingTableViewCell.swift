@@ -10,20 +10,12 @@ import UIKit
 
 class JHWbSettingTableViewCell: JHWbTableViewCell {
     var itemModel : JHWbSettingItemModel?
-    lazy var rightTitleLable = { () -> UILabel in
-       let rightTitleLable = UILabel()
-        rightTitleLable.text = ""
-        rightTitleLable.textColor = UIColor.jh_setColor(rgb: 142)
-        rightTitleLable.textAlignment = .right
-        rightTitleLable.font = UIFont.systemFont(ofSize: 14)
-        return rightTitleLable
-    }()
-    
+   
     // MARK:- 注册Cell
     class func dequeueOrCreateCell(tableView: UITableView) -> JHWbSettingTableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: JHWbSettingTableViewCell.cellIdentifier())
         if (cell == nil) {
-            cell = JHWbSettingTableViewCell.init(style: .default, reuseIdentifier: JHWbSettingTableViewCell.cellIdentifier())
+            cell = JHWbSettingTableViewCell.init(style: .value1, reuseIdentifier: JHWbSettingTableViewCell.cellIdentifier())
 //            cell?.selectionStyle = .none
         }
         return cell as! JHWbSettingTableViewCell
@@ -35,32 +27,38 @@ class JHWbSettingTableViewCell: JHWbTableViewCell {
     
     override func setupViews() {
         super.setupViews()
+        detailTextLabel?.font = UIFont.systemFont(ofSize: jh_getLength(length: 15))
+        detailTextLabel?.textAlignment = .right
+        detailTextLabel?.textColor = UIColor.jh_setColor(rgb: 77)
         textLabel?.backgroundColor = UIColor.clear
     }
     
     override func configureCellDate(entity: Any) {
         itemModel = entity as? JHWbSettingItemModel
         textLabel?.text = itemModel?.title
-        rightTitleLable.text = itemModel?.rightTitle
+        detailTextLabel?.text = itemModel?.detailTextLabel
         setupRightView()
         super.configureCellDate(entity: entity)
     }
     
     override func layoutSubviews() {
-        super.layoutSubviews()
-        rightTitleLable.frame = .init(x: (UIScreen.main.bounds.size.width - 110), y: 0, width: 100, height: jh_getLength(length: 15))
+        super .layoutSubviews()
+        detailTextLabel?.jh_centerX += 6
     }
 }
 
 extension JHWbSettingTableViewCell {
     func setupRightView() {
         if (itemModel?.isKind(of: type(of: JHWbSettingArrowItemModel()) as AnyClass))! {
-//            accessoryView = UIImageView.init(image: #imageLiteral(resourceName: "setting_arrow_right"))
             accessoryType = .disclosureIndicator
         } else if (itemModel?.isKind(of: type(of: JHWbSettingSwitchItemModel()) as AnyClass))!{
             let switchBtn = UISwitch()
            switchBtn.isOn = (itemModel as! JHWbSettingSwitchItemModel).switchOn
             accessoryView = switchBtn
+        } else if (itemModel?.isKind(of: type(of: JHWbSettingCheckItemModel()) as AnyClass))!{
+//            accessoryType = .checkmark
+//            accessoryView?.isHidden = true
+            accessoryView = nil
         } else {
             accessoryView = nil
         }
