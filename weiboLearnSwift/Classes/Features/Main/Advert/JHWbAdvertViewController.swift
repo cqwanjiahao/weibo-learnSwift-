@@ -12,8 +12,8 @@ class JHWbAdvertViewController: UIViewController {
     private var didSetupConstraints = false
     
     //MARK: - lazyload
-    lazy var backgroundImageView = UIImageView.init(image: #imageLiteral(resourceName: "ad_background")) 
-    lazy var passBtn = { () -> UIButton in
+    private lazy var backgroundImageView = UIImageView.init(image: #imageLiteral(resourceName: "ad_background"))
+    private lazy var passBtn = { () -> UIButton in
         let passBtn = UIButton()
         passBtn.titleLabel?.textAlignment = .center
         passBtn.setTitleColor(UIColor.jh_setColor(rgb: 168), for: .normal)
@@ -25,7 +25,7 @@ class JHWbAdvertViewController: UIViewController {
         passBtn.addTarget(self, action: #selector(JHWbAdvertViewController.passBtnClick), for: .touchUpInside)
         return passBtn
     }()
-    lazy var advertImageView = UIImageView.init(image: #imageLiteral(resourceName: "ad_1"))
+    private lazy var advertImageView = UIImageView.init(image: #imageLiteral(resourceName: "ad_1"))
     
     //MARK: - 计时器
     private var remainingSeconds = 0
@@ -49,7 +49,7 @@ class JHWbAdvertViewController: UIViewController {
 
 // MARK:- setupView
 extension JHWbAdvertViewController {
-    func setupSubView() {
+    private func setupSubView() {
         view.addSubview(backgroundImageView)
         backgroundImageView.addSubview(advertImageView)
         view.addSubview(passBtn)
@@ -58,13 +58,13 @@ extension JHWbAdvertViewController {
 
 // MARK:- 倒计时跳过
 extension JHWbAdvertViewController {
-    func calculateTime() {
+    private func calculateTime() {
         remainingSeconds = 3
         passBtn.setTitle("跳过(\(remainingSeconds))", for: .normal)
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(JHWbAdvertViewController.checkCountDown), userInfo: nil, repeats: true)
     }
 
-    @objc func checkCountDown() {
+    @objc private func checkCountDown() {
         remainingSeconds -= 1
         passBtn.setTitle("跳过(\(remainingSeconds))", for: .normal)
         if remainingSeconds == 0 {
@@ -101,7 +101,7 @@ extension JHWbAdvertViewController {
 
 // MARK: - Events
 extension JHWbAdvertViewController {
-    @objc func passBtnClick() {
+    @objc private func passBtnClick() {
         countdownTimer?.invalidate()
         countdownTimer = nil
         let mainVC = JHWbMainViewController()

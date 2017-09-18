@@ -9,7 +9,6 @@
 import UIKit
 
 class JHWbMeTableViewController: JHWbBaseTableViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = UIColor.darkGray
@@ -23,7 +22,7 @@ extension JHWbMeTableViewController {
         super.setupSubView()
         automaticallyAdjustsScrollViewInsets = true
 //        navigationController?.navigationBar.isTranslucent = true
-//        hidesBottomBarWhenPushed = true
+        hidesBottomBarWhenPushed = true
         visitorView.setupMeController()
     }
     
@@ -31,6 +30,17 @@ extension JHWbMeTableViewController {
         navigationItem.title = "我"
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "设置", style:.plain, target: self, action: #selector(JHWbMeTableViewController.settingBtnClick))
     }
+    
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        hidesBottomBarWhenPushed = true
+//    }
+//    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        hidesBottomBarWhenPushed = false
+//    }
 }
 
 
@@ -38,8 +48,9 @@ extension JHWbMeTableViewController {
 extension JHWbMeTableViewController {
     @objc private func settingBtnClick(){
         navigationController?.pushViewController(JHWbSettingUnLoginTableViewController(), animated: true)
+        hidesBottomBarWhenPushed = false
     }
-
+   
 }
 
 // MARK: - Table view data source

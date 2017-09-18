@@ -14,7 +14,7 @@ protocol JHWbMainTabBarDelegate :NSObjectProtocol {
 
 class JHWbMainTabBar: UITabBar {
     var mainTabBarDelegate : JHWbMainTabBarDelegate?
-    let addBarBtn : JHWbTabBarAddBtn = JHWbTabBarAddBtn.init(frame: CGRect.zero)
+    private let addBarBtn : JHWbTabBarAddBtn = JHWbTabBarAddBtn.init(frame: CGRect.zero)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -51,7 +51,7 @@ class JHWbMainTabBar: UITabBar {
 }
 
 extension JHWbMainTabBar {
-    @objc  func barBtnAction(_ sender: JHWbTabBarAddBtn) {
+    @objc private func barBtnAction(_ sender: JHWbTabBarAddBtn) {
         if mainTabBarDelegate != nil {
             mainTabBarDelegate?.barBtnAction(sender)
         }

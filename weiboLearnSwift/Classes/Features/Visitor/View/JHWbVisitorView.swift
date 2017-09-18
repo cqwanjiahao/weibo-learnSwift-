@@ -11,11 +11,11 @@ import SnapKit
 
 class JHWbVisitorView: UIView {
     //MARK: - lazyLoad
-    lazy var didSetupConstraints = false
+    private lazy var didSetupConstraints = false
     //我:顶部框
-    lazy var meHeadView = UIView()
+    private lazy var meHeadView = UIView()
     //#warning 后期把UIView()  改为 scrollView()
-    lazy var meHeadImageView = UIImageView.init(image: #imageLiteral(resourceName: "visitorme_photo"))
+    private lazy var meHeadImageView = UIImageView.init(image: #imageLiteral(resourceName: "visitorme_photo"))
     lazy var meHaedBtn = {
         () -> UIButton in
         let headButton = UIButton()
@@ -23,17 +23,17 @@ class JHWbVisitorView: UIView {
         return headButton
     }()
     //旋转轮盘
-    lazy var rotateView = UIImageView.init(image: #imageLiteral(resourceName: "visitordiscover_feed_image_smallicon"))
+    private lazy var rotateView = UIImageView.init(image: #imageLiteral(resourceName: "visitordiscover_feed_image_smallicon"))
     //背景阴影
-    lazy var shadowView = UIImageView.init(image: #imageLiteral(resourceName: "visitordiscover_feed_mask_smallicon"))
+    private lazy var shadowView = UIImageView.init(image: #imageLiteral(resourceName: "visitordiscover_feed_mask_smallicon"))
     //中心图标
-    lazy var centerIconView = { () -> UIImageView in
+    private lazy var centerIconView = { () -> UIImageView in
        let centerIconView = UIImageView.init(image: #imageLiteral(resourceName: "visitordiscover_feed_image_house"))
         centerIconView.contentMode = .center
         return centerIconView
     }()
     //文字介绍
-    lazy var introLabel = {
+    private lazy var introLabel = {
         () -> UILabel in
         let introLabel = UILabel()
         introLabel.text = "你还没有关注的人。关注自己感兴趣的人，可在这\n里看到他们发布的内容"
@@ -65,7 +65,7 @@ class JHWbVisitorView: UIView {
 
 // MARK:- setupView
 extension JHWbVisitorView {
-    func setupSubView() {
+    private func setupSubView() {
         addSubview(meHeadView)
         meHeadView.addSubview(meHeadImageView)
         meHeadView.addSubview(meHaedBtn)
@@ -182,7 +182,7 @@ extension JHWbVisitorView {
 
 //MARK: - 设置旋转动画
 extension JHWbVisitorView {
-    func addRotateAnimate() {
+    private func addRotateAnimate() {
         //创建动画
         let rotateAnimate = CABasicAnimation(keyPath: "transform.rotation.z")
         //动画的属性

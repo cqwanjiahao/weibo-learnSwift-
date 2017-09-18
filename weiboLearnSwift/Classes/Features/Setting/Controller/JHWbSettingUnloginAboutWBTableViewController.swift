@@ -18,12 +18,12 @@ class JHWbSettingUnloginAboutWBTableViewController: JHWbSettingBaseTableViewCont
 
 // MARK: - stupUI
 extension JHWbSettingUnloginAboutWBTableViewController {
-    func setupSubview() {
+    private func setupSubview() {
         setupGrup0()
         tableView.isScrollEnabled = false
     }
     
-    func setupGrup0() {
+    private func setupGrup0() {
         let items = NSMutableArray()
         let item11 = JHWbSettingArrowItemModel.init(title: "官方微博")
         items.add(item11)

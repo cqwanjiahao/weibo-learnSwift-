@@ -16,25 +16,30 @@ class JHWbSettingUnloginLanguageTableViewController: JHWbSettingBaseTableViewCon
     //声明一个闭包
     var languageTitleClosure : sentLanguageTitleClosure?
     
-    var selctCell : UITableViewCell!
+    private var selctCell : UITableViewCell!
     var defalutSelectDetialText : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNav(title: "多语言环境")
         setupSubview()
+        
+            //                languageVC.selctCell = cell
+            //                languageVC.tableView(tableView, didSelectRowAt: indexPath)
+            //                cell.accessoryType = .checkmark
+        }
 //        selctCell.isSelected = true
-    }
+//    }
 }
 
 
 // MARK: - stupUI
 extension JHWbSettingUnloginLanguageTableViewController {
-    func setupSubview() {
+    private func setupSubview() {
         setupGrup0()
     }
     
-    func setupGrup0() {
+    private func setupGrup0() {
         let items = NSMutableArray()
         let item11 = JHWbSettingCheckItemModel.init(title: "跟随手机系统")
         items.add(item11)

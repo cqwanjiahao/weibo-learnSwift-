@@ -10,14 +10,24 @@
 import UIKit
 class JHWbMainViewController: UITabBarController,JHWbMainTabBarDelegate {
     /// MARK: - lazyLoad
-    lazy var mainTabBar = JHWbMainTabBar.init(frame: self.tabBar.frame)
-    lazy var isLogin = false
+    private lazy var mainTabBar = JHWbMainTabBar.init(frame: self.tabBar.frame)
+    private lazy var isLogin = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChildVc()
         setupTabBar()
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+////        hidesBottomBarWhenPushed = true
+//    }
+//    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+////        hidesBottomBarWhenPushed = false
+//    }
 }
 
 // MARK:- setupChildVC
@@ -60,7 +70,7 @@ extension JHWbMainViewController {
 
 // MARK:- setupView
 extension JHWbMainViewController {
-    func setupTabBar() {
+    private func setupTabBar() {
         UINavigationBar.appearance().tintColor = UIColor.orange
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.orange], for: .selected)
         
@@ -71,14 +81,14 @@ extension JHWbMainViewController {
 
 // MARK:- 事件监听
 extension JHWbMainViewController {
-    @objc fileprivate func composeButtonClick() -> Void {
+    @objc private func composeButtonClick() -> Void {
         print("点击了发布按钮")
     }
 }
 
 //MARK:- JHWbMainTabBarDelegate
 extension JHWbMainViewController {
-      func barBtnAction(_ sender: JHWbTabBarAddBtn) {
+     func barBtnAction(_ sender: JHWbTabBarAddBtn) {
         let composeVC = JHWbComposeViewController()
         present(composeVC, animated: true) {
         }

@@ -9,7 +9,7 @@
 import UIKit
 
 class JHWbSettingTableViewCell: JHWbTableViewCell {
-    var itemModel : JHWbSettingItemModel?
+    private var itemModel : JHWbSettingItemModel?
    
     // MARK:- 注册Cell
     class func dequeueOrCreateCell(tableView: UITableView) -> JHWbSettingTableViewCell {
@@ -48,7 +48,7 @@ class JHWbSettingTableViewCell: JHWbTableViewCell {
 }
 
 extension JHWbSettingTableViewCell {
-    func setupRightView() {
+   private  func setupRightView() {
         if (itemModel?.isKind(of: type(of: JHWbSettingArrowItemModel()) as AnyClass))! {
             accessoryType = .disclosureIndicator
         } else if (itemModel?.isKind(of: type(of: JHWbSettingSwitchItemModel()) as AnyClass))!{

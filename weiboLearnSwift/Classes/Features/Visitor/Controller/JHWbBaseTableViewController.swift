@@ -12,9 +12,9 @@ import SnapKit
 class JHWbBaseTableViewController: UITableViewController {
     //MARK: - lazyload
     lazy var visitorView = JHWbVisitorView()
-    lazy var isLogin = false
+    private lazy var isLogin = false
     private var didSetupConstraints = false
-    lazy var topLine = {() -> UIView in
+    private lazy var topLine = {() -> UIView in
         let topLine = UIView()
         topLine.backgroundColor = UIColor.jh_setColor(rgb: 221)
         topLine.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1)
@@ -43,11 +43,21 @@ class JHWbBaseTableViewController: UITableViewController {
         visitorView.loginBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.loginBtnClick), for: .touchUpInside)
         visitorView.meHaedBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.loginBtnClick), for: .touchUpInside)
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        hidesBottomBarWhenPushed = true
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        hidesBottomBarWhenPushed = false
+//    }
 }
 
 // MARK:- setupView
 extension JHWbBaseTableViewController {
-    @objc func setupSubView() {
+    @objc  func setupSubView() {
         setupNavigationBar()
         view .addSubview(topLine)
     }

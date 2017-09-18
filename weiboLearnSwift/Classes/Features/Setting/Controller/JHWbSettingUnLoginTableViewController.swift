@@ -17,12 +17,12 @@ class JHWbSettingUnLoginTableViewController: JHWbSettingBaseTableViewController 
 
 // MARK: - stupUI
 extension JHWbSettingUnLoginTableViewController {
-    func setupSubview() {
+    private func setupSubview() {
         setupGrup0()
         setupGrup1()
     }
     
-    func setupGrup0() {
+    private func setupGrup0() {
         let items = NSMutableArray()
         let item11 = JHWbSettingArrowItemModel.init(title: "通用设置")
         item11.desVC = NSStringFromClass(JHWbSettingUnloginCommonTableViewController.classForCoder())
@@ -32,7 +32,7 @@ extension JHWbSettingUnLoginTableViewController {
         groups.add(group)
     }
     
-    func setupGrup1() {
+    private func setupGrup1() {
         let items = NSMutableArray()
         let item21 = JHWbSettingArrowItemModel.init(title: "客服中心")
         item21.desVC = NSStringFromClass(JHWbWebServiceCenterViewController.classForCoder())

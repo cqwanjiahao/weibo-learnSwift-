@@ -8,7 +8,7 @@
 
 import UIKit
 class JHWbHomeTableViewController: JHWbBaseTableViewController {
-    lazy var titleButton = JHWbHomeTitleButton()
+    private lazy var titleButton = JHWbHomeTitleButton()
     
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -36,7 +36,7 @@ extension JHWbHomeTableViewController {
 
 // MARK:- Click
 extension JHWbHomeTableViewController {
-    @objc func titleButtonClick() -> Void {
+    @objc private func titleButtonClick() -> Void {
         titleButton.isSelected = !titleButton.isSelected
     }
 }
