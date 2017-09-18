@@ -12,7 +12,8 @@ import SnapKit
 class JHWbBaseTableViewController: UITableViewController {
     //MARK: - lazyload
     lazy var visitorView = JHWbVisitorView()
-    private lazy var isLogin = false
+    lazy var isLogin = false
+    //    lazy var isLogin = true
     private var didSetupConstraints = false
     private lazy var topLine = {() -> UIView in
         let topLine = UIView()

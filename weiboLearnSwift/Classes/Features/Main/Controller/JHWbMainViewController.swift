@@ -11,7 +11,6 @@ import UIKit
 class JHWbMainViewController: UITabBarController,JHWbMainTabBarDelegate {
     /// MARK: - lazyLoad
     private lazy var mainTabBar = JHWbMainTabBar.init(frame: self.tabBar.frame)
-    private lazy var isLogin = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +61,7 @@ extension JHWbMainViewController {
         let childVc = childVcType!.init()
         childVc.title = title
         childVc.tabBarItem.image = UIImage.init(named: imageName)
-        childVc.tabBarItem.selectedImage = UIImage.init(named: imageName + "_highlighted")
+        childVc.tabBarItem.selectedImage = UIImage.init(named: imageName + "_selected")
         let childNav = UINavigationController.init(rootViewController: childVc)
         addChildViewController(childNav)
     }
@@ -72,7 +71,9 @@ extension JHWbMainViewController {
 extension JHWbMainViewController {
     private func setupTabBar() {
         UINavigationBar.appearance().tintColor = UIColor.orange
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.orange], for: .selected)
+//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.orange], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor :  UIColor.black], for: .selected)
+        
         
         mainTabBar.mainTabBarDelegate = self
         self.setValue(mainTabBar, forKey: "tabBar")
