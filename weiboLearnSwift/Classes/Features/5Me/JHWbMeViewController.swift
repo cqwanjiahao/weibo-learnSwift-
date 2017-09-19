@@ -1,5 +1,5 @@
 //
-//  JHWbMeTableViewController.swift
+//  JHWbMeViewController.swift
 //  weiboLearnSwift
 //
 //  Created by 万家豪 on 2017/8/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JHWbMeTableViewController: JHWbBaseTableViewController {
+class JHWbMeViewController: JHWbBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = UIColor.darkGray
@@ -17,18 +17,16 @@ class JHWbMeTableViewController: JHWbBaseTableViewController {
 }
 
 // MARK:- setupView
-extension JHWbMeTableViewController {
+extension JHWbMeViewController {
     override func setupSubView() {
         super.setupSubView()
-        automaticallyAdjustsScrollViewInsets = true
-//        navigationController?.navigationBar.isTranslucent = true
         hidesBottomBarWhenPushed = true
         visitorView.setupMeController()
     }
     
     override func setupNavigationBar() {
         navigationItem.title = "我"
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "设置", style:.plain, target: self, action: #selector(JHWbMeTableViewController.settingBtnClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "设置", style:.plain, target: self, action: #selector(JHWbMeViewController.settingBtnClick))
     }
     
     
@@ -45,23 +43,11 @@ extension JHWbMeTableViewController {
 
 
 //MARK: - Click
-extension JHWbMeTableViewController {
+extension JHWbMeViewController {
     @objc private func settingBtnClick(){
         navigationController?.pushViewController(JHWbSettingUnLoginTableViewController(), animated: true)
         hidesBottomBarWhenPushed = false
     }
    
-}
-
-// MARK: - Table view data source
-extension JHWbMeTableViewController {
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-
 }
 

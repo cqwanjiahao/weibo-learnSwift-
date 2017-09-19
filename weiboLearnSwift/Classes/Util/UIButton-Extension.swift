@@ -14,6 +14,7 @@ extension UIButton {
     convenience init(imageName:String) {
         self.init()
         setImage(UIImage(named: imageName), for: .normal)
+        setImage(UIImage(named: imageName + "_highlighted"), for: .highlighted)
         setImage(UIImage(named: imageName + "_highlighted"), for: .selected)
         sizeToFit()
     }

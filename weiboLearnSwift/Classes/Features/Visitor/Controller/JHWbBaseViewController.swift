@@ -1,100 +1,86 @@
 //
-//  JHWbBaseTableViewController.swift
+//  JHWbBaseViewController.swift
 //  weiboLearnSwift
 //
 //  Created by 万家豪 on 2017/8/30.
 //  Copyright © 2017年 万家豪. All rights reserved.
 //
-
 import UIKit
 import SnapKit
 
-class JHWbBaseTableViewController: UITableViewController {
-    //MARK: - lazyload
+class JHWbBaseViewController: UIViewController {
     lazy var visitorView = JHWbVisitorView()
     lazy var isLogin = false
-    //    lazy var isLogin = true
+//    lazy var isLogin = true
     private var didSetupConstraints = false
     private lazy var topLine = {() -> UIView in
         let topLine = UIView()
         topLine.backgroundColor = UIColor.jh_setColor(rgb: 221)
-        topLine.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1)
         return topLine
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if !isLogin {
-            setupVisitorView()
-            tableView.isScrollEnabled = false
-        } else {
-            tableView.isScrollEnabled = true
-        }
-        tableView.separatorStyle = .none
         setupSubView()
         view .updateConstraints()
         view.setNeedsUpdateConstraints()
     }
-    
-    private func setupVisitorView() {
-//        view = visitorView
-        view.addSubview(visitorView)
-        ///监听按钮点击
-        visitorView.registBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.registBtnClick), for: .touchUpInside)
-        visitorView.loginBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.loginBtnClick), for: .touchUpInside)
-        visitorView.meHaedBtn.addTarget(self, action: #selector(JHWbBaseTableViewController.loginBtnClick), for: .touchUpInside)
-    }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        hidesBottomBarWhenPushed = true
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        hidesBottomBarWhenPushed = false
-//    }
 }
 
 // MARK:- setupView
-extension JHWbBaseTableViewController {
+extension JHWbBaseViewController {
     @objc  func setupSubView() {
-        setupNavigationBar()
+        view.backgroundColor = .clear
+        navigationController?.navigationBar.backgroundColor = .white
         view .addSubview(topLine)
+        setupVisitorView()
+        setupNavigationBar()
     }
+    
+    private func setupVisitorView() {
+        //        view = visitorView
+        view.addSubview(visitorView)
+        visitorView.registBtn.addTarget(self, action: #selector(JHWbBaseViewController.registBtnClick), for: .touchUpInside)
+        visitorView.loginBtn.addTarget(self, action: #selector(JHWbBaseViewController.loginBtnClick), for: .touchUpInside)
+        visitorView.meHaedBtn.addTarget(self, action: #selector(JHWbBaseViewController.loginBtnClick), for: .touchUpInside)
+    }
+    
     /// 设置导航栏左右的Item
     @objc func setupNavigationBar() {
         let leftNegativeSpacer = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         leftNegativeSpacer.width = -10
-        let leftButton = UIBarButtonItem.init(title: "注册", style: .plain, target: self, action: #selector(JHWbBaseTableViewController.registBtnClick))
+        let leftButton = UIBarButtonItem.init(title: "注册", style: .plain, target: self, action: #selector(JHWbBaseViewController.registBtnClick))
         navigationItem.leftBarButtonItems = [leftNegativeSpacer, leftButton]
         let rightNegativeSpacer = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         rightNegativeSpacer.width = -10
-        let rightButton = UIBarButtonItem.init(title: "登录", style: .plain, target: self, action: #selector(JHWbBaseTableViewController.loginBtnClick))
+        let rightButton = UIBarButtonItem.init(title: "登录", style: .plain, target: self, action: #selector(JHWbBaseViewController.loginBtnClick))
         navigationItem.rightBarButtonItems = [rightNegativeSpacer, rightButton]
     }
-    
-
 }
 
- //MARK:- constraints
-extension JHWbBaseTableViewController {
+//MARK:- constraints
+extension JHWbBaseViewController {
     override func updateViewConstraints() {
         if !didSetupConstraints {
             didSetupConstraints = true
             if !isLogin {
-            visitorView.snp.makeConstraints { (make) -> Void in
-                make.size.equalTo(view)
-                make.center.equalTo(view)
-                }
+                topLine.snp.makeConstraints({ (make) -> Void in
+                    make.top.trailing.width.equalToSuperview()
+                    make.height.equalTo(1)
+                })
+                visitorView.snp.makeConstraints({ (make) -> Void in
+                    make.top.equalTo(64)
+                    make.height.equalTo(UIScreen.main.bounds.size.height - 64)
+                    make.trailing.width.equalToSuperview()
+                })
             }
-        }
         super .updateViewConstraints()
+        }
     }
 }
 
 // MARK:- Click
-extension JHWbBaseTableViewController {
+extension JHWbBaseViewController {
     @objc private func registBtnClick() {
         let registNav = UINavigationController.init(rootViewController: JHWbRegistViewController())
         present(registNav, animated: true) {

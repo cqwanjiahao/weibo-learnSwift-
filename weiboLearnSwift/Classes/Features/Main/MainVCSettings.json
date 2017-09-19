@@ -1,21 +1,21 @@
 [
  {
-    "vcName": "JHWbHomeTableViewController",
+    "vcName": "JHWbHomeViewController",
     "title": "首页",
     "imageName": "tabbar_home"
  },
  {
-     "vcName": "JHWbMessageTableTableViewController",
+     "vcName": "JHWbMessageViewController",
      "title": "消息",
      "imageName": "tabbar_message_center"
  },
  {
-     "vcName": "JHWbDiscoverTableViewController",
+     "vcName": "JHWbDiscoverViewController",
      "title": "发现",
      "imageName": "tabbar_discover"
  },
  {
-     "vcName": "JHWbMeTableViewController",
+     "vcName": "JHWbMeViewController",
      "title": "我",
      "imageName": "tabbar_profile"
  }

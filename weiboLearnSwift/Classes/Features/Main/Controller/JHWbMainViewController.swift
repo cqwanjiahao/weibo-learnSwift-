@@ -71,10 +71,7 @@ extension JHWbMainViewController {
 extension JHWbMainViewController {
     private func setupTabBar() {
         UINavigationBar.appearance().tintColor = UIColor.orange
-//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.orange], for: .selected)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor :  UIColor.black], for: .selected)
-        
-        
         mainTabBar.mainTabBarDelegate = self
         self.setValue(mainTabBar, forKey: "tabBar")
     }

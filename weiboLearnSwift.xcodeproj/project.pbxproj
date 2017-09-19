@@ -16,10 +16,10 @@
 		E9157A331F663F2100AC896E /* JHWbAreaPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9157A321F663F2100AC896E /* JHWbAreaPickViewController.swift */; };
 		E9157A371F66538B00AC896E /* JHWbAreaPickOtherAreaBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9157A361F66538B00AC896E /* JHWbAreaPickOtherAreaBtn.swift */; };
 		E9157A391F66669000AC896E /* JHWbAreaPickOtherWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9157A381F66669000AC896E /* JHWbAreaPickOtherWebViewController.swift */; };
-		E91B8AE41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AD41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift */; };
-		E91B8AE61F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AD71F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift */; };
-		E91B8AE81F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8ADB1F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift */; };
-		E91B8AEA1F4D1F9000F6C640 /* JHWbMeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8ADE1F4D1F9000F6C640 /* JHWbMeTableViewController.swift */; };
+		E91B8AE41F4D1F9000F6C640 /* JHWbHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AD41F4D1F9000F6C640 /* JHWbHomeViewController.swift */; };
+		E91B8AE61F4D1F9000F6C640 /* JHWbMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AD71F4D1F9000F6C640 /* JHWbMessageViewController.swift */; };
+		E91B8AE81F4D1F9000F6C640 /* JHWbDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8ADB1F4D1F9000F6C640 /* JHWbDiscoverViewController.swift */; };
+		E91B8AEA1F4D1F9000F6C640 /* JHWbMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8ADE1F4D1F9000F6C640 /* JHWbMeViewController.swift */; };
 		E91B8AEB1F4D1F9000F6C640 /* JHWbRegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AE11F4D1F9000F6C640 /* JHWbRegistViewController.swift */; };
 		E91B8AED1F4D21DD00F6C640 /* JHWbMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AEC1F4D21DD00F6C640 /* JHWbMainViewController.swift */; };
 		E91B8AEF1F4D2C1E00F6C640 /* JHWbComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B8AEE1F4D2C1E00F6C640 /* JHWbComposeViewController.swift */; };
@@ -28,7 +28,7 @@
 		E92726121F68CADA00D8B818 /* JHWbSettingItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92726111F68CADA00D8B818 /* JHWbSettingItemModel.swift */; };
 		E92A8E331F64FEAA00E38970 /* JHWbAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A8E321F64FEAA00E38970 /* JHWbAdvertViewController.swift */; };
 		E93002D51F6A4B960079E2C8 /* JHWbMainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93002D41F6A4B960079E2C8 /* JHWbMainTabBar.swift */; };
-		E93038511F571448008F7114 /* JHWbBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93038501F571448008F7114 /* JHWbBaseTableViewController.swift */; };
+		E93038511F571448008F7114 /* JHWbBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93038501F571448008F7114 /* JHWbBaseViewController.swift */; };
 		E93038531F571464008F7114 /* JHWbVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93038521F571464008F7114 /* JHWbVisitorView.swift */; };
 		E9412C9C1F6C30FF004437BB /* JHWbSettingUnloginAboutWBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9412C9B1F6C30FF004437BB /* JHWbSettingUnloginAboutWBTableViewController.swift */; };
 		E944941B1F4EDD300053DFC3 /* JHWbHomeTitleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944941A1F4EDD300053DFC3 /* JHWbHomeTitleBtn.swift */; };
@@ -80,10 +80,10 @@
 		E9157A321F663F2100AC896E /* JHWbAreaPickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickViewController.swift; sourceTree = "<group>"; };
 		E9157A361F66538B00AC896E /* JHWbAreaPickOtherAreaBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickOtherAreaBtn.swift; sourceTree = "<group>"; };
 		E9157A381F66669000AC896E /* JHWbAreaPickOtherWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAreaPickOtherWebViewController.swift; sourceTree = "<group>"; };
-		E91B8AD41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbHomeTableViewController.swift; sourceTree = "<group>"; };
-		E91B8AD71F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbMessageTableTableViewController.swift; sourceTree = "<group>"; };
-		E91B8ADB1F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbDiscoverTableViewController.swift; sourceTree = "<group>"; };
-		E91B8ADE1F4D1F9000F6C640 /* JHWbMeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbMeTableViewController.swift; sourceTree = "<group>"; };
+		E91B8AD41F4D1F9000F6C640 /* JHWbHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbHomeViewController.swift; sourceTree = "<group>"; };
+		E91B8AD71F4D1F9000F6C640 /* JHWbMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbMessageViewController.swift; sourceTree = "<group>"; };
+		E91B8ADB1F4D1F9000F6C640 /* JHWbDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbDiscoverViewController.swift; sourceTree = "<group>"; };
+		E91B8ADE1F4D1F9000F6C640 /* JHWbMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbMeViewController.swift; sourceTree = "<group>"; };
 		E91B8AE11F4D1F9000F6C640 /* JHWbRegistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbRegistViewController.swift; sourceTree = "<group>"; };
 		E91B8AEC1F4D21DD00F6C640 /* JHWbMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbMainViewController.swift; sourceTree = "<group>"; };
 		E91B8AEE1F4D2C1E00F6C640 /* JHWbComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHWbComposeViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		E92726111F68CADA00D8B818 /* JHWbSettingItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbSettingItemModel.swift; sourceTree = "<group>"; };
 		E92A8E321F64FEAA00E38970 /* JHWbAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbAdvertViewController.swift; sourceTree = "<group>"; };
 		E93002D41F6A4B960079E2C8 /* JHWbMainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbMainTabBar.swift; sourceTree = "<group>"; };
-		E93038501F571448008F7114 /* JHWbBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbBaseTableViewController.swift; sourceTree = "<group>"; };
+		E93038501F571448008F7114 /* JHWbBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbBaseViewController.swift; sourceTree = "<group>"; };
 		E93038521F571464008F7114 /* JHWbVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbVisitorView.swift; sourceTree = "<group>"; };
 		E9412C9B1F6C30FF004437BB /* JHWbSettingUnloginAboutWBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbSettingUnloginAboutWBTableViewController.swift; sourceTree = "<group>"; };
 		E944941A1F4EDD300053DFC3 /* JHWbHomeTitleBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHWbHomeTitleBtn.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 		E91B8AD51F4D1F9000F6C640 /* 2Message */ = {
 			isa = PBXGroup;
 			children = (
-				E91B8AD71F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift */,
+				E91B8AD71F4D1F9000F6C640 /* JHWbMessageViewController.swift */,
 			);
 			path = 2Message;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 		E91B8AD91F4D1F9000F6C640 /* 4Discover */ = {
 			isa = PBXGroup;
 			children = (
-				E91B8ADB1F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift */,
+				E91B8ADB1F4D1F9000F6C640 /* JHWbDiscoverViewController.swift */,
 			);
 			path = 4Discover;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 		E91B8ADC1F4D1F9000F6C640 /* 5Me */ = {
 			isa = PBXGroup;
 			children = (
-				E91B8ADE1F4D1F9000F6C640 /* JHWbMeTableViewController.swift */,
+				E91B8ADE1F4D1F9000F6C640 /* JHWbMeViewController.swift */,
 			);
 			path = 5Me;
 			sourceTree = "<group>";
@@ -365,7 +365,7 @@
 		E98CEE621F614A40000B4FD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E93038501F571448008F7114 /* JHWbBaseTableViewController.swift */,
+				E93038501F571448008F7114 /* JHWbBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -509,7 +509,7 @@
 		E9EE9A021F6F9CEB009AB295 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E91B8AD41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift */,
+				E91B8AD41F4D1F9000F6C640 /* JHWbHomeViewController.swift */,
 				E9EE9A061F6FBD1D009AB295 /* JHWbHomeAttentionTableViewController.swift */,
 				E9EE9A081F6FBD2F009AB295 /* JHWbHomeHotTopicTableViewController.swift */,
 			);
@@ -675,7 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E91B8AEA1F4D1F9000F6C640 /* JHWbMeTableViewController.swift in Sources */,
+				E91B8AEA1F4D1F9000F6C640 /* JHWbMeViewController.swift in Sources */,
 				E94C26411F61BC8E00C69DF4 /* JHWbMoblieRegistView.swift in Sources */,
 				E9CC97BD1F65805800263D08 /* JHWbTableViewCell.swift in Sources */,
 				E9EE9A051F6FA11C009AB295 /* JHWbHomeTitleView.swift in Sources */,
@@ -715,17 +715,17 @@
 				E9730E951F589FE800006773 /* JHWbAreaPickModel.swift in Sources */,
 				E9AD2B1C1F4BBF0600D60C34 /* AppDelegate.swift in Sources */,
 				E92A8E331F64FEAA00E38970 /* JHWbAdvertViewController.swift in Sources */,
-				E93038511F571448008F7114 /* JHWbBaseTableViewController.swift in Sources */,
-				E91B8AE81F4D1F9000F6C640 /* JHWbDiscoverTableViewController.swift in Sources */,
+				E93038511F571448008F7114 /* JHWbBaseViewController.swift in Sources */,
+				E91B8AE81F4D1F9000F6C640 /* JHWbDiscoverViewController.swift in Sources */,
 				E9C5DBF71F62541D0035C374 /* JHWbMobileTextField.swift in Sources */,
 				E91B8AED1F4D21DD00F6C640 /* JHWbMainViewController.swift in Sources */,
 				E96EAB701F67F5FF00217CD0 /* JHWbSettingUnLoginTableViewController.swift in Sources */,
 				E98B06291F6804D000E2E015 /* JHWbSettingTableViewCell.swift in Sources */,
-				E91B8AE61F4D1F9000F6C640 /* JHWbMessageTableTableViewController.swift in Sources */,
+				E91B8AE61F4D1F9000F6C640 /* JHWbMessageViewController.swift in Sources */,
 				E9157A391F66669000AC896E /* JHWbAreaPickOtherWebViewController.swift in Sources */,
 				E970881F1F65A0A700E04E56 /* JHWbAreaPickTableHeaderView.swift in Sources */,
 				E9EE9A121F6FEAA0009AB295 /* UIImage-Extension.swift in Sources */,
-				E91B8AE41F4D1F9000F6C640 /* JHWbHomeTableViewController.swift in Sources */,
+				E91B8AE41F4D1F9000F6C640 /* JHWbHomeViewController.swift in Sources */,
 				E9EE9A0E1F6FCFCA009AB295 /* JHWbHotTopictPopoverPresentationController.swift in Sources */,
 				E9412C9C1F6C30FF004437BB /* JHWbSettingUnloginAboutWBTableViewController.swift in Sources */,
 				E9EBD1591F6AAD3000500B73 /* JHWbTabBarAddBtn.swift in Sources */,
