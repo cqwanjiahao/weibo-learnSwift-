@@ -13,6 +13,7 @@ class JHWbHomeHotTopicTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        hotTopicVC.view.backgroundColor = .yellow
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

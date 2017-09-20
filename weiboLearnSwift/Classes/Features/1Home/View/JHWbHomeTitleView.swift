@@ -56,7 +56,7 @@ extension JHWbHomeTitleView {
             })
             bottomLine.snp.makeConstraints({ (make) -> Void in
                 make.bottom.equalToSuperview().offset(-3)
-                make.leading.equalTo(attentionBtn.snp.leading).offset(jh_getLength(length: 8))
+                make.leading.equalTo(subviews[0].snp.leading).offset(jh_getLength(length: 6))
                 make.height.equalTo(3)
                 make.width.equalTo(24)
             })

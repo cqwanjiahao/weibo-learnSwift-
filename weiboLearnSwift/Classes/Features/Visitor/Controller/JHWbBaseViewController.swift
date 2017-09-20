@@ -30,7 +30,7 @@ class JHWbBaseViewController: UIViewController {
 // MARK:- setupView
 extension JHWbBaseViewController {
     @objc  func setupSubView() {
-        view.backgroundColor = .clear
+        view.backgroundColor = UIColor.jh_setColor(rgb: 237)
         navigationController?.navigationBar.backgroundColor = .white
         view .addSubview(topLine)
         setupVisitorView()

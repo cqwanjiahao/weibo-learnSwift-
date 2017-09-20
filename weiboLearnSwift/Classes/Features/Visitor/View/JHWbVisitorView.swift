@@ -54,7 +54,7 @@ class JHWbVisitorView: UIView {
     public init() {
         super.init(frame: CGRect.zero)
             setupSubView()
-            backgroundColor = UIColor.jh_setColor(rgb: 237)
+            backgroundColor = .clear
             translatesAutoresizingMaskIntoConstraints = false
         }
     
@@ -66,6 +66,7 @@ class JHWbVisitorView: UIView {
 // MARK:- setupView
 extension JHWbVisitorView {
     private func setupSubView() {
+        isHidden = true
         addSubview(meHeadView)
         meHeadView.addSubview(meHeadImageView)
         meHeadView.addSubview(meHaedBtn)
@@ -111,8 +112,6 @@ extension JHWbVisitorView {
             
             loginBtn.snp.makeConstraints({ (make) -> Void in
                 make.top.equalTo(registBtn)
-                ///此时父view的frame为0
-//                make.trailing.equalToSuperview().offset(jh_getLength(length: 69))
                 make.leading.equalTo(registBtn.snp.trailing).offset(jh_getLength(length: 22))
                 make.size.equalTo(jh_getsize(x: 127, y: 40))
             })
@@ -149,6 +148,7 @@ extension JHWbVisitorView {
 extension JHWbVisitorView {
     ///设置Home界面
     func setupHomeController() {
+        self.isHidden = false
         meHeadView.isHidden = true
         registBtn.isHidden = true
         loginBtn.isHidden = true
@@ -156,6 +156,7 @@ extension JHWbVisitorView {
     }
     ///设置Message界面
     func setupMessageController() {
+        self.isHidden = false
         meHeadView.isHidden = true
         rotateView.isHidden = true
         shadowView.isHidden = true
@@ -168,6 +169,7 @@ extension JHWbVisitorView {
     }
     ///设置Me界面
     func setupMeController() {
+        self.isHidden = false
         rotateView.isHidden = true
         shadowView.isHidden = true
         homeButton.isHidden = true

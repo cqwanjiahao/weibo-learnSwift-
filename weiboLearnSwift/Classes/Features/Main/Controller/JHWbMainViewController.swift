@@ -88,6 +88,7 @@ extension JHWbMainViewController {
 extension JHWbMainViewController {
      func barBtnAction(_ sender: JHWbTabBarAddBtn) {
         let composeVC = JHWbComposeViewController()
+        composeVC.modalPresentationStyle = .custom
         present(composeVC, animated: true) {
         }
     }

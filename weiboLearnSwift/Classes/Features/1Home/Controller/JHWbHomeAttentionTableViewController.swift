@@ -7,12 +7,14 @@
 //
 
 import UIKit
-
+import SnapKit
 class JHWbHomeAttentionTableViewController: UITableViewController {
-
+    
+    lazy var visitorVC = JHWbBaseViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
+        setupChildVC()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,6 +22,16 @@ class JHWbHomeAttentionTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    func setupChildVC() {
+        view.backgroundColor = UIColor.clear
+        visitorVC.visitorView.setupHomeController()
+        view.addSubview(visitorVC.view)
+        visitorVC.view.snp.makeConstraints { (make) -> Void in
+            make.edges.equalToSuperview()
+        }
+        tableView.isScrollEnabled = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

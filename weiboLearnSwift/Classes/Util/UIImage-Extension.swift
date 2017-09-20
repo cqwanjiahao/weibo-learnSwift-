@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Accelerate
+
 extension UIImage {
-    //修正原始方向
+    //MARK: - 修正原始方向
     func fixOrientation(img: UIImage) -> UIImage {
         if (img.imageOrientation == .up) {
             return img
@@ -23,7 +25,7 @@ extension UIImage {
         return normalizedImage
     }
 
-    //图片进行旋转
+    //MARK: - 图片进行旋转
      func rotateImage(ratation: UIImageOrientation) -> UIImage {
         var tempSize = size
         var transform: CGAffineTransform = .identity
@@ -49,7 +51,7 @@ extension UIImage {
             transform = transform.rotated(by: (.pi / 2)).scaledBy(x: -1.0, y: 1.0)
         }
         
-        //CGBitmapContextCreate
+        //CGBitmapContextCreate  创建上下文
         let context = CGContext(data: nil, width: Int(size.width), height: Int(size.height),
                                 bitsPerComponent: cgImage!.bitsPerComponent, bytesPerRow: 0,
                                 space: cgImage!.colorSpace!, bitmapInfo: cgImage!.bitmapInfo.rawValue)!
@@ -57,5 +59,73 @@ extension UIImage {
         context.draw(cgImage!, in: CGRect(x: 0, y: 0, width: tempSize.width,height: tempSize.height))
         return UIImage(cgImage: context.makeImage()!)
         }
+    
+
+    //失败
+//    //MARK: - CoreImage处理:高斯模糊图    传入模糊半径 越大越模糊
+//    func imageWithGaussianBlur(radiusValue: CGFloat) -> UIImage {
+//        let context = CIContext.init(options: nil)
+//        let inputImage = self.ciImage
+//        //设置filter
+////        let filter = CIFilter.init(name: "CIGaussianBlur")
+//        let filter = CIFilter.init(name: "CIGaussianBlur")
+//        filter?.setValue(inputImage, forKey: kCIInputImageKey)
+//        filter?.setValue(radiusValue, forKey: kCIInputRadiusKey)
+//        //模糊图片
+////        let outputCIImage: CIImage = filter?.outputImage
+//        let outputCIImage: CIImage = filter?.value(forKey: kCIOutputImageKey) as! CIImage
+//        let rect = CGRect.init(origin: .zero, size: self.size)
+//        let blurImage = context.createCGImage(outputCIImage, from: rect)
+//        return UIImage.init(cgImage: blurImage!)
+//    }
+    
+    
+//    //有时候可以 有时候不行 内存错误
+//    func blurryImage(_ level:CGFloat) -> UIImage {
+//        var tempLevel = level
+//        //高斯模糊参数(0-1)之间，超出范围强行转成0.5
+//        if (Float(level) < 0.0 || Float(level) > 1.0){
+//            tempLevel = 0.5
+//        }
+//        var boxSize = Int(tempLevel * 100.0)
+//        boxSize -= (boxSize % 2) + 1
+//        let imgRef = self.cgImage
+//        var inBuffer = vImage_Buffer()
+//        var outBuffer = vImage_Buffer()
+//        var error = vImage_Error()
+//        let inProvider = imgRef?.dataProvider
+//        let inBitmapData = inProvider!.data
+//        inBuffer.width = vImagePixelCount((imgRef?.width)!)
+//        inBuffer.height = vImagePixelCount((imgRef?.height)!)
+//        inBuffer.rowBytes = (imgRef?.bytesPerRow)!
+//        // void *
+//        inBuffer.data = UnsafeMutableRawPointer.init(mutating:CFDataGetBytePtr(inBitmapData!))
+//        //手动申请内存
+//        let pixelBuffer = malloc(imgRef!.height)
+//        outBuffer.data = pixelBuffer
+//        outBuffer.width = vImagePixelCount((imgRef?.width)!)
+//        outBuffer.height = vImagePixelCount((imgRef?.height)!)
+//        outBuffer.rowBytes = (imgRef?.bytesPerRow)!
+//        error = vImageBoxConvolve_ARGB8888(&inBuffer, &outBuffer,nil,
+//                                           0, 0,UInt32(boxSize), UInt32(boxSize),nil,
+//                                           vImage_Flags(kvImageEdgeExtend))
+//        if(kvImageNoError != error) {
+//            error = vImageBoxConvolve_ARGB8888(&inBuffer,
+//                                               &outBuffer,nil,vImagePixelCount(0),vImagePixelCount(0),
+//                                               UInt32(boxSize),UInt32(boxSize),nil,vImage_Flags(kvImageEdgeExtend))
+//        }
+//        let colorSpace = CGColorSpaceCreateDeviceRGB()
+//        let ctx = CGContext(data: outBuffer.data,
+//                           width:Int(outBuffer.width),
+//                           height:Int(outBuffer.height),
+//                           bitsPerComponent:8,
+//                           bytesPerRow: outBuffer.rowBytes,
+//                           space: colorSpace,
+//                           bitmapInfo:CGImageAlphaInfo.premultipliedLast.rawValue)
+//        let imageRef = ctx!.makeImage()
+//        //手动释放内存
+//        free(pixelBuffer)
+//        return UIImage(cgImage: imageRef!)
+//    }
 }
 
